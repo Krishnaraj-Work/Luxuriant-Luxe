@@ -1,2 +1,2 @@
-# Balraj-Website
-Deployable Website for a Skin Care Product
+# Luxuriant Luxe
+Skin Care Product Website made for Balraj. 
