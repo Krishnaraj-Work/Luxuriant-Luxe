@@ -14,8 +14,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import {
 	IconBrush,
 	IconGardenCart,
-	IconHanger2,
-	IconLogout,
+	IconLogout, IconPackage,
 	IconPalette,
 	IconUserBolt,
 } from "@tabler/icons-react";
@@ -75,7 +74,7 @@ export function Navbar(props) {
 								id="contact_element"
 								className="hover:text-black"
 							>
-								<IconHanger2 className="w-8 h-8" />
+								<IconPackage className="w-8 h-8" />
 								Our Products
 							</NavLink>
 						</li>
@@ -176,7 +175,7 @@ export function Navbar(props) {
 											id="contact_element"
 											className="hover:text-black"
 										>
-											<IconHanger2 className="w-6 h-6" />
+											<IconPackage className="w-6 h-6" />
 											Products
 										</NavLink>
 									</li>
