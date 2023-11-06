@@ -1,27 +1,23 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "../input.css";
 import "../style.css";
-import {themeChange} from "theme-change";
-import {ThemeContext} from "../context/ThemeContext";
+import { themeChange } from "theme-change";
+import { ThemeContext } from "../context/ThemeContext";
 
 import {
 	SunIcon,
 	MoonIcon,
 	InformationCircleIcon,
 	Bars3Icon,
-	AcademicCapIcon,
-	HashtagIcon,
-	QuestionMarkCircleIcon,
 } from "@heroicons/react/24/solid";
-import {NavLink, useNavigate} from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
-	IconBrush, IconGardenCart, IconHanger2,
-	IconHome,
-	IconKey,
+	IconBrush,
+	IconGardenCart,
+	IconHanger2,
 	IconLogout,
 	IconPalette,
 	IconUserBolt,
-	IconUserCircle,
 } from "@tabler/icons-react";
 import "../css/Navbar.css";
 
@@ -29,7 +25,7 @@ export function Navbar(props) {
 	useEffect(() => {
 		themeChange(false);
 	}, []);
-	const {theme, setTheme} = React.useContext(ThemeContext);
+	const { theme, setTheme } = React.useContext(ThemeContext);
 	const navigate = useNavigate();
 	useEffect(() => {
 		if (theme === "light") {
@@ -40,12 +36,12 @@ export function Navbar(props) {
 			dark_button.click();
 		}
 	});
-	
+
 	function handleLogout() {
 		props.setisNavbarPresent(false);
 		navigate("/");
 	}
-	
+
 	return (
 		<div className="z-50">
 			<div
@@ -79,7 +75,7 @@ export function Navbar(props) {
 								id="contact_element"
 								className="hover:text-black"
 							>
-								<IconHanger2 className="w-8 h-8"/>
+								<IconHanger2 className="w-8 h-8" />
 								Our Products
 							</NavLink>
 						</li>
@@ -89,7 +85,7 @@ export function Navbar(props) {
 								id="contact_element"
 								className="hover:text-black"
 							>
-								<InformationCircleIcon className="w-8 h-8"/>
+								<InformationCircleIcon className="w-8 h-8" />
 								About Us
 							</NavLink>
 						</li>
@@ -102,7 +98,7 @@ export function Navbar(props) {
 							<li>
 								<details>
 									<summary className="text-lg md:text-xl hover:text-black">
-										<IconPalette className="w-8 h-8"/>
+										<IconPalette className="w-8 h-8" />
 										Theme
 									</summary>
 									<ul className="p-2 bg-base-100 text-base-content">
@@ -112,7 +108,7 @@ export function Navbar(props) {
 											onClick={() => setTheme("light")}
 										>
 											<div>
-												<SunIcon className="w-8 h-8"/>
+												<SunIcon className="w-8 h-8" />
 												Light
 											</div>
 										</li>
@@ -122,7 +118,7 @@ export function Navbar(props) {
 											onClick={() => setTheme("dark")}
 										>
 											<div>
-												<MoonIcon className="w-8 h-6"/>
+												<MoonIcon className="w-8 h-6" />
 												Dark
 											</div>
 										</li>
@@ -137,7 +133,7 @@ export function Navbar(props) {
 							<li>
 								<details>
 									<summary>
-										<IconUserBolt className="w-8 h-8"/>
+										<IconUserBolt className="w-8 h-8" />
 									</summary>
 									<ul className="p-2 bg-base-100 text-base-content">
 										<li className="text-lg">
@@ -146,7 +142,7 @@ export function Navbar(props) {
 												id="contact_element"
 												className="hover:text-black"
 											>
-												<IconGardenCart className="w-8 h-8"/>
+												<IconGardenCart className="w-8 h-8" />
 												Cart
 											</NavLink>
 										</li>
@@ -164,14 +160,14 @@ export function Navbar(props) {
 						</ul>
 					</div>
 				</div>
-				
+
 				{/* hamburger */}
 				<div className="md:hidden w-fit">
 					<ul className="menu menu-horizontal px-1 w-fit">
 						<li>
 							<details className="w-fit">
 								<summary className="text-md md:text-xl hover:text-black">
-									<Bars3Icon className="w-6 h-6"/>
+									<Bars3Icon className="w-6 h-6" />
 								</summary>
 								<ul className="p-2 bg-base-100 text-base-content z-50 flex flex-wrap flex-col w-fit gap-2">
 									<li className="text-md md:text-xl whitespace-nowrap flex-nowrap w-36">
@@ -180,7 +176,7 @@ export function Navbar(props) {
 											id="contact_element"
 											className="hover:text-black"
 										>
-											<IconHanger2 className="w-6 h-6"/>
+											<IconHanger2 className="w-6 h-6" />
 											Products
 										</NavLink>
 									</li>
@@ -190,34 +186,38 @@ export function Navbar(props) {
 											id="contact_element"
 											className="hover:text-black"
 										>
-											<InformationCircleIcon className="w-6 h-6"/>
+											<InformationCircleIcon className="w-6 h-6" />
 											About Us
 										</NavLink>
 									</li>
 									<li className="menu menu-horizontal px-1 py-0 ">
 										<details>
 											<summary className="text-md md:text-xl hover:text-black">
-												<IconBrush className="w-6 h-6"/>
+												<IconBrush className="w-6 h-6" />
 												Theme
 											</summary>
 											<ul className="p-2 bg-base-100 text-base-content">
 												<li
 													// data-set-theme="cupcake"
 													className="text-md"
-													onClick={() => setTheme("light")}
+													onClick={() =>
+														setTheme("light")
+													}
 												>
 													<a>
-														<SunIcon className="w-6 h-6"/>
+														<SunIcon className="w-6 h-6" />
 														Light
 													</a>
 												</li>
 												<li
 													className="text-md"
 													// data-set-theme="dracula"
-													onClick={() => setTheme("dark")}
+													onClick={() =>
+														setTheme("dark")
+													}
 												>
 													<a>
-														<MoonIcon className="w-6 h-6"/>
+														<MoonIcon className="w-6 h-6" />
 														Dark
 													</a>
 												</li>
@@ -227,7 +227,7 @@ export function Navbar(props) {
 									<li className="menu menu-horizontal px-1 py-0">
 										<details>
 											<summary className="text-md md:text-xl hover:text-black">
-												<IconUserBolt className="w-6 h-6"/>
+												<IconUserBolt className="w-6 h-6" />
 												Account
 											</summary>
 											<ul className="p-2 bg-base-100 text-base-content">
@@ -237,7 +237,7 @@ export function Navbar(props) {
 														id="contact_element"
 														className="hover:text-black"
 													>
-														<IconGardenCart className="w-6 h-6"/>
+														<IconGardenCart className="w-6 h-6" />
 														Cart
 													</NavLink>
 												</li>
@@ -247,11 +247,10 @@ export function Navbar(props) {
 														id="contact_element"
 														className="hover:text-black"
 													>
-														<IconLogout className="w-6 h-6"/>
+														<IconLogout className="w-6 h-6" />
 														Logout
 													</NavLink>
 												</li>
-											
 											</ul>
 										</details>
 									</li>
