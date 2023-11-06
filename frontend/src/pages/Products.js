@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import '../style.css'
 import '../input.css'
 
-const Home = () => {
+const Products = () => {
 	const navigate = useNavigate();
 	const {theme} = React.useContext(ThemeContext);
 	useEffect(() => {
@@ -19,9 +19,9 @@ const Home = () => {
 	});
 	return (
 		<div>
-			<h1 className="bg-background text-text">Home</h1>
+			<h1 className="bg-background text-text">products</h1>
 		</div>
 	)
 }
 
-export default Home
+export default Products
