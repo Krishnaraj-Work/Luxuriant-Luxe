@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#000000" name="theme-color"/>
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/site.webmanifest" rel="manifest">
+    <link color="#5bbad5" href="/safari-pinned-tab.svg" rel="mask-icon">
+    <meta content="#da532c" name="msapplication-TileColor">
+    <meta content="#ffffff" name="theme-color">
     <meta
-      name="description"
-      content="Your Skin, Our Priority"
+            content="Your Skin, Our Priority"
+            name="description"
     />
-    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link href="/logo192.png" rel="apple-touch-icon"/>
 
-    <link rel="manifest" href="/manifest.json" />
-
+    <link href="/manifest.json" rel="manifest"/>
     <title>Luxuriant Luxe</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <button
-            id="dark_button"
-            data-set-theme="MyDark"
-            data-act-class="ACTIVECLASS"
-            class="hidden"
-    ></button>
-    <button
-            id="light_button"
-            data-set-theme="MyLight"
-            data-act-class="ACTIVECLASS"
-            class="hidden"
-    ></button>
-    <script type="module" src="src/main.jsx"></script>
-  </body>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<button
+        class="hidden"
+        data-act-class="ACTIVECLASS"
+        data-set-theme="MyDark"
+        id="dark_button"
+></button>
+<button
+        class="hidden"
+        data-act-class="ACTIVECLASS"
+        data-set-theme="MyLight"
+        id="light_button"
+></button>
+<script src="src/main.jsx" type="module"></script>
+</body>
 </html>
