@@ -4,7 +4,14 @@ import {useNavigate} from "react-router-dom";
 import '../style.css'
 import '../input.css'
 import '../css/Home.css'
-import {IconBrandFacebook, IconBrandInstagram, IconBrandTelegram, IconBrandWhatsapp} from "@tabler/icons-react";
+import {
+	IconBrandFacebook,
+	IconBrandInstagram,
+	IconBrandLinkedin,
+	IconBrandWhatsapp,
+	IconMail,
+	IconPhoneCall
+} from "@tabler/icons-react";
 
 const Home = () => {
 	
@@ -91,21 +98,54 @@ const Home = () => {
 					></div>
 					<p><span className="text-lg">Luxuriant Luxe</span><br/>Your Skin, Our Priority</p>
 					<p>Copyright © 2023 - All right reserved</p>
+					<a className="link">Privacy Policy</a>
 				</aside>
-				<nav>
-					<div className="grid grid-flow-col gap-4">
-						<a>
+				<nav className="">
+					<div className="flex flex-wrap justify-center items-center gap-4 w-2/3 lg:w-fit">
+						<a
+							href="https://wa.me/917666018928?text=Welcome%20to%20Luxuriant%20Luxe!%20How%20can%20we%20help%20you%20today%3F%20"
+						>
 							<IconBrandWhatsapp className="w-8 h-8"/>
 						</a>
-						<a>
+						<a href="https://www.instagram.com/luxuriant_luxe"
+						>
 							<IconBrandInstagram className="w-8 h-8"/>
 						</a>
-						<a>
+						<a href="https://www.facebook.com/profile.php?id=61551508050876"
+						>
 							<IconBrandFacebook className="w-8 h-8"/>
 						</a>
-						<a>
-							<IconBrandTelegram className="w-8 h-8"/>
+						{/*<a*/}
+						{/*	href=""*/}
+						{/*>*/}
+						{/*	<IconBrandTelegram className="w-8 h-8"/>*/}
+						{/*</a>*/}
+						<a
+							href="https://www.linkedin.com/in/luxuriant-luxe-1b852a292"
+						>
+							<IconBrandLinkedin className="w-8 h-8"/>
 						</a>
+						<a
+							onClick={
+								// open mail client
+								() => {
+									window.location.href = "mailto:luxeluxuriant@gmail.com";
+								}
+							}
+						>
+							<IconMail className="w-8 h-8"/>
+						</a>
+						<a
+							onClick={
+								// open phone client
+								() => {
+									window.location.href = "tel:+917666018928";
+								}
+							}
+						>
+							<IconPhoneCall className="w-8 h-8"/>
+						</a>
+					
 					</div>
 				</nav>
 			</footer>
