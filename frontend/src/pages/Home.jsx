@@ -70,30 +70,52 @@ const Home = () => {
 			
 			<section className="flex flex-col p-4 justify-center items-center" id="intro">
 				intro
-				<button className="btn btn-sm btn-primary">
+				<button className="btn btn-sm btn-primary" onClick={
+					() => {
+						navigate("#our_products");
+					}
+				}>
 					View more
 				</button>
 			</section>
 			
 			<section className="flex flex-col p-4 justify-center items-center" id="our_products">
 				our products
-				<button className="btn btn-sm btn-primary">
+				<button className="btn btn-sm btn-primary" onClick={
+					() => {
+						navigate("/products");
+					}
+				}>
 					Visit Store
 				</button>
 			</section>
 			
 			<section className="flex flex-col p-4 justify-center items-center" id="special_about_us">
 				special about us
-				<button className="btn btn-sm btn-primary">
+				<button className="btn btn-sm btn-primary" onClick={
+					() => {
+						navigate("/about");
+					}
+				}>
 					Learn More
 				</button>
 			</section>
 			
 			<section className="flex flex-col p-4 justify-center items-center" id="contact">
-				contact us
+				<div className="text-3xl">
+					Contact
+				</div>
+				
+				<button className="btn btn-sm btn-primary" onClick={
+					() => {
+						navigate("/about");
+					}
+				}>
+					Learn More
+				</button>
 			</section>
 			
-			<footer className="footer footer-center p-10 bg-primary text-primary-content bottom">
+			<footer className="footer footer-center p-10 bg-secondary text-primary-content bottom-0">
 				<aside>
 					<div id="luxelogo" className="w-12 h-12 bg-center snap-center self-center"
 					></div>
