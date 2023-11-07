@@ -12,6 +12,7 @@ import {
 	IconMail,
 	IconPhoneCall
 } from "@tabler/icons-react";
+import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 
 const Home = () => {
 	
@@ -145,7 +146,7 @@ const Home = () => {
 						>
 							<IconPhoneCall className="w-8 h-8"/>
 						</a>
-					
+						<ScrollToTopButton/>
 					</div>
 				</nav>
 			</footer>
