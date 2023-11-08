@@ -6,7 +6,15 @@ import {ThemeContext} from "../context/ThemeContext";
 
 import {Bars3Icon, InformationCircleIcon, MoonIcon, SunIcon,} from "@heroicons/react/24/solid";
 import {NavLink, useNavigate} from "react-router-dom";
-import {IconBrush, IconLogout, IconPackage, IconShoppingCart, IconUserBolt,} from "@tabler/icons-react";
+import {
+	IconBrush,
+	IconLogout,
+	IconMoon,
+	IconPackage,
+	IconShoppingCart,
+	IconSun,
+	IconUserBolt,
+} from "@tabler/icons-react";
 import "../css/Navbar.css";
 
 export function Navbar(props) {
@@ -94,9 +102,28 @@ export function Navbar(props) {
 								
 								</NavLink>
 							</li>
-							<li>
 							
-							</li>
+							{theme === "light" ? (<li className="text-lg md:text-xl">
+								<button
+									className="btn btn-ghost rounded-btn"
+									onClick={() => {
+										setTheme("dark");
+									}}
+								>
+									<IconMoon className="w-8 h-8" onClick={() => {
+										setTheme("dark");
+									}}/>
+								</button>
+							</li>) : (<li className="text-lg md:text-xl">
+								<button
+									className="btn btn-ghost rounded-btn"
+								
+								>
+									<IconSun className="w-8 h-8 text-text hover:text-text" onClick={() => {
+										setTheme("light");
+									}}/>
+								</button>
+							</li>)}
 						</ul>
 					</div>
 					{/* Profile */}

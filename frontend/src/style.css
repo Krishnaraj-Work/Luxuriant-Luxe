@@ -2042,6 +2042,11 @@ body::-webkit-scrollbar-thumb {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.hover\:text-text:hover {
+  --tw-text-opacity: 1;
+  color: rgb(35 16 16 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
