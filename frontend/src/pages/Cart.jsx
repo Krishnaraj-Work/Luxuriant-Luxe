@@ -4,12 +4,12 @@ import {ThemeContext} from "../context/ThemeContext";
 import '../style.css'
 import '../input.css'
 import {
-    IconBrandFacebook,
-    IconBrandInstagram,
-    IconBrandLinkedin,
-    IconBrandWhatsapp,
-    IconMail,
-    IconPhoneCall
+	IconBrandFacebook,
+	IconBrandInstagram,
+	IconBrandLinkedin,
+	IconBrandWhatsapp,
+	IconMail,
+	IconPhoneCall
 } from "@tabler/icons-react";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 
@@ -27,10 +27,33 @@ const Cart = () => {
 	});
 	return (
 		<div>
-			<h1 className="bg-background text-text">Your Cart</h1>
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				Your cart
+			</section>
 			
 			<section className="flex flex-col p-4 justify-center items-center" id="intro">
-				Premium Quality
+				display things they bought
+			</section>
+			
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				invoice.
+				give total amount here.
+			</section>
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				ask for email and phone number
+			</section>
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				<button className="btn btn-sm btn-primary" onClick={
+					() => {
+						console.log("buy not clicked. send some api calls. ")
+					}
+				}>
+					Buy Now.
+				</button>
+			</section>
+			
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				now display qr code for payment. tell them that they will receive a confirmation email shortly.
 			</section>
 			
 			<footer className="footer footer-center p-10 bg-secondary text-primary-content bottom-0">

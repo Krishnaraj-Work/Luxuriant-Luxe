@@ -189,13 +189,13 @@ export function Navbar(props) {
 											About Us
 										</NavLink>
 									</li>
-									<li className="text-lg md:text-xl">
+									<li className="text-md md:text-xl">
 										<NavLink
 											to={"/cart"}
 											id="contact_element"
 											className="hover:text-black"
 										>
-											<IconShoppingCart className="w-8 h-8"/>
+											<IconShoppingCart className="w-6 h-6"/>
 											Cart
 										</NavLink>
 									</li>

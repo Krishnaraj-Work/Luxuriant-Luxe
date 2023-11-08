@@ -27,8 +27,21 @@ const Products = () => {
 	});
 	return (
 		<div>
-			<h1 className="bg-background text-text">products</h1>
-			
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				Our Products lineup
+			</section>
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				some sort of carousal
+			</section>
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				jar 1 pics, description, price, add to cart button
+			</section>
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				jar 2 pics, description, price, add to cart button
+			</section>
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				jar 3 pics, description, price, add to cart button
+			</section>
 			<footer className="footer footer-center p-10 bg-secondary text-primary-content bottom-0">
 				<aside>
 					<div id="luxelogo" className="w-12 h-12 bg-center snap-center self-center"
