@@ -9,10 +9,30 @@
     font-family: 'Lato', serif;
 }
 
-/*@font-face {*/
-/*    font-family: "rocket";*/
-/*    src: url("../src/assets/fonts/Rocketwildness-7BB8R.ttf");*/
-/*}*/
+@font-face {
+    font-family: "MonaLisa";
+    src: url("../assets/fonts/Monalisa.ttf");
+}
+
+@font-face {
+    font-family: "Bulgatti";
+    src: url("../assets/fonts/Bulgatti-xgMV.ttf");
+}
+
+@font-face {
+    font-family: "Hendrickson";
+    src: url("../assets/fonts/Hendrickson-K7GOD.otf");
+}
+
+@font-face {
+    font-family: "RainyWind";
+    src: url("../assets/fonts/Rainy Wind.ttf");
+}
+
+@font-face {
+    font-family: "Storytelling";
+    src: url("../assets/fonts/StorytellingDEMO.ttf");
+}
 
 body {
     margin: 0;
@@ -44,4 +64,24 @@ body::-webkit-scrollbar-thumb {
 
 .enriqueta {
     font-family: 'Enriqueta', serif;
+}
+
+.monalisa {
+    font-family: 'MonaLisa', serif;
+}
+
+.hendrickson {
+    font-family: 'Hendrickson', serif;
+}
+
+.rainywind {
+    font-family: 'RainyWind', serif;
+}
+
+.storytelling {
+    font-family: 'Storytelling', serif;
+}
+
+.bulgatti {
+    font-family: 'Bulgatti', serif;
 }

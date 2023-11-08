@@ -40,8 +40,12 @@ const About = () => {
 				Premium Quality
 			</section>
 			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				Whats in the Box?
+			</section>
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
 				Origins
 			</section>
+			
 			<section className="flex flex-col p-4 justify-center items-center" id="intro">
 				Founders
 			</section>

@@ -1,27 +1,74 @@
 import {createContext, useState} from "react";
 
-export const CartContext = createContext();
+export const CartContext = createContext(undefined);
 
 const CartContextProvider = ({children}) => {
 	// find the theme value from the local storage if it exists.
 	// If it doesn't exist, set it to light.
 	let local_cart = localStorage.getItem("cart");
+	console.log("local cart", local_cart)
+	console.log("local cart type", typeof local_cart)
 	if (local_cart === null) {
-		localStorage.setItem("cart", "[]");
-		local_cart = "[]";
+		localStorage.setItem("cart", "[{product_id: 1, cost: 100, quantity: 1}]");
+		local_cart = "[{product_id: 1, cost: 100, quantity: 1}]";
 	} else {
-		// parse the string to a JSON object
-		local_cart = JSON.parse(local_cart);
+		if (local_cart === "[]") {
+			console.log("local cart is empty")
+			local_cart = [
+				{product_id: 1, cost: 100, quantity: 1},
+				{product_id: 1, cost: 100, quantity: 1},
+				{
+					product_id: 1, cost: 100, quantity: 1
+				}, {product_id: 1, cost: 100, quantity: 1}
+			];
+			console.log("local cart is not empty anymore", local_cart)
+			localStorage.setItem("cart", local_cart);
+		} else {
+			// parse the string to a JSON object
+			try {
+				local_cart = JSON.parse(local_cart);
+			} catch (e) {
+				console.log(e);
+				local_cart = [
+					{product_id: 1, cost: 100, quantity: 1},
+					{product_id: 1, cost: 100, quantity: 1},
+					{
+						product_id: 1, cost: 100, quantity: 1
+					}, {product_id: 1, cost: 100, quantity: 1}
+				];
+			}
+		}
 	}
 	
 	const [cart, setCart] = useState(local_cart);
+	const [productInfo, setProductInfo] = useState([
+		{
+			product_id: 1,
+			product_name: "Blue Jar",
+			product_image: "../../assets/images/blue.png",
+			product_cost: 100
+		},
+		{
+			product_id: 2,
+			product_name: "Purple Jar",
+			product_image: "../../assets/images/blue.png",
+			product_cost: 100
+			
+		},
+		{
+			product_id: 3,
+			product_name: "Yellow Jar",
+			product_image: "../../assets/images/blue.png",
+			product_cost: 100
+		}
+	]);
+	
 	
 	const addToCart = (item) => {
 		// item has the following structure:
 		// {
-		//     id: 1,
-		//     name: "Product 1",
-		//     price: 100,
+		//     product_id: 1,
+		//     cost: 100,
 		//     quantity: 1,
 		// }
 		
@@ -93,9 +140,53 @@ const CartContextProvider = ({children}) => {
 		// set the cart in the local storage
 		localStorage.setItem("cart", JSON.stringify(cart));
 	}
+	
+	const clearCart = () => {
+		// clear the cart
+		cart.splice(0, cart.length);
+		// set the cart in the local storage
+		localStorage.setItem("cart", JSON.stringify(cart));
+	}
+	
+	const getCartTotal = () => {
+		let total = 0;
+		for (let i = 0; i < cart.length; i++) {
+			total += cart[i].price * cart[i].quantity;
+		}
+		return total;
+	}
+	
+	const IncreaseProductQuantity = (product_id) => {
+		for (let i = 0; i < cart.length; i++) {
+			if (cart[i].product_id === product_id) {
+				cart[i].quantity += 1;
+				break;
+			}
+		}
+		// set the cart in the local storage
+		localStorage.setItem("cart", JSON.stringify(cart));
+	}
+	
+	const DecreaseProductQuantity = (product_id) => {
+		for (let i = 0; i < cart.length; i++) {
+			if (cart[i].product_id === product_id) {
+				cart[i].quantity -= 1;
+				if (cart[i].quantity === 0) {
+					// if the quantity is 0, remove the item from the cart
+					cart.splice(i, 1);
+				}
+				break;
+			}
+		}
+		// set the cart in the local storage
+		localStorage.setItem("cart", JSON.stringify(cart));
+	}
+	
 	return (
 		<CartContext.Provider value={{
-			cart, addToCart: addToCart, removeFromCart: removeFromCart
+			cart, addToCart: addToCart, removeFromCart: removeFromCart, productInfo,
+			clearCart: clearCart, getCartTotal: getCartTotal, IncreaseProductQuantity: IncreaseProductQuantity,
+			DecreaseProductQuantity: DecreaseProductQuantity
 		}}>
 			{children}
 		</CartContext.Provider>

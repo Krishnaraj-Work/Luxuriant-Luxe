@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+product table
+product_id (primary), product_name, product_cost
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+customer table
+customer_id, customer_name, customer_address, customer_email (primary), customer_phone
 
-## Available Scripts
+order table
+order_id (primary), order_date, order_cost, payment_status, customer_id
 
-In the project directory, you can run:
+order_details table
+order_id, product_id, quantity, price
 
-### `npm start`
+routes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. /add_order
+   input: eg:
+   {
+   customer_email: "soemthing@something.com",
+   customer_phone: "1234567890",
+   customer_address: "some address",
+   customer_name: "some name",
+   products_ordered: [
+   {
+   product_id: 1,
+   quantity: 2,
+   cost: 100,
+   },
+   {
+   product_id: 2,
+   quantity: 1,
+   cost: 200,
+   }
+   ]
+   order_cost: 400,
+   }
+   output:
+   {
+   order_id: 1,
+   order_cost: 400,
+   payment_status: "pending",
+   message: "success"
+   }
+   else:
+   {
+   message: "failure"
+   }
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. /get_customers
+   input:
+   {
+   password: something
+   }
+   output:
+   [
+   {
+   customer_id: 1,
+   customer_name: "some name",
+   customer_address: "some address",
+   customer_email: "some email",
+   customer_phone: "some phone"
+   },
+   {
+   customer_id: 2,
+   customer_name: "some name",
+   customer_address: "some address",
+   customer_email: "some email",
+   customer_phone: "some phone"
+   },
+   ]
 
-### `npm test`
+3. /get_products
+   input:
+   {
+   password: something
+   }
+   output
+   [
+   {
+   product_id: 1,
+   product_name: "some name",
+   product_cost: 100,
+   },
+   {
+   product_id: 2,
+   product_name: "some name",
+   product_cost: 200,
+   },
+   ]
+4. /get_orders
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   input:
+   {
+   password: something
+   }
 
-### `npm run build`
+   output:
+   [
+   {
+   order_id: 1,
+   order_date: "some date",
+   order_cost: 400,
+   products: [product1, product2]
+   payment_status: "pending",
+   customer_id: 1,
+   customer_name: "some name",
+   customer_address: "some address",
+   customer_email: "some email",
+   customer_phone: "some phone"
+   },
+   {
+   order_id: 2,
+   order_date: "some date",
+   order_cost: 400,
+   products: [product1]
+   payment_status: "pending",
+   customer_id: 2,
+   customer_name: "some name",
+   customer_address: "some address",
+   customer_email: "some email",
+   customer_phone: "some phone"
+   },
+   ]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. /change_payment_status
+   input:
+   {
+   password: something,
+   order_id: 1,
+   payment_status: "paid"
+   }
+   output:
+   {
+   message: "success"
+   }
+   else:
+   {
+   message: "failure"
+   }

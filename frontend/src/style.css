@@ -1502,6 +1502,14 @@ html {
   z-index: 50;
 }
 
+.m-8 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -1528,6 +1536,10 @@ html {
 
 .h-9 {
   height: 2.25rem;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .w-12 {
@@ -1557,6 +1569,10 @@ html {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .transform {
@@ -1627,9 +1643,8 @@ html {
   border-radius: 9999px;
 }
 
-.bg-background {
-  --tw-bg-opacity: 1;
-  background-color: rgb(246 234 234 / var(--tw-bg-opacity));
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .bg-base-100 {
@@ -1650,6 +1665,11 @@ html {
 .bg-text {
   --tw-bg-opacity: 1;
   background-color: rgb(35 16 16 / var(--tw-bg-opacity));
+}
+
+.bg-base-200 {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2) / var(--tw-bg-opacity));
 }
 
 .bg-center {
@@ -1697,6 +1717,31 @@ html {
   line-height: 1.75rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .text-base-content {
   --tw-text-opacity: 1;
   color: hsl(var(--bc) / var(--tw-text-opacity));
@@ -1715,6 +1760,10 @@ html {
 .text-text {
   --tw-text-opacity: 1;
   color: rgb(35 16 16 / var(--tw-text-opacity));
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
@@ -1740,13 +1789,35 @@ html {
   font-family: 'Lato', serif;
 }
 
-/*@font-face {*/
+@font-face {
+  font-family: "MonaLisa";
 
-/*    font-family: "rocket";*/
+  src: url("../assets/fonts/Monalisa.ttf");
+}
 
-/*    src: url("../src/assets/fonts/Rocketwildness-7BB8R.ttf");*/
+@font-face {
+  font-family: "Bulgatti";
 
-/*}*/
+  src: url("../assets/fonts/Bulgatti-xgMV.ttf");
+}
+
+@font-face {
+  font-family: "Hendrickson";
+
+  src: url("../assets/fonts/Hendrickson-K7GOD.otf");
+}
+
+@font-face {
+  font-family: "RainyWind";
+
+  src: url("../assets/fonts/Rainy Wind.ttf");
+}
+
+@font-face {
+  font-family: "Storytelling";
+
+  src: url("../assets/fonts/StorytellingDEMO.ttf");
+}
 
 body {
   margin: 0;
@@ -1782,6 +1853,26 @@ body::-webkit-scrollbar-thumb {
 
 .enriqueta {
   font-family: 'Enriqueta', serif;
+}
+
+.monalisa {
+  font-family: 'MonaLisa', serif;
+}
+
+.hendrickson {
+  font-family: 'Hendrickson', serif;
+}
+
+.rainywind {
+  font-family: 'RainyWind', serif;
+}
+
+.storytelling {
+  font-family: 'Storytelling', serif;
+}
+
+.bulgatti {
+  font-family: 'Bulgatti', serif;
 }
 
 @media (min-width: 768px) {
