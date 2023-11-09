@@ -5,6 +5,7 @@ import '../style.css'
 import '../input.css'
 import '../css/Home.css'
 import {
+	IconArrowUpRight,
 	IconBrandFacebook,
 	IconBrandInstagram,
 	IconBrandLinkedin,
@@ -26,6 +27,25 @@ const Home = () => {
 			const dark_button = document.getElementById("dark_button");
 			dark_button.click();
 		}
+		// let images = [
+		// 	`https://www.rollingstone.com/wp-content/uploads/2023/01/taylor-swift-1975.jpg`,
+		// 	"https://media.cnn.com/api/v1/images/stellar/prod/230318120009-01-taylor-swift-eras-tour-0317.jpg?c=4x3",
+		// 	"https://hips.hearstapps.com/hmg-prod/images/taylor-swift-performs-onstage-as-taylor-swift-dua-lipa-sza-news-photo-1587245373.jpg",
+		// 	"https://d.newsweek.com/en/full/2143867/taylor-swift-performs-stage.jpg",
+		// 	"https://assets.teenvogue.com/photos/641b2a23912ddccbabf80f80/16:9/w_2560%2Cc_limit/GettyImages-1474459622.jpg",
+		// 	"https://people.com/thmb/uuPGxQDpQeh35iKyxDnWuzCuldg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(701x0:703x2)/taylor-swift-performs-nashville-songwriter-awards-1-92122-512828fbf94347b39dfe985a758a4c69.jpg",
+		// 	"https://www.reviewjournal.com/wp-content/uploads/2023/03/17584261_web1_AP23077144507236.jpg?crop=1",
+		// 	"https://www.refinery29.com/images/8833407.jpg",
+		// 	"https://media.pitchfork.com/photos/5f62c6f6b2d5b619cfead49d/1:1/w_1500,h_1500,c_limit/Taylor%20Swift.jpg",
+		// ];
+		// const carousal_div = document.getElementById("car-div");
+		// console.log(carousal_div);
+		// const carousals = carousal_div.querySelectorAll("div");
+		// for (let i = 0; i < carousals.length; i++) {
+		// 	// add images from results.images
+		// 	carousals[i].style.backgroundImage = `url(${images[i]})`;
+		// 	// carousals[i].classList.add("hidden");
+		// }
 	});
 	return (
 		<div className="">
@@ -67,51 +87,92 @@ const Home = () => {
 			{/*	</div>*/}
 			{/*	<div className="untitled__shutters"></div>*/}
 			{/*</div>*/}
-			
+			{/*<div className="container_div">*/}
+			{/*	<div className="carousel" id="car-div">*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*		<div className="carousel__face"><span></span></div>*/}
+			{/*	</div>*/}
+			{/*</div>*/}
 			<section className="flex flex-col p-4 justify-center items-center" id="intro">
-				intro
-				<button className="btn btn-sm btn-primary" onClick={
-					() => {
-						navigate("#our_products");
-					}
-				}>
-					View more
-				</button>
+				
+				
+				{/*<div className="patterns">*/}
+				{/*	<svg width="100%" height="100%">*/}
+				{/*		<defs>*/}
+				{/*			<pattern*/}
+				{/*				id="polka-dots"*/}
+				{/*				x="0"*/}
+				{/*				y="0"*/}
+				{/*				width="100"*/}
+				{/*				height="100"*/}
+				{/*				patternUnits="userSpaceOnUse"*/}
+				{/*			>*/}
+				{/*				<circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>*/}
+				{/*			</pattern>*/}
+				{/*			<style>*/}
+				{/*				@import url("https://fonts.googleapis.com/css? family=Lora:400,400i,700,700i");*/}
+				{/*			</style>*/}
+				{/*		</defs>*/}
+				{/*		*/}
+				{/*		<!-- <rect x="0" y="0" width="100%" height="75%" fill="url(#polka-dots)"> </rect> -->*/}
+				{/*		<text x="50%" y="60%" text-anchor="middle" id="artist-text"></text>*/}
+				{/*	</svg>*/}
+				{/*</div>*/}
+			
 			</section>
 			
-			<section className="flex flex-col p-4 justify-center items-center" id="our_products">
-				our products
-				<button className="btn btn-sm btn-primary" onClick={
+			<section className="flex flex-col p-2 m-8 justify-center items-center " id="intro">
+				<div className="text-4xl bulgatti my-6">
+					Our Products
+				</div>
+				
+				<div className="text-xl mt-4 prata text-left text-center">
+					From <span className="text-accent prata text-xl"> Oily or Dry skin, </span>
+					to <span className="text-accent prata text-xl"> Acne or Pigmentation, </span> We have something special for
+					everyone!
+					<br></br>
+					<br></br>
+					Explore a wide range of products that will help you get rid of all your skin problems and give you a
+					flawless and glowing skin!
+				</div>
+				
+				<button className="btn btn-sm btn-primary my-6" onClick={
 					() => {
 						navigate("/products");
 					}
 				}>
-					Visit Store
+					Explore More! <IconArrowUpRight className="w-4 h-4"/>
 				</button>
 			</section>
 			
-			<section className="flex flex-col p-4 justify-center items-center" id="special_about_us">
-				special about us
-				<button className="btn btn-sm btn-primary" onClick={
-					() => {
-						navigate("/about");
-					}
-				}>
-					Learn More
-				</button>
-			</section>
 			
-			<section className="flex flex-col p-4 justify-center items-center" id="contact">
-				<div className="text-3xl">
-					Contact
+			<section className="flex flex-col p-2 m-8 justify-center items-center " id="intro">
+				<div className="text-4xl bulgatti my-6">
+					Why are we special?
 				</div>
 				
-				<button className="btn btn-sm btn-primary" onClick={
+				<div className="text-xl mt-4 prata text-left text-center">
+					Made with <span className="text-accent prata text-xl"> pure safe-to-use organic </span>
+					ingredients. This formula won't harm
+					your natural skin, it will only help you
+					get rid of those dark spots, tan, open
+					pores, and small bumps and will
+					make your skin outrageously flawless
+					like <span className="text-accent prata text-xl"> you've always dreamt of. </span>
+				</div>
+				<button className="btn btn-sm btn-primary my-6" onClick={
 					() => {
 						navigate("/about");
 					}
 				}>
-					Learn More
+					Learn More <IconArrowUpRight className="w-4 h-4"/>
 				</button>
 			</section>
 			
