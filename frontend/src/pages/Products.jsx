@@ -13,7 +13,6 @@ import {
 	IconShoppingCartPlus
 } from "@tabler/icons-react";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
-import {useNavigate} from "react-router-dom";
 import {CartContext} from "../context/CartContext";
 
 let images = [
@@ -28,17 +27,11 @@ let images = [
 	"https://media.pitchfork.com/photos/5f62c6f6b2d5b619cfead49d/1:1/w_1500,h_1500,c_limit/Taylor%20Swift.jpg",
 ];
 const Products = () => {
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 	const {theme} = React.useContext(ThemeContext);
-	
 	let {
 		addToCart,
-		removeFromCart,
-		clearCart,
 		productInfo,
-		IncreaseProductQuantity,
-		DecreaseProductQuantity,
-		getCart
 	} = React.useContext(CartContext);
 	
 	useEffect(() => {
@@ -85,8 +78,8 @@ const Products = () => {
 					() => {
 						// navigate("/cart");
 						addToCart({
-							product_id: 1,
-							cost: 100,
+							product_id: productInfo[0].product_id,
+							cost: productInfo[0].product_cost,
 							quantity: 1,
 						})
 						// display the alert for 1 second
@@ -120,8 +113,8 @@ const Products = () => {
 					() => {
 						// navigate("/cart");
 						addToCart({
-							product_id: 1,
-							cost: 100,
+							product_id: productInfo[1].product_id,
+							cost: productInfo[1].product_cost,
 							quantity: 1,
 						})
 						const alert = document.getElementById("added_order");
@@ -154,8 +147,8 @@ const Products = () => {
 					() => {
 						// navigate("/cart");
 						addToCart({
-							product_id: 1,
-							cost: 100,
+							product_id: productInfo[2].product_id,
+							cost: productInfo[2].product_cost,
 							quantity: 1,
 						})
 						const alert = document.getElementById("added_order");
@@ -237,6 +230,19 @@ const Products = () => {
 						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
 					</svg>
 					<span>Added to Cart!</span>
+				</div>
+			</div>
+			
+			<div className="flex justify-center toast-center toast">
+				<div
+					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
+					id="added_order_failed">
+					<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
+					     viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					</svg>
+					<span>Could not Add Order!</span>
 				</div>
 			</div>
 		

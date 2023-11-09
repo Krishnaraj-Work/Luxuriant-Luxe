@@ -5,62 +5,59 @@ export const CartContext = createContext(undefined);
 const CartContextProvider = ({children}) => {
 	// find the theme value from the local storage if it exists.
 	// If it doesn't exist, set it to light.
-	let local_cart = localStorage.getItem("cart");
-	console.log("local cart", local_cart)
-	console.log("local cart type", typeof local_cart)
-	if (local_cart === null) {
-		localStorage.setItem("cart", "[{product_id: 1, cost: 100, quantity: 1}]");
-		local_cart = "[{product_id: 1, cost: 100, quantity: 1}]";
-	} else {
-		if (local_cart === "[]") {
-			console.log("local cart is empty")
-			local_cart = [
-				{product_id: 1, cost: 100, quantity: 1},
-				{product_id: 2, cost: 100, quantity: 1},
-				{
-					product_id: 3, cost: 100, quantity: 1
-				}, {product_id: 2, cost: 100, quantity: 1}
-			];
-			console.log("local cart is not empty anymore", local_cart)
-			localStorage.setItem("cart", local_cart);
-		} else {
-			// parse the string to a JSON object
-			try {
-				local_cart = JSON.parse(local_cart);
-			} catch (e) {
-				console.log(e);
-				local_cart = [
-					{product_id: 1, cost: 100, quantity: 1},
-					{product_id: 2, cost: 100, quantity: 3},
-					{
-						product_id: 3, cost: 100, quantity: 2
-					}, {product_id: 1, cost: 100, quantity: 1}
-				];
-			}
-		}
-	}
+	// let local_cart = localStorage.getItem("cart");
+	// console.log("local cart", local_cart)
+	// console.log("local cart type", typeof local_cart)
+	// if (local_cart === null) {
+	// 	localStorage.setItem("cart", "[{product_id: 1, cost: 100, quantity: 1}]");
+	// 	local_cart = "[{product_id: 1, cost: 100, quantity: 1}]";
+	// } else {
+	// 	if (local_cart === "[]") {
+	// 		console.log("local cart is empty")
+	// 		local_cart = [
+	// 			{product_id: "654cd992ae6a271afeed6b4c", cost: 100, quantity: 1},
+	// 			{product_id: "654cd992ae6a271afeed6b4d", cost: 100, quantity: 3},
+	// 			{product_id: "654cd992ae6a271afeed6b4e", cost: 100, quantity: 2}
+	// 		];
+	// 		console.log("local cart is not empty anymore", local_cart)
+	// 		localStorage.setItem("cart", local_cart);
+	// 	} else {
+	// 		// parse the string to a JSON object
+	// 		try {
+	// 			local_cart = JSON.parse(local_cart);
+	// 		} catch (e) {
+	// 			console.log(e);
+	// 			local_cart = [
+	// 				{product_id: "654cd992ae6a271afeed6b4c", cost: 100, quantity: 1},
+	// 				{product_id: "654cd992ae6a271afeed6b4d", cost: 100, quantity: 3},
+	// 				{product_id: "654cd992ae6a271afeed6b4e", cost: 100, quantity: 2}
+	// 			];
+	// 		}
+	// 	}
+	// }
+	//
 	
-	const [cart, setCart] = useState(local_cart);
+	const [cart, setCart] = useState([]);
 	const [productInfo, setProductInfo] = useState([
 		{
-			product_id: 1,
+			product_id: "654cd992ae6a271afeed6b4c",
 			product_name: "Blue Jar",
 			product_image: "../../assets/images/blue.png",
 			product_cost: 100
 		},
 		{
-			product_id: 2,
+			product_id: "654cd992ae6a271afeed6b4e",
+			product_name: "Pink Jar",
+			product_image: "../../assets/images/pink.png",
+			product_cost: 100
+		},
+		{
+			product_id: "654cd992ae6a271afeed6b4d",
 			product_name: "Purple Jar",
 			product_image: "../../assets/images/purple.png",
 			product_cost: 100
 			
 		},
-		{
-			product_id: 3,
-			product_name: "Pink Jar",
-			product_image: "../../assets/images/pink.png",
-			product_cost: 100
-		}
 	]);
 	
 	
@@ -84,7 +81,7 @@ const CartContextProvider = ({children}) => {
 			// if the cart is not empty, check if the item is in the cart
 			let found = false;
 			for (let i = 0; i < cart.length; i++) {
-				if (cart[i].id === item.id) {
+				if (cart[i].product_id === item.product_id) {
 					// if the item is in the cart, increase the quantity
 					cart[i].quantity += 1;
 					found = true;
@@ -121,7 +118,7 @@ const CartContextProvider = ({children}) => {
 			// if the cart is not empty, check if the item is in the cart
 			let found = false;
 			for (let i = 0; i < cart.length; i++) {
-				if (cart[i].id === item.id) {
+				if (cart[i].product_id === item.product_id) {
 					// if the item is in the cart, decrease the quantity
 					cart[i].quantity -= 1;
 					if (cart[i].quantity === 0) {
@@ -151,7 +148,7 @@ const CartContextProvider = ({children}) => {
 	const getCartTotal = () => {
 		let total = 0;
 		for (let i = 0; i < cart.length; i++) {
-			total += cart[i].price * cart[i].quantity;
+			total += cart[i].product_cost * cart[i].quantity;
 		}
 		return total;
 	}

@@ -19,16 +19,20 @@ import {
 	IconShoppingCartHeart
 } from "@tabler/icons-react";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
+import {BaseUrlContext} from "../context/BaseUrlContext";
+import axios from "axios";
 
 const Cart = () => {
 	// const navigate = useNavigate();
 	const {theme} = React.useContext(ThemeContext);
 	const [change, setChange] = React.useState(0);
+	const base_url = React.useContext(BaseUrlContext).baseUrl
 	
 	let {
 		addToCart,
 		removeFromCart,
 		clearCart,
+		getCartTotal,
 		productInfo,
 		IncreaseProductQuantity,
 		DecreaseProductQuantity,
@@ -46,20 +50,97 @@ const Cart = () => {
 			const dark_button = document.getElementById("dark_button");
 			dark_button.click();
 		}
+		
 	}, []);
 	
-	const IncreaseProductQuantityHere = (product_id) => {
-		for (let i = 0; i < cart.length; i++) {
-			if (cart[i].product_id === product_id) {
-				cart[i].quantity += 1;
-				break;
-			}
+	
+	const [customerEmail, setCustomerEmail] = React.useState("");
+	const [customerPhone, setCustomerPhone] = React.useState("");
+	const [customerAddress, setCustomerAddress] = React.useState("");
+	const [customerName, setCustomerName] = React.useState("");
+	
+	const SendOrderToBackend = async () => {
+		
+		// check that none of the things are null
+		// if (customerEmail === "" || customerPhone === "" || customerAddress === "" || customerName === "") {
+		// 	alert("Please fill all the fields!");
+		// 	return;
+		// }
+		
+		// do a regex check for phone number ( +91 1234567890 )
+		// const phone_regex = new RegExp("^\\+91[0-9]{10}$");
+		// if (!phone_regex.test(customerPhone)) {
+		// 	alert("Please enter a valid phone number!");
+		// 	return;
+		// }
+		
+		// do a regex check for email
+		// const email_regex = new RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+		// if (!email_regex.test(customerEmail)) {
+		// 	alert("Please enter a valid email!");
+		// 	return;
+		// }
+		//
+		// // make sure xss scripts are not present in address using regex
+		// const xss_regex = new RegExp("<script>");
+		// if (xss_regex.test(customerAddress)) {
+		// 	alert("Please enter a valid address!");
+		// 	return;
+		// }
+		
+		// print everything
+		console.log(customerEmail);
+		console.log(customerPhone);
+		console.log(customerAddress);
+		console.log(customerName);
+		console.log(getCart());
+		console.log(getCartTotal());
+		
+		
+		const response = await axios
+			.post(
+				`${base_url}/api/v1/Luxuriant/add_order`,
+				{},
+				{
+					params: {
+						customer_email: customerEmail,
+						customer_phone: customerPhone,
+						customer_address: customerAddress,
+						customer_name: customerName,
+						products_ordered: getCart(),
+						order_cost: getCartTotal(),
+					},
+				},
+			)
+			.then((response) => {
+				return response;
+			})
+			.catch((error) => {
+				console.error(error);
+				alert("server not running! a simulated response is being sent");
+				return {
+					data: {
+						message: "simulation",
+					},
+				};
+			});
+		if (response.data.message === "simulation") {
+			alert("Simulation Response, Added order");
+		} else if (response.data.message === "success") {
+			const alert = document.getElementById("added_order");
+			alert.classList.remove("hidden");
+			setTimeout(() => {
+				alert.classList.add("hidden");
+			}, 3000);
+		} else if (response.data.message === "failure") {
+			const alert = document.getElementById("added_order_failed");
+			alert.classList.remove("hidden");
+			setTimeout(() => {
+				alert.classList.add("hidden");
+			}, 3000);
 		}
-		// set the cart in the local storage
-		IncreaseProductQuantity(product_id);
-		setCart(getCart())
-		setChange((change) => change + 1);
 	}
+	
 	
 	return (
 		<div>
@@ -203,14 +284,32 @@ const Cart = () => {
 					within 24 hours.</span>
 					</div>
 					<div className="">
-						
+						<div className="form-control">
+							<label className="label">
+								<span className="label-text">Your Name</span>
+							</label>
+							<label className="input-group">
+								<span><IconMail className="w-4 h-4"/></span>
+								<input type="text" placeholder="John Doe" className="input input-bordered" value={customerName}
+								       onChange={
+									       (event) => {
+										       setCustomerName(event.target.value)
+									       }
+								       }/>
+							</label>
+						</div>
 						<div className="form-control">
 							<label className="label">
 								<span className="label-text">Your Email</span>
 							</label>
 							<label className="input-group">
 								<span><IconMail className="w-4 h-4"/></span>
-								<input type="text" placeholder="info@site.com" className="input input-bordered"/>
+								<input type="text" placeholder="info@site.com" className="input input-bordered" value={customerEmail}
+								       onChange={
+									       (event) => {
+										       setCustomerEmail(event.target.value)
+									       }
+								       }/>
 							</label>
 						</div>
 						<div className="form-control">
@@ -219,7 +318,12 @@ const Cart = () => {
 							</label>
 							<label className="input-group">
 								<span><IconPhoneCall className="w-4 h-4"/> </span>
-								<input type="tel" placeholder="+91 XXXXXXXXXX" className="input input-bordered"/>
+								<input type="tel" placeholder="+91 XXXXXXXXXX" className="input input-bordered" value={customerPhone}
+								       onChange={
+									       (event) => {
+										       setCustomerPhone(event.target.value)
+									       }
+								       }/>
 							</label>
 						</div>
 						<div className="form-control">
@@ -231,7 +335,11 @@ const Cart = () => {
 								{/*<input type="tel" placeholder=""*/}
 								{/*       className="input input-bordered"/>*/}
 								<textarea className="textarea textarea-bordered w-full"
-								          placeholder="Flat, Building, Street, City, State"></textarea>
+								          placeholder="Flat, Building, Street, City, State" value={customerAddress} onChange={
+									(event) => {
+										setCustomerAddress(event.target.value)
+									}
+								}></textarea>
 							</label>
 						</div>
 					</div>
@@ -246,9 +354,11 @@ const Cart = () => {
 							// 	unhide the qr code
 							const qr_code = document.getElementById("qr_payment");
 							qr_code.style.display = "flex";
-							// hide the buy now button
-							const buy_now_button = document.getElementById("buy_now_button");
-							buy_now_button.style.display = "none";
+							SendOrderToBackend();
+							// // hide the buy now button
+							// const buy_now_button = document.getElementById("buy_now_button");
+							// buy_now_button.style.display = "none";
+							// clearCart();
 						}
 					}>
 						Buy Now.

@@ -27,6 +27,7 @@ const Home = () => {
 			const dark_button = document.getElementById("dark_button");
 			dark_button.click();
 		}
+		
 		// let images = [
 		// 	`https://www.rollingstone.com/wp-content/uploads/2023/01/taylor-swift-1975.jpg`,
 		// 	"https://media.cnn.com/api/v1/images/stellar/prod/230318120009-01-taylor-swift-eras-tour-0317.jpg?c=4x3",
