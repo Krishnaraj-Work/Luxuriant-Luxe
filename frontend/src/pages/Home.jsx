@@ -101,7 +101,9 @@ const Home = () => {
 			{/*	</div>*/}
 			{/*</div>*/}
 			<section className="flex flex-col p-4 justify-center items-center" id="intro">
-				
+				<div className="text-6xl bulgatti my-12">
+					Luxuriant Luxe
+				</div>
 				
 				{/*<div className="patterns">*/}
 				{/*	<svg width="100%" height="100%">*/}

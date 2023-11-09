@@ -144,3 +144,10 @@ body::-webkit-scrollbar-thumb {
     background-size: contain;
     background-position: center;
 }
+
+#founder_1 {
+    background-image: url("../assets/images/insta_dark.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
