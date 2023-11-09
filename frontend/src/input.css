@@ -116,3 +116,31 @@ body::-webkit-scrollbar-thumb {
     background-size: contain;
     background-position: center;
 }
+
+#insta_code {
+    background-image: url("../assets/images/insta.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#insta_code_dark {
+    background-image: url("../assets/images/insta_dark.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#founder_1 {
+    background-image: url("../assets/images/insta_dark.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#founder_1 {
+    background-image: url("../assets/images/insta_dark.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

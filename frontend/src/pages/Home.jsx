@@ -117,9 +117,10 @@ const Home = () => {
 			
 			<footer className="footer footer-center p-10 bg-secondary text-primary-content bottom-0">
 				<aside>
-					<div id="luxelogo" className="w-12 h-12 bg-center snap-center self-center"
+					<div id="luxelogo" className="w-20 h-20 bg-center snap-center self-center"
 					></div>
-					<p><span className="text-lg">Luxuriant Luxe</span><br/>Your Skin, Our Priority</p>
+					<p className="dancing text-3xl"><span className="text-2xl prata">Luxuriant Luxe</span><br/>Your Skin Our
+						Priority</p>
 					<p>Copyright © 2023 - All right reserved</p>
 					<a className="link">Privacy Policy</a>
 				</aside>
@@ -172,6 +173,7 @@ const Home = () => {
 					</div>
 				</nav>
 			</footer>
+		
 		</div>
 	)
 }

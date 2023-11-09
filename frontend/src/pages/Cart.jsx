@@ -107,15 +107,13 @@ const Cart = () => {
 											</button>
 										</div>
 									</div>
-									<div className="">
+									<div className="flex justify-center items-center align-middle">
 										<img src={
 											productInfo.filter((product) => {
 													return product.product_id === item.product_id
 												}
 											)[0].product_image
 										} alt={item.name} className="w-32 rounded-2xl"/>
-									
-									
 									</div>
 								</div>
 							)
@@ -263,7 +261,6 @@ const Cart = () => {
 					<span className="text-center">Pay this Number below or Scan the UPI QR Code, and you will receive an email confirming your order within 24 hours. </span>
 				</div>
 				<div className="flex justify-center">
-					
 					<div id="qr_code" className="w-screen h-96 bg-center snap-center self-center">
 					</div>
 				</div>

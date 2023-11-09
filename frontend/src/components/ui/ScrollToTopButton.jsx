@@ -31,7 +31,7 @@ const ScrollToTopButton = () => {
 		<button
 			className={`${
 				isVisible ? 'block' : 'hidden'
-			} fixed bottom-4 right-4 z-10 bg-text text-neutral-content rounded-full p-3 cursor-pointer transition transform ease-in-out duration-300 hover:scale-110`}
+			} fixed bottom-4 right-4 z-10 bg-text text-white rounded-full p-3 cursor-pointer transition transform ease-in-out duration-300 hover:scale-110`}
 			onClick={scrollToTop}
 		>
 			<IconArrowUp/>
