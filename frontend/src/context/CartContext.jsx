@@ -19,7 +19,7 @@ const CartContextProvider = ({children}) => {
 				{product_id: 2, cost: 100, quantity: 1},
 				{
 					product_id: 3, cost: 100, quantity: 1
-				}, {product_id: 4, cost: 100, quantity: 1}
+				}, {product_id: 2, cost: 100, quantity: 1}
 			];
 			console.log("local cart is not empty anymore", local_cart)
 			localStorage.setItem("cart", local_cart);

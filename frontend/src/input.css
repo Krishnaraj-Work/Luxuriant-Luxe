@@ -85,3 +85,34 @@ body::-webkit-scrollbar-thumb {
 .bulgatti {
     font-family: 'Bulgatti', serif;
 }
+
+.prata {
+    font-family: 'Prata', serif;
+}
+
+.arvo {
+    font-family: 'Arvo', serif;
+}
+
+.lato {
+    font-family: 'Lato', serif;
+}
+
+.freehand {
+    font-family: 'Freehand', serif;
+}
+
+.sacramento {
+    font-family: 'Sacramento', serif;
+}
+
+.dancing {
+    font-family: 'Dancing Script', serif;
+}
+
+#qr_code {
+    background-image: url("../assets/images/Removal-68.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
