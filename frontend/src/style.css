@@ -1817,6 +1817,15 @@ html {
   margin-bottom: 1rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
 .block {
   display: block;
 }
@@ -1874,6 +1883,14 @@ html {
   height: 24rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -1925,6 +1942,10 @@ html {
 
 .w-96 {
   width: 24rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .max-w-5xl {
@@ -2132,6 +2153,11 @@ html {
 .text-text {
   --tw-text-opacity: 1;
   color: rgb(35 16 16 / var(--tw-text-opacity));
+}
+
+.text-accent {
+  --tw-text-opacity: 1;
+  color: rgb(162 73 74 / var(--tw-text-opacity));
 }
 
 .filter {

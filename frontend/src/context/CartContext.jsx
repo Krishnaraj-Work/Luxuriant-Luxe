@@ -182,11 +182,15 @@ const CartContextProvider = ({children}) => {
 		localStorage.setItem("cart", JSON.stringify(cart));
 	}
 	
+	const getCart = () => {
+		return cart;
+	}
+	
 	return (
 		<CartContext.Provider value={{
 			cart, addToCart: addToCart, removeFromCart: removeFromCart, productInfo,
 			clearCart: clearCart, getCartTotal: getCartTotal, IncreaseProductQuantity: IncreaseProductQuantity,
-			DecreaseProductQuantity: DecreaseProductQuantity
+			DecreaseProductQuantity: DecreaseProductQuantity, getCart: getCart
 		}}>
 			{children}
 		</CartContext.Provider>
