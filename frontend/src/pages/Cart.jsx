@@ -23,6 +23,7 @@ import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 const Cart = () => {
 	// const navigate = useNavigate();
 	const {theme} = React.useContext(ThemeContext);
+	const [change, setChange] = React.useState(0);
 	
 	let {
 		addToCart,
@@ -57,6 +58,7 @@ const Cart = () => {
 		// set the cart in the local storage
 		IncreaseProductQuantity(product_id);
 		setCart(getCart())
+		setChange((change) => change + 1);
 	}
 	
 	return (
@@ -66,7 +68,8 @@ const Cart = () => {
 			</section>
 			
 			{cart.length !== 0 ? (
-					<section className="flex flex-col justify-center items-center m-4 rounded-2xl gap-6 p-2" id="intro">
+					<section className="flex flex-col justify-center items-center m-4 rounded-2xl gap-6 p-2" id="intro"
+					         key={change}>
 						{cart.map((item) => {
 							return (
 								<div className="flex justify-between items-center gap-4 w-full px-4 pt-4 bg-base-200 rounded-2xl">
@@ -89,12 +92,16 @@ const Cart = () => {
 										
 										<div className="flex flex-row items-center gap-4 my-4 mx-0">
 											<button className="btn btn-sm btn-accent text-accent-content" onClick={() => {
-												IncreaseProductQuantityHere(item.product_id)
+												IncreaseProductQuantity(item.product_id);
+												setCart(getCart())
+												setChange((change) => change + 1);
 											}}>
 												<IconPlus className="w-4 h-4"/>
 											</button>
 											<button className="btn btn-sm btn-accent text-accent-content" onClick={() => {
 												DecreaseProductQuantity(item.product_id)
+												setCart(getCart())
+												setChange((change) => change - 1);
 											}}>
 												<IconMinus className="w-4 h-4"/>
 											</button>
