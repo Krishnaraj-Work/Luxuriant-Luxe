@@ -22,6 +22,11 @@ import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import {BaseUrlContext} from "../context/BaseUrlContext";
 import axios from "axios";
 
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = 'http://localhost:5173';
+axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS';
+axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Content-Type';
+axios.defaults.headers.common['Access-Control-Allow-Credentials'] = 'true';
+
 const Cart = () => {
 	// const navigate = useNavigate();
 	const {theme} = React.useContext(ThemeContext);
@@ -96,7 +101,7 @@ const Cart = () => {
 		console.log(getCart());
 		console.log(getCartTotal());
 		
-		
+		let latest_cart = getCart();
 		const response = await axios
 			.post(
 				`${base_url}/api/v1/Luxuriant/add_order`,
@@ -107,7 +112,7 @@ const Cart = () => {
 						customer_phone: customerPhone,
 						customer_address: customerAddress,
 						customer_name: customerName,
-						products_ordered: getCart(),
+						customer_order: JSON.stringify(latest_cart),
 						order_cost: getCartTotal(),
 					},
 				},

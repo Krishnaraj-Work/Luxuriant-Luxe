@@ -148,7 +148,7 @@ const CartContextProvider = ({children}) => {
 	const getCartTotal = () => {
 		let total = 0;
 		for (let i = 0; i < cart.length; i++) {
-			total += cart[i].product_cost * cart[i].quantity;
+			total += cart[i].cost * cart[i].quantity;
 		}
 		return total;
 	}
