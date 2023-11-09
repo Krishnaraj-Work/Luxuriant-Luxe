@@ -20,6 +20,7 @@ const Cart = () => {
 		cart,
 		addToCart,
 		removeFromCart,
+		clearCart,
 		productInfo,
 		IncreaseProductQuantity,
 		DecreaseProductQuantity
@@ -34,6 +35,7 @@ const Cart = () => {
 			dark_button.click();
 		}
 		console.log("product iamges", productInfo)
+		// clearCart();
 	});
 	return (
 		<div>
@@ -44,7 +46,7 @@ const Cart = () => {
 			<section className="flex flex-col p-4 justify-center items-center bg-base-200 m-4 rounded-2xl" id="intro">
 				{cart.map((item) => {
 					return (
-						<div className="flex flex-row justify-center items-center gap-4">
+						<div className="flex flex-row justify-center items-center gap-4" key={item.product_id}>
 							<div className="flex flex-col justify-center items-center gap-4">
 								<div>
 									{productInfo.filter((product) => {
@@ -66,7 +68,7 @@ const Cart = () => {
 											return product.product_id === item.product_id
 										}
 									)[0].product_image
-								} alt={item.name} className="w-32 h-32 rounded-2xl"/>
+								} alt={item.name} className="w-32 rounded-2xl"/>
 								<div className="flex flex-row justify-center items-center gap-4">
 									<button className="btn btn-sm btn-primary" onClick={() => {
 										addToCart(item)

@@ -16,10 +16,10 @@ const CartContextProvider = ({children}) => {
 			console.log("local cart is empty")
 			local_cart = [
 				{product_id: 1, cost: 100, quantity: 1},
-				{product_id: 1, cost: 100, quantity: 1},
+				{product_id: 2, cost: 100, quantity: 1},
 				{
-					product_id: 1, cost: 100, quantity: 1
-				}, {product_id: 1, cost: 100, quantity: 1}
+					product_id: 3, cost: 100, quantity: 1
+				}, {product_id: 4, cost: 100, quantity: 1}
 			];
 			console.log("local cart is not empty anymore", local_cart)
 			localStorage.setItem("cart", local_cart);
@@ -31,9 +31,9 @@ const CartContextProvider = ({children}) => {
 				console.log(e);
 				local_cart = [
 					{product_id: 1, cost: 100, quantity: 1},
-					{product_id: 1, cost: 100, quantity: 1},
+					{product_id: 2, cost: 100, quantity: 3},
 					{
-						product_id: 1, cost: 100, quantity: 1
+						product_id: 3, cost: 100, quantity: 2
 					}, {product_id: 1, cost: 100, quantity: 1}
 				];
 			}
@@ -51,14 +51,14 @@ const CartContextProvider = ({children}) => {
 		{
 			product_id: 2,
 			product_name: "Purple Jar",
-			product_image: "../../assets/images/blue.png",
+			product_image: "../../assets/images/purple.png",
 			product_cost: 100
 			
 		},
 		{
 			product_id: 3,
-			product_name: "Yellow Jar",
-			product_image: "../../assets/images/blue.png",
+			product_name: "Pink Jar",
+			product_image: "../../assets/images/pink.png",
 			product_cost: 100
 		}
 	]);
