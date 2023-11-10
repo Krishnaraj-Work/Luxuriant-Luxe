@@ -87,34 +87,48 @@ const Cart = () => {
 	const [customerAddress, setCustomerAddress] = React.useState("");
 	const [customerName, setCustomerName] = React.useState("");
 	
-	const SendOrderToBackend = async () => {
-		
+	
+	const checkValidity = () => {
 		// check that none of the things are null
-		// if (customerEmail === "" || customerPhone === "" || customerAddress === "" || customerName === "") {
-		// 	alert("Please fill all the fields!");
-		// 	return;
-		// }
+		if (customerEmail === "" || customerPhone === "" || customerAddress === "" || customerName === "") {
+			alert("Please fill all the fields!");
+			return false;
+		}
 		
 		// do a regex check for phone number ( +91 1234567890 )
-		// const phone_regex = new RegExp("^\\+91[0-9]{10}$");
-		// if (!phone_regex.test(customerPhone)) {
-		// 	alert("Please enter a valid phone number!");
-		// 	return;
-		// }
+		const phone_regex = new RegExp("^\\+91[0-9]{10}$");
+		if (!phone_regex.test(customerPhone)) {
+			alert("Please enter a valid phone number!");
+			return false;
+		}
 		
 		// do a regex check for email
-		// const email_regex = new RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
-		// if (!email_regex.test(customerEmail)) {
-		// 	alert("Please enter a valid email!");
-		// 	return;
-		// }
-		//
+		const email_regex = new RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+		if (!email_regex.test(customerEmail)) {
+			alert("Please enter a valid email!");
+			return false;
+		}
+		
 		// // make sure xss scripts are not present in address using regex
-		// const xss_regex = new RegExp("<script>");
-		// if (xss_regex.test(customerAddress)) {
-		// 	alert("Please enter a valid address!");
-		// 	return;
-		// }
+		const xss_regex = new RegExp("<script>");
+		if (xss_regex.test(customerAddress)) {
+			alert("Please enter a valid address!");
+			return false;
+		}
+		
+		if (xss_regex.test(customerName)) {
+			alert("Please enter a valid address!");
+			return false;
+		}
+		return true
+	}
+	
+	
+	const SendOrderToBackend = async () => {
+		
+		// show the placing order button
+		const placing_order = document.getElementById("placing_order");
+		placing_order.classList.remove("hidden");
 		
 		// print everything
 		console.log(customerEmail);
@@ -155,7 +169,6 @@ const Cart = () => {
 		console.log(response.data)
 		
 		// stop showing the placing order button
-		const placing_order = document.getElementById("placing_order");
 		placing_order.classList.add("hidden");
 		
 		if (response.data.message === "simulation") {
@@ -387,18 +400,21 @@ const Cart = () => {
 					<button className="btn btn-sm btn-primary" id="buy_now_button" onClick={
 						() => {
 							console.log("buy not clicked. send some api calls. ")
-							// 	unhide the qr code
-							const qr_code = document.getElementById("qr_payment");
-							qr_code.style.display = "flex";
-							// SendOrderToBackend();
-							// // hide the buy now button
-							// const buy_now_button = document.getElementById("buy_now_button");
-							// buy_now_button.style.display = "none";
-							// clearCart();
 							
-							// show the placing order button
-							// const placing_order = document.getElementById("placing_order");
-							// placing_order.classList.remove("hidden");
+							if (checkValidity()) {
+								// 	unhide the qr code
+								const qr_code = document.getElementById("qr_payment");
+								qr_code.style.display = "flex";
+								// SendOrderToBackend();
+								// // hide the buy now button
+								// const buy_now_button = document.getElementById("buy_now_button");
+								// buy_now_button.style.display = "none";
+								// clearCart();
+								
+								// show the placing order button
+								// const placing_order = document.getElementById("placing_order");
+								// placing_order.classList.remove("hidden");
+							}
 						}
 					}>
 						Buy Now.
@@ -425,9 +441,7 @@ const Cart = () => {
 							// buy_now_button.style.display = "none";
 							// clearCart();
 							
-							// show the placing order button
-							const placing_order = document.getElementById("placing_order");
-							placing_order.classList.remove("hidden");
+							
 						}
 					}>
 						I Have Paid!
