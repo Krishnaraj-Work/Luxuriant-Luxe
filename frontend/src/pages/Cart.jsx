@@ -166,6 +166,8 @@ const Cart = () => {
 			setTimeout(() => {
 				alert.classList.add("hidden");
 			}, 3000);
+			clearCart();
+			setChange(1)
 		} else if (response.data.message === "Failure") {
 			const alert = document.getElementById("added_order_failed");
 			alert.classList.remove("hidden");
@@ -388,6 +390,35 @@ const Cart = () => {
 							// 	unhide the qr code
 							const qr_code = document.getElementById("qr_payment");
 							qr_code.style.display = "flex";
+							// SendOrderToBackend();
+							// // hide the buy now button
+							// const buy_now_button = document.getElementById("buy_now_button");
+							// buy_now_button.style.display = "none";
+							// clearCart();
+							
+							// show the placing order button
+							// const placing_order = document.getElementById("placing_order");
+							// placing_order.classList.remove("hidden");
+						}
+					}>
+						Buy Now.
+					</button>
+				</section>) : <div></div>}
+			{cart.length !== 0 ? (
+				<section className="flex flex-col items-center p-4 justify-center items-center hidden" id="qr_payment">
+					<div className="alert alert-success max-w-5xl text-center flex flex-col justify-center">
+						<IconDiscountCheckFilled className="w-8 h-8"/>
+						<span className="text-center">Pay this Number below or Scan the UPI QR Code, and you will receive an email confirming your order within 24 hours. </span>
+					</div>
+					<div className="flex justify-center">
+						<div id="qr_code" className="w-screen h-96 bg-center snap-center self-center">
+						</div>
+					</div>
+					
+					<button className="btn btn-sm btn-primary" id="buy_now_button" onClick={
+						() => {
+							console.log("i have paid clicked. send some api calls. ")
+							
 							SendOrderToBackend();
 							// // hide the buy now button
 							// const buy_now_button = document.getElementById("buy_now_button");
@@ -399,21 +430,9 @@ const Cart = () => {
 							placing_order.classList.remove("hidden");
 						}
 					}>
-						Buy Now.
+						I Have Paid!
 					</button>
 				</section>) : <div></div>}
-			
-			<section className="flex flex-col items-center p-4 justify-center items-center hidden" id="qr_payment">
-				<div className="alert alert-success max-w-5xl text-center flex flex-col justify-center">
-					<IconDiscountCheckFilled className="w-8 h-8"/>
-					<span className="text-center">Pay this Number below or Scan the UPI QR Code, and you will receive an email confirming your order within 24 hours. </span>
-				</div>
-				<div className="flex justify-center">
-					<div id="qr_code" className="w-screen h-96 bg-center snap-center self-center">
-					</div>
-				</div>
-			
-			</section>
 			
 			<footer className="footer footer-center p-10 bg-secondary text-primary-content bottom-0">
 				<aside>
