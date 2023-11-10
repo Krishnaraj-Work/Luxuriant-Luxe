@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { BaseUrlContext } from "../context/BaseUrlContext";
+import { UserContext } from "../context/UserContext";
+
 import "../style.css";
 import "../input.css";
 import { NavLink } from "react-router-dom";
@@ -9,7 +11,7 @@ import axios from "axios";
 
 const Login = (props) => {
 	const base_url = React.useContext(BaseUrlContext).baseUrl;
-
+	const { userPassword, setUserPassword } = React.useContext(UserContext);
 	const comment = document.getElementById("comment");
 	const [password, setPassword] = useState("");
 	const [passwordError, setPasswordError] = useState("");
@@ -24,7 +26,7 @@ const Login = (props) => {
 	async function handleClick() {
 		const response = await axios
 			.post(
-				`${base_url}/auth`,
+				`${base_url}/api/v1/Luxuriant/check_password`,
 				{ password },
 				{
 					params: {},
@@ -43,10 +45,15 @@ const Login = (props) => {
 				};
 				return response;
 			});
-		if (response.data.pass_correct === true) {
+		// stop showing the svg spinner in login button
+		const login_button = document.getElementById("login_button");
+		login_button.innerHTML = `Log In`;
+		if (response.data.message === "Success") {
+			setUserPassword(password);
 			redirect();
 		} else if (response.data.message === "simulation") {
-			redirect();
+			console.log("This is a simulation");
+			// redirect();
 		} else {
 			comment.innerHTML = "Incorrect Password";
 		}
@@ -63,6 +70,10 @@ const Login = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		// show the svg spinner in login button while the password is being validated
+		const login_button = document.getElementById("login_button");
+		login_button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><path fill="currentColor" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z"><animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg>`;
 
 		if (!validatePassword(password)) {
 			setPasswordError("Enter Correct Password");
@@ -162,6 +173,7 @@ const Login = (props) => {
 											className="bg-primary p-4 w-full rounded-full tracking-wide
                           font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-primary-focus text-primary-content
                           shadow-lg text-xl cursor-pointer"
+											id="login_button"
 											type="submit"
 										>
 											Log In
