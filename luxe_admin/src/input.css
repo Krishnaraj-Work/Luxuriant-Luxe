@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', serif;
+}
+
+@font-face {
+    font-family: "MonaLisa";
+    src: url("../assets/fonts/Monalisa.ttf");
+}
+
+@font-face {
+    font-family: "Bulgatti";
+    src: url("../assets/fonts/Bulgatti-xgMV.ttf");
+}
+
+@font-face {
+    font-family: "Hendrickson";
+    src: url("../assets/fonts/Hendrickson-K7GOD.otf");
+}
+
+@font-face {
+    font-family: "RainyWind";
+    src: url("../assets/fonts/Rainy Wind.ttf");
+}
+
+@font-face {
+    font-family: "Storytelling";
+    src: url("../assets/fonts/StorytellingDEMO.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body::-webkit-scrollbar {
+    width: 6px; /* width of the entire scrollbar */
+    display: none;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #231010; /* color of the scroll thumb */
+    border-radius: 4rem; /* roundness of the scroll thumb */
+}
+
+.enriqueta {
+    font-family: 'Enriqueta', serif;
+}
+
+.monalisa {
+    font-family: 'MonaLisa', serif;
+}
+
+.hendrickson {
+    font-family: 'Hendrickson', serif;
+}
+
+.rainywind {
+    font-family: 'RainyWind', serif;
+}
+
+.storytelling {
+    font-family: 'Storytelling', serif;
+}
+
+.bulgatti {
+    font-family: 'Bulgatti', serif;
+}
+
+.prata {
+    font-family: 'Prata', serif;
+}
+
+.arvo {
+    font-family: 'Arvo', serif;
+}
+
+.lato {
+    font-family: 'Lato', serif;
+}
+
+.freehand {
+    font-family: 'Freehand', serif;
+}
+
+.sacramento {
+    font-family: 'Sacramento', serif;
+}
+
+.dancing {
+    font-family: 'Dancing Script', serif;
+}

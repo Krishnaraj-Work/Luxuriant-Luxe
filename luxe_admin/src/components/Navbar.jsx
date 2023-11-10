@@ -5,15 +5,15 @@ import {themeChange} from "theme-change";
 import {ThemeContext} from "../context/ThemeContext";
 import {NavLink, useNavigate} from "react-router-dom";
 import {
+	IconBoxSeam,
 	IconBrush,
-	IconInfoCircle,
 	IconLogout,
 	IconMenu2,
 	IconMoon,
-	IconPackage,
 	IconShoppingCart,
 	IconSun,
 	IconUserBolt,
+	IconUsers,
 } from "@tabler/icons-react";
 import "../css/Navbar.css";
 
@@ -54,8 +54,9 @@ export function Navbar(props) {
 							id="luxelogo"
 							className="w-9 h-9 bg-center snap-center self-center"
 						></div>
-						<div className="md:btn md:btn-ghost md:normal-case md:text-lg md:text-xl hidden md:display">
-							Luxuriant Luxe
+						<div
+							className="md:btn md:btn-ghost md:normal-case md:text-lg md:text-xl hidden md:display text-primary-content">
+							LL Admin
 						</div>
 					</NavLink>
 				</div>
@@ -65,24 +66,35 @@ export function Navbar(props) {
 			   md:flex"
 				>
 					<ul className="menu menu-horizontal px-1">
-						<li className="text-lg md:text-xl">
+						<li className="text-md md:text-xl">
+							<NavLink
+								to={"/orders"}
+								id="contact_element"
+								className="hover:text-black"
+							>
+								<IconShoppingCart className="w-6 h-6"/>
+								Orders
+							</NavLink>
+						</li>
+						
+						<li className="text-md md:text-xl">
+							<NavLink
+								to={"/customers"}
+								id="contact_element"
+								className="hover:text-black"
+							>
+								<IconUsers className="w-6 h-6"/>
+								Customers
+							</NavLink>
+						</li>
+						<li className="text-md md:text-xl whitespace-nowrap flex-nowrap w-36">
 							<NavLink
 								to={"/products"}
 								id="contact_element"
 								className="hover:text-black"
 							>
-								<IconPackage className="w-8 h-8"/>
-								Our Products
-							</NavLink>
-						</li>
-						<li className="text-lg md:text-xl">
-							<NavLink
-								to={"/about"}
-								id="contact_element"
-								className="hover:text-black"
-							>
-								<IconInfoCircle className="w-8 h-8"/>
-								About Us
+								<IconBoxSeam className="w-6 h-6"/>
+								Products
 							</NavLink>
 						</li>
 					
@@ -169,34 +181,35 @@ export function Navbar(props) {
 									<IconMenu2 className="w-6 h-6"/>
 								</summary>
 								<ul className="p-2 bg-base-100 text-base-content z-50 flex flex-wrap flex-col w-fit gap-2">
+									<li className="text-md md:text-xl">
+										<NavLink
+											to={"/orders"}
+											id="contact_element"
+											className="hover:text-black"
+										>
+											<IconShoppingCart className="w-6 h-6"/>
+											Orders
+										</NavLink>
+									</li>
+									
+									<li className="text-md md:text-xl">
+										<NavLink
+											to={"/customers"}
+											id="contact_element"
+											className="hover:text-black"
+										>
+											<IconUsers className="w-6 h-6"/>
+											Customers
+										</NavLink>
+									</li>
 									<li className="text-md md:text-xl whitespace-nowrap flex-nowrap w-36">
 										<NavLink
 											to={"/products"}
 											id="contact_element"
 											className="hover:text-black"
 										>
-											<IconPackage className="w-6 h-6"/>
+											<IconBoxSeam className="w-6 h-6"/>
 											Products
-										</NavLink>
-									</li>
-									<li className="text-md md:text-xl">
-										<NavLink
-											to={"/about"}
-											id="contact_element"
-											className="hover:text-black"
-										>
-											<IconInfoCircle className="w-6 h-6"/>
-											About Us
-										</NavLink>
-									</li>
-									<li className="text-md md:text-xl">
-										<NavLink
-											to={"/cart"}
-											id="contact_element"
-											className="hover:text-black"
-										>
-											<IconShoppingCart className="w-6 h-6"/>
-											Cart
 										</NavLink>
 									</li>
 									<li className="menu menu-horizontal px-1 py-0 ">
