@@ -190,7 +190,6 @@ const Cart = () => {
 		}
 	}
 	
-	
 	return (
 		<div>
 			<section className="flex flex-col p-4 m-8 justify-center items-center text-5xl bulgatti" id="intro">
