@@ -20,12 +20,12 @@ import {
 } from "@tabler/icons-react";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import {BaseUrlContext} from "../context/BaseUrlContext";
-import axios from "axios";
 import blue_image from "../../assets/images/blue.png"
 import pink_image from "../../assets/images/pink.png"
 import purple_image from "../../assets/images/purple.png"
 
 
+import axios from "axios";
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = 'http://localhost:5173';
 axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS';
 axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Content-Type';

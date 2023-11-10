@@ -4,6 +4,12 @@ import { ThemeContext } from "../context/ThemeContext";
 import { UserContext } from "../context/UserContext";
 import { BaseUrlContext } from "../context/BaseUrlContext";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
+import axios from "axios";
+axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
+axios.defaults.headers.common["Access-Control-Allow-Methods"] =
+	"GET, POST, OPTIONS";
+axios.defaults.headers.common["Access-Control-Allow-Headers"] = "Content-Type";
+axios.defaults.headers.common["Access-Control-Allow-Credentials"] = "true";
 
 const Customers = () => {
 	const { theme } = React.useContext(ThemeContext);
@@ -19,16 +25,28 @@ const Customers = () => {
 
 	const get_customer_details = async () => {
 		// get customer details by sending the password to the server as part of the body of the request
-		// include allow cors headers.
-		const response = await fetch("http://localhost:5000/api/customers", {
-			method: "POST",
-			headers: {
-				"Content-type": "application/json",
-				"Access-Control-Allow-Origin": "*",
-			},
-			body: userPassword,
-		});
-		const data = await response.json();
+		// include allow cors headers using axios
+
+		const data = {
+			password: userPassword,
+		};
+
+		const response = await axios
+			.post(`${base_url}/api/v1/Luxuriant/get_customers`, data, {})
+			.then((response) => {
+				return response;
+			})
+			.catch((error) => {
+				console.error(error);
+				alert("server not running! a simulated response is being sent");
+				return {
+					data: {
+						message: "simulation",
+					},
+				};
+			});
+		console.log(response.data);
+
 		setCustomerDetails(data);
 	};
 
