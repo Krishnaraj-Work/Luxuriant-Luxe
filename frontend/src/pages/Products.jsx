@@ -220,6 +220,7 @@ const Products = () => {
 					</div>
 				</nav>
 			</footer>
+			
 			<div className="flex justify-center toast-center toast">
 				<div
 					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
@@ -242,10 +243,9 @@ const Products = () => {
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
 						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
 					</svg>
-					<span>Could not Add Order!</span>
+					<span>Could not Add Order! Please Contact Us!</span>
 				</div>
 			</div>
-		
 		</div>
 	)
 }

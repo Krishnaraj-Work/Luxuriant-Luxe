@@ -129,15 +129,16 @@ const Cart = () => {
 					},
 				};
 			});
+		console.log(response.data)
 		if (response.data.message === "simulation") {
 			alert("Simulation Response, Added order");
-		} else if (response.data.message === "success") {
+		} else if (response.data.message === "Success") {
 			const alert = document.getElementById("added_order");
 			alert.classList.remove("hidden");
 			setTimeout(() => {
 				alert.classList.add("hidden");
 			}, 3000);
-		} else if (response.data.message === "failure") {
+		} else if (response.data.message === "Failure") {
 			const alert = document.getElementById("added_order_failed");
 			alert.classList.remove("hidden");
 			setTimeout(() => {
@@ -440,6 +441,32 @@ const Cart = () => {
 					</div>
 				</nav>
 			</footer>
+			
+			<div className="flex justify-center toast-center toast">
+				<div
+					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
+					id="added_order">
+					<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
+					     viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					</svg>
+					<span>Added to Cart!</span>
+				</div>
+			</div>
+			
+			<div className="flex justify-center toast-center toast">
+				<div
+					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
+					id="added_order_failed">
+					<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
+					     viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					</svg>
+					<span>Could not Add Order! Please Contact Us!</span>
+				</div>
+			</div>
 		</div>
 	)
 }

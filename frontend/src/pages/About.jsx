@@ -80,7 +80,7 @@ const About = () => {
 				</div>
 				<div className="text-xl mt-4 prata text-left p-4 text-center">
 					
-					We are from MITWPU, Pune. We are a group of students who are passionate about skincare and beauty. We strive
+					We are from Pune. We are a group of students who are passionate about skincare and beauty. We strive
 					to bring you the best products at the best prices!
 				</div>
 			</section>
@@ -108,12 +108,7 @@ const About = () => {
 						1st century and made it time
 						travel to 2023 for you.
 						</span>
-						
-						<br></br>
-						<br></br>
-						We are from MITWPU, Pune. We are a group of students who are passionate about
-						skincare and beauty. We strive
-						to bring you the best products at the best prices!
+					
 					</div>
 				
 				</div>
