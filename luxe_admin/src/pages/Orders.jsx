@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
-const Products = () => {
+const Orders = () => {
 	const { theme } = React.useContext(ThemeContext);
 
 	useEffect(() => {
@@ -16,9 +16,9 @@ const Products = () => {
 	});
 	return (
 		<div>
-			<h1>Products</h1>
+			<h1>Orders</h1>
 		</div>
 	);
 };
 
-export default Products;
+export default Orders;

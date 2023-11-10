@@ -31,8 +31,8 @@ const Home = () => {
 		<div className="">
 			
 			<section className="flex flex-col p-4 justify-center items-center" id="intro">
-				<div className="text-6xl bulgatti my-12">
-					Luxuriant Luxe
+				<div className="text-3xl prata my-12">
+					Welcome to LL Admin
 				</div>
 			
 			</section>
