@@ -146,7 +146,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #blue_1 {
-    background-image: url("../assets/images/insta_dark.jpeg");
+    background-image: url("../assets/images/blue.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -188,7 +188,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #purple_1 {
-    background-image: url("../assets/images/insta_dark.jpeg");
+    background-image: url("../assets/images/purple.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -230,7 +230,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #pink_1 {
-    background-image: url("../assets/images/insta_dark.jpeg");
+    background-image: url("../assets/images/pink.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
