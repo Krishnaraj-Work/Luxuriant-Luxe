@@ -60,7 +60,7 @@ const Products = () => {
 					Oily Skin
 				</div>
 				<div className="flex justify-center mt-4">
-					<div id={theme === "light" ? "insta_code" : "insta_code_dark"}
+					<div id={theme === "light" ? "blue_1" : "blue_1"}
 					     className="w-screen h-64 bg-center snap-center self-center my-4">
 					</div>
 				</div>
@@ -99,7 +99,7 @@ const Products = () => {
 					Dry Skin
 				</div>
 				<div className="flex justify-center mt-4">
-					<div id={theme === "light" ? "insta_code" : "insta_code_dark"}
+					<div id={theme === "light" ? "pink_1" : "pink_1"}
 					     className="w-screen h-64 bg-center snap-center self-center my-4">
 					</div>
 				</div>
@@ -133,7 +133,7 @@ const Products = () => {
 					Normal Skin
 				</div>
 				<div className="flex justify-center mt-4">
-					<div id={theme === "light" ? "insta_code" : "insta_code_dark"}
+					<div id={theme === "light" ? "purple_1" : "purple_1"}
 					     className="w-screen h-64 bg-center snap-center self-center my-4">
 					</div>
 				</div>

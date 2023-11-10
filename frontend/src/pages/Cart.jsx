@@ -21,6 +21,10 @@ import {
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import {BaseUrlContext} from "../context/BaseUrlContext";
 import axios from "axios";
+import blue_image from "../../assets/images/blue.png"
+import pink_image from "../../assets/images/pink.png"
+import purple_image from "../../assets/images/purple.png"
+
 
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = 'http://localhost:5173';
 axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS';
@@ -43,6 +47,25 @@ const Cart = () => {
 		DecreaseProductQuantity,
 		getCart
 	} = React.useContext(CartContext);
+	
+	// const blue_image = require(productInfo[0].product_image)
+	// const pink_image = require(productInfo[1].product_image)
+	// const purple_image = require(productInfo[2].product_image)
+	
+	const images = [
+		{
+			product_id: "654cd992ae6a271afeed6b4c",
+			product_image: blue_image
+		},
+		{
+			product_id: "654cd992ae6a271afeed6b4e",
+			product_image: pink_image
+		},
+		{
+			product_id: "654cd992ae6a271afeed6b4d",
+			product_image: purple_image
+		}
+	]
 	
 	const [cart, setCart] = React.useState([]);
 	
@@ -130,6 +153,11 @@ const Cart = () => {
 				};
 			});
 		console.log(response.data)
+		
+		// stop showing the placing order button
+		const placing_order = document.getElementById("placing_order");
+		placing_order.classList.add("hidden");
+		
 		if (response.data.message === "simulation") {
 			alert("Simulation Response, Added order");
 		} else if (response.data.message === "Success") {
@@ -196,7 +224,7 @@ const Cart = () => {
 									</div>
 									<div className="flex justify-center items-center align-middle">
 										<img src={
-											productInfo.filter((product) => {
+											images.filter((product) => {
 													return product.product_id === item.product_id
 												}
 											)[0].product_image
@@ -365,6 +393,10 @@ const Cart = () => {
 							// const buy_now_button = document.getElementById("buy_now_button");
 							// buy_now_button.style.display = "none";
 							// clearCart();
+							
+							// show the placing order button
+							const placing_order = document.getElementById("placing_order");
+							placing_order.classList.remove("hidden");
 						}
 					}>
 						Buy Now.
@@ -445,13 +477,33 @@ const Cart = () => {
 			<div className="flex justify-center toast-center toast">
 				<div
 					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
+					id="placing_order">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+						<path fill="currentColor"
+						      d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/>
+						<rect width="2" height="7" x="11" y="6" fill="currentColor" rx="1">
+							<animateTransform attributeName="transform" dur="9s" repeatCount="indefinite" type="rotate"
+							                  values="0 12 12;360 12 12"/>
+						</rect>
+						<rect width="2" height="9" x="11" y="11" fill="currentColor" rx="1">
+							<animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate"
+							                  values="0 12 12;360 12 12"/>
+						</rect>
+					</svg>
+					<span>Placing Your Order!</span>
+				</div>
+			</div>
+			
+			<div className="flex justify-center toast-center toast">
+				<div
+					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
 					id="added_order">
 					<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
 					     viewBox="0 0 24 24">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
 						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
 					</svg>
-					<span>Added to Cart!</span>
+					<span>Order Placed Successfully!</span>
 				</div>
 			</div>
 			
@@ -464,7 +516,7 @@ const Cart = () => {
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
 						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
 					</svg>
-					<span>Could not Add Order! Please Contact Us!</span>
+					<span>Could not Place Order! Please Contact Us!</span>
 				</div>
 			</div>
 		</div>
