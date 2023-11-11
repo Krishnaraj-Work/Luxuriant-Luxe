@@ -5,6 +5,8 @@ import {BaseUrlContext} from "../context/BaseUrlContext";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import axios from "axios";
 import {DBInfoContext} from "../context/DBInfoContext.jsx";
+import {IconSearch} from "@tabler/icons-react";
+
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.common["Access-Control-Allow-Methods"] =
@@ -18,6 +20,8 @@ const Customers = () => {
 	const base_url = React.useContext(BaseUrlContext).baseUrl;
 	const [customerDetails, setCustomerDetails] = React.useState(null);
 	const [apiCallMade, setApiCallMade] = useState(false);
+	const [searchTerm, setSearchTerm] = useState("");
+	
 	let iSentOnce = false;
 	
 	const {
@@ -54,6 +58,45 @@ const Customers = () => {
 		}
 	}, []);
 	
+	function filtered_customer_details(customerDetails) {
+		return customerDetails.filter((customer) => {
+			if (searchTerm === "") {
+				return customer;
+			} else if (
+				customer.customer_name ? customer.customer_name.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return customer;
+			} else if (
+				customer.customer_email ? customer.customer_email.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return customer;
+			} else if (
+				customer.customer_address ? customer.customer_address.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return customer;
+			} else if (
+				customer.customer_phone ? customer.customer_phone.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return customer;
+			} else if (
+				customer._id
+					.toLowerCase()
+					.includes(searchTerm.toLowerCase())
+			) {
+				return customer;
+			}
+		});
+		
+	}
+	
 	return (
 		<div className="min-h-screen">
 			<div className="flex justify-center m-4">
@@ -61,7 +104,24 @@ const Customers = () => {
 			</div>
 			
 			{/* Add Search bar */}
-			
+			<div className="flex justify-center">
+				<div className="flex justify-center items-center">
+					<div className="flex items-center border-2 border-gray-300 rounded-md shadow-sm">
+						<input
+							type="text"
+							name="search"
+							id="search"
+							className="w-full rounded-md p-2 bg-transparent focus:outline-none"
+							placeholder="Search"
+							value={searchTerm}
+							onChange={(e) => {
+								setSearchTerm(e.target.value);
+							}}
+						/>
+						<IconSearch className="w-8 h-8"/>
+					</div>
+				</div>
+			</div>
 			
 			<div className="overflow-x-auto p-8">
 				{customerDetails === null ||
@@ -95,7 +155,7 @@ const Customers = () => {
 						</thead>
 						<tbody>
 						{
-							customerDetails.map((customer, index) => {
+							filtered_customer_details(customerDetails).map((customer, index) => {
 								return (
 									<tr key={index} className="hover border-accent border-t-1">
 										<td>{index + 1}</td>

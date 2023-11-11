@@ -142,6 +142,11 @@ const Login = (props) => {
 		console.log("redirecting, after downloading all data");
 		props.setisNavbarPresent(true);
 		navigate("/orders");
+		
+		
+		// stop showing the svg spinner in login button
+		const login_button = document.getElementById("login_button");
+		login_button.innerHTML = `Log In`;
 	}
 	
 	async function handleClick() {
@@ -166,9 +171,7 @@ const Login = (props) => {
 				};
 			});
 		console.log(response.data);
-		// stop showing the svg spinner in login button
-		const login_button = document.getElementById("login_button");
-		login_button.innerHTML = `Log In`;
+		
 		if (response.data.message === "Success") {
 			setUserPassword(password);
 			await redirect();
