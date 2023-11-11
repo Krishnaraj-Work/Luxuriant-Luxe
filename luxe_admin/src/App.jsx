@@ -3,16 +3,16 @@
 // made for luxuriant luxe.
 
 // react imports
-import { Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {Route, Routes} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 // import components
-import { Navbar } from "./components/Navbar";
+import {Navbar} from "./components/Navbar";
 
 // import contexts
 import ThemeContextProvider from "./context/ThemeContext";
-import CartContextProvider from "./context/CartContext";
-import { UserContextProvider } from "./context/UserContext.jsx";
+import {DBInfoContextProvider} from "./context/DBInfoContext";
+import {UserContextProvider} from "./context/UserContext.jsx";
 // import pages
 import Login from "./pages/Login";
 import Customers from "./pages/Customers";
@@ -21,7 +21,7 @@ import Products from "./pages/Products";
 
 function App() {
 	const [isNavbarPresent, setisNavbarPresent] = useState(true);
-
+	
 	useEffect(() => {
 		if (window.location.pathname === "/") {
 			setisNavbarPresent(false);
@@ -29,14 +29,14 @@ function App() {
 			setisNavbarPresent(true);
 		}
 	}, [isNavbarPresent]);
-
+	
 	return (
 		<ThemeContextProvider>
-			<CartContextProvider>
+			<DBInfoContextProvider>
 				<UserContextProvider>
 					<div className="">
 						{isNavbarPresent ? (
-							<Navbar setisNavbarPresent={setisNavbarPresent} />
+							<Navbar setisNavbarPresent={setisNavbarPresent}/>
 						) : null}
 						<Routes>
 							<Route
@@ -47,13 +47,13 @@ function App() {
 									/>
 								}
 							/>{" "}
-							<Route path="/customers" element={<Customers />} />
-							<Route path="/orders" element={<Orders />} />
-							<Route path="/products" element={<Products />} />
+							<Route path="/customers" element={<Customers/>}/>
+							<Route path="/orders" element={<Orders/>}/>
+							<Route path="/products" element={<Products/>}/>
 						</Routes>
 					</div>
 				</UserContextProvider>
-			</CartContextProvider>
+			</DBInfoContextProvider>
 		</ThemeContextProvider>
 	);
 }

@@ -3,6 +3,8 @@ import {ThemeContext} from "../context/ThemeContext";
 import {UserContext} from "../context/UserContext";
 import {BaseUrlContext} from "../context/BaseUrlContext";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
+import {DBInfoContext} from "../context/DBInfoContext.jsx";
+
 import axios from "axios";
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
@@ -17,6 +19,10 @@ const Orders = () => {
 	const base_url = React.useContext(BaseUrlContext).baseUrl;
 	const [orderDetails, setOrderDetails] = React.useState(null);
 	const [apiCallMade, setApiCallMade] = useState(false);
+	const {
+		orderInfo, setOrderInfo
+	} = React.useContext(DBInfoContext);
+	
 	let iSentOnce = false;
 	
 	// how orders are returned from the server, in a list of objects
@@ -40,42 +46,12 @@ const Orders = () => {
 	// 	}
 	// ]
 	// }
-	const get_order_details = async () => {
+	const get_order_details = () => {
 		// get customer details by sending the password to the server as part of the body of the request
 		// include allow cors headers using axios
-		const data = {
-			password: userPassword,
-		};
-		
-		const response = await axios
-			.post(`${base_url}/api/v1/Luxuriant/get_orders`, data, {
-				headers: {
-					"Content-Type": "application/json",
-				},
-			})
-			.then((response) => {
-				return response;
-			})
-			.catch((error) => {
-				console.error(error);
-				alert("server not running! a simulated response is being sent");
-				return {
-					data: {
-						message: "simulation",
-					},
-				};
-			});
-		console.log(response.data);
-		iSentOnce = true;
-		if (response.data.message === "simulation") {
-			setOrderDetails([]);
-		} else if (response.data.message === "Success") {
-			const data = response.data.orders;
-			console.log(data);
-			setOrderDetails(data);
-		} else if (response.data.message === "No Orders found") {
-			setOrderDetails([]);
-		}
+		setOrderDetails(orderInfo)
+		console.log("order details")
+		console.log(orderInfo)
 	};
 	
 	useEffect(() => {

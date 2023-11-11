@@ -4,6 +4,7 @@ import {UserContext} from "../context/UserContext";
 import {BaseUrlContext} from "../context/BaseUrlContext";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import axios from "axios";
+import {DBInfoContext} from "../context/DBInfoContext.jsx";
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.common["Access-Control-Allow-Methods"] =
@@ -16,6 +17,10 @@ const Products = () => {
 	const {userPassword, setUserPassword} = React.useContext(UserContext);
 	const base_url = React.useContext(BaseUrlContext).baseUrl;
 	const [productDetails, setProductDetails] = React.useState(null);
+	const {
+		productInfo, setProductInfo,
+	} = React.useContext(DBInfoContext);
+	
 	// this is how product details looks like
 	// [
 	// 	{
@@ -38,59 +43,12 @@ const Products = () => {
 	const [apiCallMade, setApiCallMade] = useState(false);
 	let iSentOnce = false;
 	
-	const get_product_details = async () => {
-		// get customer details by sending the password to the server as part of the body of the request
-		// include allow cors headers using axios
-		const data = {
-			password: userPassword,
-		};
+	const get_product_details = () => {
+		// get product details from the context.
+		setProductDetails(productInfo);
 		
-		const response = await axios
-			.post(`${base_url}/api/v1/Luxuriant/get_Products`, data, {
-				headers: {
-					"Content-Type": "application/json",
-				},
-			})
-			.then((response) => {
-				return response;
-			})
-			.catch((error) => {
-				console.error(error);
-				alert("server not running! a simulated response is being sent");
-				return {
-					data: {
-						message: "simulation",
-					},
-				};
-			});
-		console.log(response.data);
-		console.log(response)
-		iSentOnce = true;
-		if (response.data.message === "simulation") {
-			const data = [
-				{
-					"_id": "654cd992ae6a271afeed6b4c",
-					"product_name": "Blue Jar",
-					"product_cost": 100
-				},
-				{
-					"_id": "654cd992ae6a271afeed6b4d",
-					"product_name": "Purple Jar",
-					"product_cost": 200
-				},
-				{
-					"_id": "654cd992ae6a271afeed6b4e",
-					"product_name": "Pink Jar",
-					"product_cost": 300
-				}
-			]
-			setProductDetails(data);
-		} else if (response.data.message === "Success") {
-			const data = response.data.products;
-			console.log(data);
-			setProductDetails(data);
-		} else if (response.data.message === "No Products found") {
-			setProductDetails([]);
+		if (productInfo.length === 0) {
+			console.log("productInfo is empty");
 		}
 	};
 	

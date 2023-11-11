@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {ThemeContext} from "../context/ThemeContext";
 import {BaseUrlContext} from "../context/BaseUrlContext";
 import {UserContext} from "../context/UserContext";
+import {DBInfoContext} from "../context/DBInfoContext.jsx";
 
 import "../style.css";
 import "../input.css";
@@ -14,10 +15,131 @@ const Login = (props) => {
 	const comment = document.getElementById("comment");
 	const [password, setPassword] = useState("");
 	const [passwordError, setPasswordError] = useState("");
+	const {
+		orderInfo, setOrderInfo,
+		customerInfo, setCustomerInfo,
+		productInfo, setProductInfo
+	} = React.useContext(DBInfoContext);
 	
 	let navigate = useNavigate();
 	
-	function redirect() {
+	async function redirect() {
+		props.setisNavbarPresent(true);
+		
+		const data = {
+			password: password,
+		};
+		
+		// get all orders
+		let response = await axios
+			.post(`${base_url}/api/v1/Luxuriant/get_orders`, data, {
+				headers: {
+					"Content-Type": "application/json",
+				},
+			})
+			.then((response) => {
+				return response;
+			})
+			.catch((error) => {
+				console.error(error);
+				alert("server not running! a simulated response is being sent");
+				return {
+					data: {
+						message: "simulation",
+					},
+				};
+			});
+		console.log(response.data);
+		if (response.data.message === "simulation") {
+			setOrderInfo([]);
+		} else if (response.data.message === "Success") {
+			const data = response.data.orders;
+			console.log(data);
+			setOrderInfo(data);
+		} else if (response.data.message === "No Orders found") {
+			setOrderInfo([]);
+		}
+		
+		// get all products
+		response = await axios
+			.post(`${base_url}/api/v1/Luxuriant/get_Products`, data, {
+				headers: {
+					"Content-Type": "application/json",
+				},
+			})
+			.then((response) => {
+				return response;
+			})
+			.catch((error) => {
+				console.error(error);
+				alert("server not running! a simulated response is being sent");
+				return {
+					data: {
+						message: "simulation",
+					},
+				};
+			});
+		console.log(response.data);
+		console.log(response)
+		if (response.data.message === "simulation") {
+			const data = [
+				{
+					"_id": "654cd992ae6a271afeed6b4c",
+					"product_name": "Blue Jar",
+					"product_cost": 100
+				},
+				{
+					"_id": "654cd992ae6a271afeed6b4d",
+					"product_name": "Purple Jar",
+					"product_cost": 200
+				},
+				{
+					"_id": "654cd992ae6a271afeed6b4e",
+					"product_name": "Pink Jar",
+					"product_cost": 300
+				}
+			]
+			setProductInfo(data);
+		} else if (response.data.message === "Success") {
+			const data = response.data.products;
+			console.log(data);
+			setProductInfo(data);
+		} else if (response.data.message === "No Products found") {
+			setProductInfo([]);
+		}
+		
+		// get all customers
+		response = await axios
+			.post(`${base_url}/api/v1/Luxuriant/get_customers`, data, {
+				headers: {
+					"Content-Type": "application/json",
+				},
+			})
+			.then((response) => {
+				return response;
+			})
+			.catch((error) => {
+				console.error(error);
+				alert("server not running! a simulated response is being sent");
+				return {
+					data: {
+						message: "simulation",
+					},
+				};
+			});
+		console.log(response.data);
+		if (response.data.message === "simulation") {
+			let data = []
+			setCustomerInfo(data);
+		} else if (response.data.message === "Success") {
+			const data = response.data.customers;
+			console.log(data);
+			setCustomerInfo(data);
+		} else if (response.data.message === "No customers found") {
+			setCustomerInfo([]);
+		}
+		
+		console.log("redirecting, after downloading all data");
 		props.setisNavbarPresent(true);
 		navigate("/orders");
 	}
@@ -37,23 +159,23 @@ const Login = (props) => {
 			.catch((error) => {
 				console.error(error);
 				alert("server not running! a simulated response is being sent");
-				const response = {
+				return {
 					data: {
 						message: "simulation",
 					},
 				};
-				return response;
 			});
+		console.log(response.data);
 		// stop showing the svg spinner in login button
 		const login_button = document.getElementById("login_button");
 		login_button.innerHTML = `Log In`;
 		if (response.data.message === "Success") {
 			setUserPassword(password);
-			redirect();
+			await redirect();
 		} else if (response.data.message === "simulation") {
 			console.log("This is a simulation");
 			// redirect();
-		} else {
+		} else if (response.data.message === "Incorrect password") {
 			comment.innerHTML = "Incorrect Password";
 		}
 	}
@@ -72,7 +194,7 @@ const Login = (props) => {
 		
 		// show the svg spinner in login button while the password is being validated
 		const login_button = document.getElementById("login_button");
-		login_button.innerHTML = `<div class="flex justify-center">
+		login_button.innerHTML = `<div class="flex justify-center text-lg"> Fetching Server Info...
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><path fill="currentColor" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z"><animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg></div>`;
 		
 		if (!validatePassword(password)) {
