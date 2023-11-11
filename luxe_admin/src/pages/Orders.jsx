@@ -74,12 +74,12 @@ const Orders = () => {
 	}, []);
 	
 	return (
-		<div className="h-screen">
+		<div className="min-h-screen">
 			<div className="flex justify-center m-4">
 				<div className="text-4xl bulgatti my-6">Our Orders</div>
 				{" "}
 			</div>
-			<div className="overflow-x-auto">
+			<div className="overflow-x-auto p-10">
 				{orderDetails === null ||
 				orderDetails.length === 0 ? (
 					<div className="flex justify-center">
@@ -98,9 +98,9 @@ const Orders = () => {
 						</div>
 					</div>
 				) : (
-					<table className="table">
-						<thead>
-						<tr>
+					<table className="table text-xl outline outline-1 ">
+						<thead className="text-xl">
+						<tr className="border-neutral border-b-1 bg-base-300 text-base-content">
 							<th></th>
 							<th>Order Date</th>
 							<th>Order Cost</th>
@@ -114,7 +114,7 @@ const Orders = () => {
 						{
 							orderDetails.map((order, index) => {
 								return (
-									<tr key={index}>
+									<tr key={index} className="hover border-accent border-t-1">
 										<td>{index + 1}</td>
 										<td>{order.order_date}</td>
 										<td>{order.order_cost}</td>

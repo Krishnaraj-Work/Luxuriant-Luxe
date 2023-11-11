@@ -55,7 +55,7 @@ const Customers = () => {
 	}, []);
 	
 	return (
-		<div className="h-screen">
+		<div className="min-h-screen">
 			<div className="flex justify-center m-4">
 				<div className="text-4xl bulgatti my-6">Our Customers</div>
 			</div>
@@ -80,26 +80,26 @@ const Customers = () => {
 				) : (
 					<table className="table text-xl outline outline-1 ">
 						<thead className="text-xl">
-						<tr>
+						<tr className="border-neutral border-b-1 bg-base-300 text-base-content">
 							<th></th>
-							<th>Customer Id</th>
 							<th>Customer Name</th>
 							<th>Customer Email</th>
 							<th>Customer Address</th>
 							<th>Customer Phone</th>
+							<th>Customer Id</th>
 						</tr>
 						</thead>
 						<tbody>
 						{
 							customerDetails.map((customer, index) => {
 								return (
-									<tr key={index} className=" hover">
+									<tr key={index} className="hover border-accent border-t-1">
 										<td>{index + 1}</td>
-										<td>{customer._id}</td>
 										<td>{customer.customer_name}</td>
 										<td>{customer.customer_email}</td>
-										<td>{customer.customer_address}</td>
+										<td className="w-64">{customer.customer_address}</td>
 										<td>{customer.customer_phone}</td>
+										<td>{customer._id}</td>
 									</tr>
 								);
 							})
