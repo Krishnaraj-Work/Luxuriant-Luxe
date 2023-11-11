@@ -26,6 +26,7 @@ import purple_image from "../../assets/images/purple.png"
 
 
 import axios from "axios";
+
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = 'http://localhost:5173';
 axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS';
 axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Content-Type';
@@ -459,7 +460,7 @@ const Cart = () => {
 				<nav className="">
 					<div className="flex flex-wrap justify-center items-center gap-4 w-2/3 lg:w-fit">
 						<a
-							href="https://wa.me/917666018928?text=Welcome%20to%20Luxuriant%20Luxe!%20How%20can%20we%20help%20you%20today%3F%20"
+							href="https://wa.me/917666018928?text=Welcome%20to%20Luxuriant%20Luxe!%20How%20can%20we%20assist%20you%20today%3F%20"
 						>
 							<IconBrandWhatsapp className="w-8 h-8"/>
 						</a>
