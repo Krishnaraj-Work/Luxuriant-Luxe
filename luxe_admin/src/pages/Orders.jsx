@@ -20,8 +20,10 @@ const Orders = () => {
 	const [orderDetails, setOrderDetails] = React.useState(null);
 	const [apiCallMade, setApiCallMade] = useState(false);
 	const {
-		orderInfo, setOrderInfo
+		orderInfo, setOrderInfo,
+		customerInfo, setCustomerInfo,
 	} = React.useContext(DBInfoContext);
+	const [userIsSure, setUserIsSure] = React.useState(false);
 	
 	let iSentOnce = false;
 	
@@ -46,12 +48,87 @@ const Orders = () => {
 	// 	}
 	// ]
 	// }
+	
+	const fetch_order_from_server = async () => {
+		// get all orders
+		let response = await axios
+			.post(`${base_url}/api/v1/Luxuriant/get_orders`, {
+				password: userPassword,
+			}, {
+				headers: {
+					"Content-Type": "application/json",
+				},
+			})
+			.then((response) => {
+				return response;
+			})
+			.catch((error) => {
+				console.error(error);
+				alert("server not running! a simulated response is being sent");
+				return {
+					data: {
+						message: "simulation",
+					},
+				};
+			});
+		console.log(response.data);
+		if (response.data.message === "simulation") {
+			setOrderInfo([]);
+		} else if (response.data.message === "Success") {
+			const data = response.data.orders;
+			console.log(data);
+			setOrderInfo(data);
+			setOrderDetails(data);
+		} else if (response.data.message === "No Orders found") {
+			setOrderInfo([]);
+			setOrderDetails([]);
+		}
+	};
+	
 	const get_order_details = () => {
 		// get customer details by sending the password to the server as part of the body of the request
 		// include allow cors headers using axios
 		setOrderDetails(orderInfo)
 		console.log("order details")
 		console.log(orderInfo)
+	};
+	
+	const change_payment_and_send_mail = async (order_id) => {
+		// call the modal
+		const my_modal_1 = document.getElementById("my_modal_1");
+		my_modal_1.showModal();
+		
+		// change payment status to paid, send api call to /change_payment_status
+		if (userIsSure === false) {
+			return;
+		}
+		const response = await axios.post(
+			base_url + "/change_payment_status",
+			{
+				password: userPassword
+			}, {
+				params: {
+					order_id: order_id,
+					payment_status: "paid"
+				}
+			}
+		);
+		console.log(response.data);
+		if (response.data === "success") {
+			console.log("payment status changed to paid");
+			// show toast for 3 seconds
+			const mail_sent_toast = document.getElementById("mail_sent_toast");
+			mail_sent_toast.classList.remove("hidden");
+			setTimeout(() => {
+				mail_sent_toast.classList.add("hidden");
+			}, 3000);
+			await fetch_order_from_server();
+			setUserIsSure(false)
+		} else {
+			console.log("payment status not changed");
+		}
+		
+		
 	};
 	
 	useEffect(() => {
@@ -71,7 +148,7 @@ const Orders = () => {
 				}
 			}
 		}
-	}, []);
+	}, [orderDetails]);
 	
 	return (
 		<div className="min-h-screen">
@@ -118,7 +195,21 @@ const Orders = () => {
 										<td>{index + 1}</td>
 										<td>{order.order_date}</td>
 										<td>{order.order_cost}</td>
-										<td>{order.payment_status}</td>
+										<td>
+											<div className="flex justify-center gap-4">
+												<div>
+													{order.payment_status.charAt(0).toUpperCase() + order.payment_status.slice(1)}
+												</div>
+												<input type="checkbox" checked={
+													order.payment_status === "paid"
+												} className="checkbox shadow shadow-primary shadow-lg" onChange={
+													() => {
+														change_payment_and_send_mail(order._id);
+													}
+												}/>
+											</div>
+										
+										</td>
 										<td>{order.customer_id}</td>
 										{/*<td>{order.order_details}</td>*/}
 										<td>
@@ -145,8 +236,52 @@ const Orders = () => {
 				}
 			</div>
 			<ScrollToTopButton/>
+			<dialog id="my_modal_1" className="modal">
+				<div className="modal-box bg-secondary text-secondary-content">
+					<h3 className="font-bold text-lg">Are you Sure?</h3>
+					<p className="py-4">Are you sure you want to change payment status to paid, and send a confirmation email to
+						the customer?</p>
+					<div className="modal-action">
+						<form method="dialog">
+							{/* if there is a button in form, it will close the modal */}
+							<button className="btn m-2"
+							        onClick={
+								        () => {
+									        setUserIsSure(false);
+								        }
+							        }
+							>No
+							</button>
+							<button className="btn m-2"
+							        onClick={
+								        () => {
+									        // change payment status to paid
+									        // send mail to customer
+									        setUserIsSure(true);
+								        }
+							        }
+							>Yes! Send Mail!
+							</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
+			
+			<div className="flex justify-center toast-center toast">
+				<div
+					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
+					id="mail_sent_toast">
+					<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
+					     viewBox="0 0 24 24">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					</svg>
+					<span>Mail Sent!</span>
+				</div>
+			</div>
 		</div>
-	);
+	)
+		;
 };
 
 export default Orders;

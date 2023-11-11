@@ -59,6 +59,10 @@ const Customers = () => {
 			<div className="flex justify-center m-4">
 				<div className="text-4xl bulgatti my-6">Our Customers</div>
 			</div>
+			
+			{/* Add Search bar */}
+			
+			
 			<div className="overflow-x-auto p-8">
 				{customerDetails === null ||
 				customerDetails.length === 0 ? (
