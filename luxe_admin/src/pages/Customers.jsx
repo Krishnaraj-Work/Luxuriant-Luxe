@@ -1,11 +1,10 @@
-import React, { useCallback, useLayoutEffect } from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import { UserContext } from "../context/UserContext";
-import { BaseUrlContext } from "../context/BaseUrlContext";
+import React, {useEffect, useState} from "react";
+import {ThemeContext} from "../context/ThemeContext";
+import {UserContext} from "../context/UserContext";
+import {BaseUrlContext} from "../context/BaseUrlContext";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import axios from "axios";
+
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.common["Access-Control-Allow-Methods"] =
 	"GET, POST, OPTIONS";
@@ -13,8 +12,8 @@ axios.defaults.headers.common["Access-Control-Allow-Headers"] = "Content-Type";
 axios.defaults.headers.common["Access-Control-Allow-Credentials"] = "true";
 
 const Customers = () => {
-	const { theme } = React.useContext(ThemeContext);
-	const { userPassword, setUserPassword } = React.useContext(UserContext);
+	const {theme} = React.useContext(ThemeContext);
+	const {userPassword, setUserPassword} = React.useContext(UserContext);
 	const base_url = React.useContext(BaseUrlContext).baseUrl;
 	const [customerDetails, setCustomerDetails] = React.useState(null);
 	const [apiCallMade, setApiCallMade] = useState(false);
@@ -31,7 +30,7 @@ const Customers = () => {
 		const data = {
 			password: userPassword,
 		};
-
+		
 		const response = await axios
 			.post(`${base_url}/api/v1/Luxuriant/get_customers`, data, {
 				headers: {
@@ -106,14 +105,14 @@ const Customers = () => {
 			];
 			setCustomerDetails(data);
 		} else if (response.data.message === "Success") {
-			const data = response.data.data;
+			const data = response.data.customers;
 			console.log(data);
 			setCustomerDetails(data);
 		} else if (response.data.message === "No customers found") {
 			setCustomerDetails([]);
 		}
 	};
-
+	
 	useEffect(() => {
 		if (theme === "light") {
 			const light_button = document.getElementById("light_button");
@@ -132,11 +131,11 @@ const Customers = () => {
 			}
 		}
 	}, []);
-
+	
 	return (
 		<div className="h-screen">
 			<h1>Customers</h1>
-			<ScrollToTopButton />
+			<ScrollToTopButton/>
 		</div>
 	);
 };
