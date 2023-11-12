@@ -5,6 +5,7 @@ import {BaseUrlContext} from "../context/BaseUrlContext";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import axios from "axios";
 import {DBInfoContext} from "../context/DBInfoContext.jsx";
+import {IconSearch} from "@tabler/icons-react";
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.common["Access-Control-Allow-Methods"] =
@@ -17,6 +18,8 @@ const Products = () => {
 	const {userPassword, setUserPassword} = React.useContext(UserContext);
 	const base_url = React.useContext(BaseUrlContext).baseUrl;
 	const [productDetails, setProductDetails] = React.useState(null);
+	const [searchTerm, setSearchTerm] = useState("");
+	
 	const {
 		productInfo, setProductInfo,
 	} = React.useContext(DBInfoContext);
@@ -71,12 +74,58 @@ const Products = () => {
 		}
 	}, []);
 	
+	function filterProductDetails() {
+		if (productDetails === null) {
+			return [];
+		}
+		return productDetails.filter((product) => {
+			if (searchTerm === "") {
+				return product;
+			} else if (
+				product.product_name ? product.product_name.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return product;
+			} else if (
+				product.product_cost ? product.product_cost.toString().toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return product;
+			} else {
+				return null;
+			}
+		});
+	}
+	
 	return (
 		<div className="h-screen">
 			<div className="flex justify-center m-4">
 				<div className="text-4xl bulgatti my-6">Our Products</div>
 				{" "}
 			</div>
+			
+			{/* Add Search bar */}
+			<div className="flex justify-center">
+				<div className="flex justify-center items-center">
+					<div className="flex items-center border-2 border-gray-300 rounded-md shadow-sm">
+						<input
+							type="text"
+							name="search"
+							id="search"
+							className="w-full rounded-md p-2 bg-transparent focus:outline-none"
+							placeholder="Search"
+							value={searchTerm}
+							onChange={(e) => {
+								setSearchTerm(e.target.value);
+							}}
+						/>
+						<IconSearch className="w-8 h-8"/>
+					</div>
+				</div>
+			</div>
+			
 			<div className="overflow-x-auto p-10">
 				{productDetails === null ||
 				productDetails.length === 0 ? (
@@ -106,7 +155,7 @@ const Products = () => {
 						</thead>
 						<tbody>
 						{
-							productDetails.map((product, index) => {
+							filterProductDetails().map((product, index) => {
 									return (
 										<tr key={index} className="hover border-accent border-t-1">
 											<td>{index + 1}</td>
