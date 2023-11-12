@@ -5,7 +5,7 @@ import {BaseUrlContext} from "../context/BaseUrlContext";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import axios from "axios";
 import {DBInfoContext} from "../context/DBInfoContext.jsx";
-import {IconSearch} from "@tabler/icons-react";
+import {IconRefresh, IconSearch} from "@tabler/icons-react";
 
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
@@ -35,6 +35,45 @@ const Customers = () => {
 	//    customer_address: "some address",
 	//    customer_email: "some email",
 	//    customer_phone: "some phone"
+	
+	
+	const fetch_customer_from_server = async () => {
+		// get all orders
+		let response = await axios
+			.post(`${base_url}/api/v1/Luxuriant/get_customers`, {
+				password: userPassword,
+			}, {
+				headers: {
+					"Content-Type": "application/json",
+				},
+			})
+			.then((response) => {
+				return response;
+			})
+			.catch((error) => {
+				console.error(error);
+				alert("server not running! a simulated response is being sent");
+				return {
+					data: {
+						message: "simulation",
+					},
+				};
+			});
+		console.log(response.data);
+		if (response.data.message === "simulation") {
+			setCustomerInfo([]);
+		} else if (response.data.message === "Success") {
+			const data = response.data.customers;
+			console.log(data);
+			setCustomerInfo(data);
+			setCustomerDetails(data)
+		} else if (response.data.message === "No Orders found") {
+			setCustomerInfo([]);
+			setCustomerDetails([]);
+		}
+	};
+	
+	
 	const get_customer_details = async () => {
 		setCustomerDetails(customerInfo);
 	};
@@ -104,7 +143,7 @@ const Customers = () => {
 			</div>
 			
 			{/* Add Search bar */}
-			<div className="flex justify-center">
+			<div className="flex justify-center gap-4">
 				<div className="flex justify-center items-center">
 					<div className="flex items-center border-2 border-gray-300 rounded-md shadow-sm">
 						<input
@@ -120,6 +159,15 @@ const Customers = () => {
 						/>
 						<IconSearch className="w-8 h-8"/>
 					</div>
+				</div>
+				<div>
+					<button className="btn btn-sm bg-primary text-primary-content" onClick={
+						() => {
+							fetch_customer_from_server();
+						}
+					}>
+						<IconRefresh className="w-8 h-8"/>
+					</button>
 				</div>
 			</div>
 			

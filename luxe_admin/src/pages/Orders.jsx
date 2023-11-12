@@ -78,10 +78,10 @@ const Orders = () => {
 		// 654f70d385422b6126969c8f for eg
 		orderDetails.sort((a, b) => {
 			if (a._id < b._id) {
-				return -1;
+				return 1;
 			}
 			if (a._id > b._id) {
-				return 1;
+				return -1;
 			}
 			return 0;
 		});
@@ -168,7 +168,6 @@ const Orders = () => {
 		
 	}
 	
-	
 	const fetch_order_from_server = async () => {
 		// get all orders
 		let response = await axios
@@ -205,15 +204,6 @@ const Orders = () => {
 			setOrderDetails([]);
 		}
 	};
-	
-	const compareDates = (a, b) => {
-		// "dd/mm/yyyy"
-		let a_date = a.order_date.split("/");
-		let b_date = b.order_date.split("/");
-		let a_date_object = new Date(a_date[2], a_date[1], a_date[0]);
-		let b_date_object = new Date(b_date[2], b_date[1], b_date[0]);
-		return a_date_object - b_date_object;
-	}
 	
 	const get_order_details = () => {
 		// get customer details by sending the password to the server as part of the body of the request

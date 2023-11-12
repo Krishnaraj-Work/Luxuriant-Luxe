@@ -35,10 +35,10 @@ const Login = (props) => {
 		// 654f70d385422b6126969c8f for eg
 		orderDetails.sort((a, b) => {
 			if (a._id < b._id) {
-				return -1;
+				return 1;
 			}
 			if (a._id > b._id) {
-				return 1;
+				return -1;
 			}
 			return 0;
 		});
