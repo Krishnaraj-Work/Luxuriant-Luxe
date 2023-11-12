@@ -42,8 +42,8 @@ const Orders = () => {
 		customerInfo, setCustomerInfo,
 		productInfo, setProductInfo,
 	} = React.useContext(DBInfoContext);
-	const [userIsSure, setUserIsSure] = React.useState(false);
 	const [searchTerm, setSearchTerm] = useState("");
+	const [currentOrderIdToSendMainTo, setCurrentOrderIdToSendMainTo] = useState("");
 	
 	let iSentOnce = false;
 	
@@ -213,29 +213,37 @@ const Orders = () => {
 		console.log(orderInfo)
 	};
 	
-	const change_payment_and_send_mail = async (order_id) => {
-		// call the modal
-		const my_modal_1 = document.getElementById("my_modal_1");
-		my_modal_1.showModal();
-		
-		// change payment status to paid, send api call to /change_payment_status
-		if (userIsSure === false) {
+	const change_payment_and_send_mail = async () => {
+		if (currentOrderIdToSendMainTo === "") {
+			console.log("there is no order id to send mail to. ")
 			return;
 		}
+		
 		const response = await axios.post(
-			base_url + "/change_payment_status",
+			base_url + "/api/v1/Luxuriant/change_payment_status",
 			{
 				password: userPassword
 			}, {
 				params: {
-					order_id: order_id,
+					order_id: currentOrderIdToSendMainTo,
 					payment_status: "paid"
 				}
 			}
 		);
 		console.log(response.data);
-		if (response.data === "success") {
+		if (response.data.message === "Success") {
 			console.log("payment status changed to paid");
+			
+			// get customer name from customer id in response.data.order
+			const order = response.data.order;
+			const customer_id = order.customer_id;
+			const customer_name = customerInfo.filter((customer) => {
+				return customer._id === customer_id;
+			})[0].customer_name;
+			
+			// change innerhtml for mail_toast_text
+			const mail_toast_text = document.getElementById("mail_toast_text");
+			mail_toast_text.innerHTML = "Mail Sent to " + customer_name + "!";
 			// show toast for 3 seconds
 			const mail_sent_toast = document.getElementById("mail_sent_toast");
 			mail_sent_toast.classList.remove("hidden");
@@ -243,7 +251,6 @@ const Orders = () => {
 				mail_sent_toast.classList.add("hidden");
 			}, 3000);
 			// await fetch_order_from_server();
-			setUserIsSure(false)
 		} else {
 			console.log("payment status not changed");
 		}
@@ -421,13 +428,16 @@ const Orders = () => {
 												<div>
 													{order.payment_status}
 												</div>
-												<input type="checkbox" checked={
+												{order.payment_status === "Pending" ? (<input type="checkbox" checked={
 													order.payment_status === "paid"
 												} className="checkbox shadow shadow-primary shadow-lg" onChange={
 													() => {
-														change_payment_and_send_mail(order._id);
+														// call the modal
+														setCurrentOrderIdToSendMainTo(order._id);
+														const my_modal_1 = document.getElementById("my_modal_1");
+														my_modal_1.showModal();
 													}
-												}/>
+												}/>) : null}
 											</div>
 										
 										</td>
@@ -453,20 +463,16 @@ const Orders = () => {
 					<div className="modal-action">
 						<form method="dialog">
 							{/* if there is a button in form, it will close the modal */}
-							<button className="btn m-2"
-							        onClick={
-								        () => {
-									        setUserIsSure(false);
-								        }
-							        }
-							>No
+							<button className="btn m-2">No
 							</button>
 							<button className="btn m-2"
 							        onClick={
 								        () => {
 									        // change payment status to paid
 									        // send mail to customer
-									        setUserIsSure(true);
+									        change_payment_and_send_mail().then(r => {
+										        fetch_order_from_server();
+									        });
 								        }
 							        }
 							>Yes! Send Mail!
@@ -485,7 +491,7 @@ const Orders = () => {
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
 						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
 					</svg>
-					<span>Mail Sent!</span>
+					<span id="mail_toast_text">Mail Sent!</span>
 				</div>
 			</div>
 		</div>
