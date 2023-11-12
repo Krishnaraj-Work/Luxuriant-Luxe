@@ -6,6 +6,7 @@ import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import {DBInfoContext} from "../context/DBInfoContext.jsx";
 
 import axios from "axios";
+import {IconSearch} from "@tabler/icons-react";
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.common["Access-Control-Allow-Methods"] =
@@ -24,6 +25,7 @@ const Orders = () => {
 		customerInfo, setCustomerInfo,
 	} = React.useContext(DBInfoContext);
 	const [userIsSure, setUserIsSure] = React.useState(false);
+	const [searchTerm, setSearchTerm] = useState("");
 	
 	let iSentOnce = false;
 	
@@ -127,8 +129,6 @@ const Orders = () => {
 		} else {
 			console.log("payment status not changed");
 		}
-		
-		
 	};
 	
 	useEffect(() => {
@@ -150,11 +150,68 @@ const Orders = () => {
 		}
 	}, [orderDetails]);
 	
+	function filterOrderDetails() {
+		return orderDetails.filter((order) => {
+			if (searchTerm === "") {
+				return order;
+			} else if (
+				order.customer_id ? order.customer_id.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return order;
+			} else if (
+				order.order_cost ? order.order_cost.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return order;
+			} else if (
+				order.payment_status ? order.payment_status.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return order;
+			} else if (
+				order.order_date ? order.order_date.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return order;
+			} else if (
+				order.payment_status ? order.payment_status.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return order;
+			}
+		});
+	}
+	
 	return (
 		<div className="min-h-screen">
 			<div className="flex justify-center m-4">
 				<div className="text-4xl bulgatti my-6">Our Orders</div>
 				{" "}
+			</div>
+			{/* Add Search bar */}
+			<div className="flex justify-center">
+				<div className="flex justify-center items-center">
+					<div className="flex items-center border-2 border-gray-300 rounded-md shadow-sm">
+						<input
+							type="text"
+							name="search"
+							id="search"
+							className="w-full rounded-md p-2 bg-transparent focus:outline-none"
+							placeholder="Search"
+							value={searchTerm}
+							onChange={(e) => {
+								setSearchTerm(e.target.value);
+							}}
+						/>
+						<IconSearch className="w-8 h-8"/>
+					</div>
+				</div>
 			</div>
 			<div className="overflow-x-auto p-10">
 				{orderDetails === null ||
@@ -189,7 +246,7 @@ const Orders = () => {
 						</thead>
 						<tbody>
 						{
-							orderDetails.map((order, index) => {
+							filterOrderDetails().map((order, index) => {
 								return (
 									<tr key={index} className="hover border-accent border-t-1">
 										<td>{index + 1}</td>
