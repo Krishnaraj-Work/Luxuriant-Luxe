@@ -6,7 +6,24 @@ import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import {DBInfoContext} from "../context/DBInfoContext.jsx";
 
 import axios from "axios";
-import {IconSearch} from "@tabler/icons-react";
+import {IconRefresh, IconSearch} from "@tabler/icons-react";
+
+import {format, isValid, parse} from "date-fns";
+
+function formatDate(originalDate) {
+	// Parse the original date string
+	const parsedDate = parse(originalDate, 'dd/MM/yy', new Date());
+	
+	// Check if the parsed date is valid
+	if (!isValid(parsedDate)) {
+		console.error('Invalid date string:', originalDate);
+		return 'Invalid Date';
+	}
+	
+	// Format the date as "do MMMM yyyy"
+	return format(parsedDate, "do MMMM yyyy", {addSuffix: true});
+}
+
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.common["Access-Control-Allow-Methods"] =
@@ -52,6 +69,106 @@ const Orders = () => {
 	// ]
 	// }
 	
+	
+	const reformatOrders = (orderDetails) => {
+		if (orderDetails.length === 0) {
+			return [];
+		}
+		// sort orders by order id, which is a hex field.
+		// 654f70d385422b6126969c8f for eg
+		orderDetails.sort((a, b) => {
+			if (a._id < b._id) {
+				return -1;
+			}
+			if (a._id > b._id) {
+				return 1;
+			}
+			return 0;
+		});
+		
+		// make orders list into this.
+		// <th>Order Date</th>
+		// <th>Order Time</th>
+		// <th>Customer ID</th>
+		// <th>Order Cost</th>
+		// <th>Payment Status</th>
+		// <th>Products</th>
+		// <th>Products</th>
+		// <th>Order ID</th>
+		
+		// First change the date format to a more readable one from "dd/mm/yyyy" to "November 9, 2023"
+		for (let i = 0; i < orderDetails.length; i++) {
+			orderDetails[i].order_date = formatDate(orderDetails[i].order_date);
+		}
+		
+		// Then change the payment status to a more readable one from "paid" to "Paid"
+		for (let i = 0; i < orderDetails.length; i++) {
+			orderDetails[i].payment_status = orderDetails[i].payment_status.charAt(0).toUpperCase() + orderDetails[i].payment_status.slice(1);
+		}
+		
+		// Then change the order cost to a more readable one from "400" to "400 INR"
+		for (let i = 0; i < orderDetails.length; i++) {
+			orderDetails[i].order_cost = orderDetails[i].order_cost + " INR";
+		}
+		
+		// Then change the order details to a more readable one from
+		// [
+		//     {
+		//         "product_id": "654cd992ae6a271afeed6b4c",
+		//         "quantity": 3,
+		//         "price": 100
+		//     },
+		//     {
+		//         "product_id": "654cd992ae6a271afeed6b4e",
+		//         "quantity": 3,
+		//         "price": 100
+		//     },
+		//     {
+		//         "product_id": "654cd992ae6a271afeed6b4d",
+		//         "quantity": 3,
+		//         "price": 100
+		//     }
+		// ]
+		
+		// to split it into products that reference the id from productInfo to make it look like
+		// 5 x Blue Jar, 2 x Pink Jar
+		for (let i = 0; i < orderDetails.length; i++) {
+			let order_details = orderDetails[i].order_details;
+			let order_details_string = "";
+			for (let j = 0; j < order_details.length; j++) {
+				let product_id = order_details[j].product_id;
+				let quantity = order_details[j].quantity;
+				let current_product = productInfo.filter((product) => {
+					return product._id === product_id;
+				});
+				console.log("product", current_product);
+				order_details_string += quantity + " x " + current_product[0].product_name + ", ";
+			}
+			orderDetails[i].order_details = order_details_string;
+		}
+		
+		// Then make a field called customer name that references customer id and gets the customer name from the customerInfo list so that it looks like "John Doe"
+		for (let i = 0; i < orderDetails.length; i++) {
+			let customer_id = orderDetails[i].customer_id;
+			let customer_name = "";
+			let customer_address = "";
+			for (let j = 0; j < customerInfo.length; j++) {
+				if (customerInfo[j]._id === customer_id) {
+					customer_name = customerInfo[j].customer_name;
+					customer_address = customerInfo[j].customer_address;
+					break;
+				}
+			}
+			orderDetails[i].customer_name = customer_name;
+			orderDetails[i].customer_address = customer_address;
+		}
+		console.log("Order details after formatting:")
+		console.log(orderDetails)
+		return orderDetails;
+		
+	}
+	
+	
 	const fetch_order_from_server = async () => {
 		// get all orders
 		let response = await axios
@@ -80,8 +197,9 @@ const Orders = () => {
 		} else if (response.data.message === "Success") {
 			const data = response.data.orders;
 			console.log(data);
-			setOrderInfo(data);
-			setOrderDetails(reformatOrders(data));
+			let reformatData = reformatOrders(data);
+			setOrderInfo(reformatData);
+			setOrderDetails(reformatData);
 		} else if (response.data.message === "No Orders found") {
 			setOrderInfo([]);
 			setOrderDetails([]);
@@ -236,7 +354,7 @@ const Orders = () => {
 				{" "}
 			</div>
 			{/* Add Search bar */}
-			<div className="flex justify-center">
+			<div className="flex justify-center gap-4">
 				<div className="flex justify-center items-center">
 					<div className="flex items-center border-2 border-gray-300 rounded-md shadow-sm">
 						<input
@@ -252,6 +370,15 @@ const Orders = () => {
 						/>
 						<IconSearch className="w-8 h-8"/>
 					</div>
+				</div>
+				<div>
+					<button className="btn btn-sm bg-primary text-primary-content" onClick={
+						() => {
+							fetch_order_from_server();
+						}
+					}>
+						<IconRefresh className="w-8 h-8"/>
+					</button>
 				</div>
 			</div>
 			<div className="overflow-x-auto p-10">
