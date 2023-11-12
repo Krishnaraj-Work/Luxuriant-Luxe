@@ -253,6 +253,26 @@ const Orders = () => {
 			// await fetch_order_from_server();
 		} else {
 			console.log("payment status not changed");
+			
+			
+			// get customer name from customer id in response.data.order
+			const order = response.data.order;
+			const customer_id = order.customer_id;
+			const customer_name = customerInfo.filter((customer) => {
+				return customer._id === customer_id;
+			})[0].customer_name;
+			
+			// change innerhtml for mail_toast_text
+			const mail_toast_text = document.getElementById("mail_not_sent_toast_text");
+			mail_toast_text.innerHTML = "Mail Sent to " + customer_name + "!";
+			// show toast for 3 seconds
+			const mail_sent_toast = document.getElementById("mail_not_send_toast");
+			mail_sent_toast.classList.remove("hidden");
+			setTimeout(() => {
+				mail_sent_toast.classList.add("hidden");
+			}, 3000);
+			
+			
 		}
 	};
 	
@@ -492,6 +512,19 @@ const Orders = () => {
 						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
 					</svg>
 					<span id="mail_toast_text">Mail Sent!</span>
+				</div>
+			</div>
+			
+			<div className="flex justify-center toast-center toast">
+				<div
+					className="alert alert-error hidden transform-gpu transition-all duration-300 flex gap-4"
+					id="mail_not_send_toast">
+					{/*<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"*/}
+					{/*     viewBox="0 0 24 24">*/}
+					{/*	<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"*/}
+					{/*	      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>*/}
+					{/*</svg>*/}
+					<span id="mail_not_sent_toast_text">Could not Send Mail!</span>
 				</div>
 			</div>
 		</div>
