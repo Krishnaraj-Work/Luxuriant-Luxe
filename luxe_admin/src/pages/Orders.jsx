@@ -23,6 +23,7 @@ const Orders = () => {
 	const {
 		orderInfo, setOrderInfo,
 		customerInfo, setCustomerInfo,
+		productInfo, setProductInfo,
 	} = React.useContext(DBInfoContext);
 	const [userIsSure, setUserIsSure] = React.useState(false);
 	const [searchTerm, setSearchTerm] = useState("");
@@ -80,12 +81,21 @@ const Orders = () => {
 			const data = response.data.orders;
 			console.log(data);
 			setOrderInfo(data);
-			setOrderDetails(data);
+			setOrderDetails(reformatOrders(data));
 		} else if (response.data.message === "No Orders found") {
 			setOrderInfo([]);
 			setOrderDetails([]);
 		}
 	};
+	
+	const compareDates = (a, b) => {
+		// "dd/mm/yyyy"
+		let a_date = a.order_date.split("/");
+		let b_date = b.order_date.split("/");
+		let a_date_object = new Date(a_date[2], a_date[1], a_date[0]);
+		let b_date_object = new Date(b_date[2], b_date[1], b_date[0]);
+		return a_date_object - b_date_object;
+	}
 	
 	const get_order_details = () => {
 		// get customer details by sending the password to the server as part of the body of the request
@@ -124,7 +134,7 @@ const Orders = () => {
 			setTimeout(() => {
 				mail_sent_toast.classList.add("hidden");
 			}, 3000);
-			await fetch_order_from_server();
+			// await fetch_order_from_server();
 			setUserIsSure(false)
 		} else {
 			console.log("payment status not changed");
@@ -151,6 +161,18 @@ const Orders = () => {
 	}, [orderDetails]);
 	
 	function filterOrderDetails() {
+		
+		// this is the format of orderDetails
+		// <th>Order Date</th>
+		// <th>Order Time</th>
+		// <th>Customer ID</th>
+		// <th>Order Cost</th>
+		// <th>Payment Status</th>
+		// <th>Products</th>
+		// <th>Products</th>
+		// <th>Order ID</th>
+		
+		
 		return orderDetails.filter((order) => {
 			if (searchTerm === "") {
 				return order;
@@ -184,7 +206,26 @@ const Orders = () => {
 					: false
 			) {
 				return order;
+			} else if (
+				order.order_details ? order.order_details.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return order;
+			} else if (
+				order._id ? order._id.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return order;
+			} else if (
+				order.customer_name ? order.customer_name.toLowerCase()
+						.includes(searchTerm.toLowerCase())
+					: false
+			) {
+				return order;
 			}
+			return false;
 		});
 	}
 	
@@ -237,11 +278,14 @@ const Orders = () => {
 						<tr className="border-neutral border-b-1 bg-base-300 text-base-content">
 							<th></th>
 							<th>Order Date</th>
+							<th>Order Time</th>
+							<th>Customer Name</th>
+							<th>Customer Address</th>
 							<th>Order Cost</th>
 							<th>Payment Status</th>
-							<th>Customer ID</th>
 							<th>Order Details</th>
-							<th>Products</th>
+							<th>Order ID</th>
+							<th>Customer ID</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -251,11 +295,14 @@ const Orders = () => {
 									<tr key={index} className="hover border-accent border-t-1">
 										<td>{index + 1}</td>
 										<td>{order.order_date}</td>
+										<td>{order.order_time}</td>
+										<td>{order.customer_name}</td>
+										<td>{order.customer_address}</td>
 										<td>{order.order_cost}</td>
 										<td>
 											<div className="flex justify-center gap-4">
 												<div>
-													{order.payment_status.charAt(0).toUpperCase() + order.payment_status.slice(1)}
+													{order.payment_status}
 												</div>
 												<input type="checkbox" checked={
 													order.payment_status === "paid"
@@ -267,21 +314,9 @@ const Orders = () => {
 											</div>
 										
 										</td>
+										<td>{order.order_details}</td>
+										<td>{order._id}</td>
 										<td>{order.customer_id}</td>
-										{/*<td>{order.order_details}</td>*/}
-										<td>
-											{
-												order.order_details.map((order_detail, index) => {
-													return (
-														<div key={index}>
-															<div>Product ID: {order_detail.product_id}</div>
-															<div>Quantity: {order_detail.quantity}</div>
-															<div>Price: {order_detail.price}</div>
-														</div>
-													);
-												})
-											}
-										</td>
 									</tr>
 								);
 							})
