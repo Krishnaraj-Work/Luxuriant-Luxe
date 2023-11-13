@@ -14,6 +14,7 @@ import {
 } from "@tabler/icons-react";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import {CartContext} from "../context/CartContext";
+import {FancyButton} from "../components/ui/FancyButton";
 
 let images = [
 	`https://www.rollingstone.com/wp-content/uploads/2023/01/taylor-swift-1975.jpg`,
@@ -92,6 +93,9 @@ const Products = () => {
 				}>
 					Add to Cart <IconShoppingCartPlus className="w-4 h-4"/>
 				</button>
+				
+				<FancyButton/>
+			
 			</section>
 			
 			<section className="flex flex-col p-4 justify-center items-center bg-base-200 m-6 pb-10 rounded-2xl" id="intro">
