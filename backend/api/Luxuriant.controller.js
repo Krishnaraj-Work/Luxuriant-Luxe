@@ -3,19 +3,19 @@ import { sendMail } from "../send_mail.js";
 import LuxuriantDAO from "../dao/LuxuriantDAO.js";
 const dao = new LuxuriantDAO(); // Create a new instance of the LuxuriantDAO class
 const master_password = process.env.master_password; // Get master password from environment variables
-// const master_password = "119d22515f91b4be"; // Get master password from environment variables
+
 // Define LuxuriantController class
 export default class LuxuriantController {
   // Method to get Luxuriant data
-  static async apiGetLuxuriant(req, res, next) {
-    try {
-      // Send a JSON response with a message
-      res.json({ message: "Hello World!" });
-    } catch (e) {
-      // Send a 500 status code and the error message if an error occurs
-      res.status(500).json({ error: e.message });
-    }
-  }
+  // static async apiGetLuxuriant(req, res, next) {
+  //   try {
+  //     // Send a JSON response with a message
+  //     res.json({ message: "Hello World!" });
+  //   } catch (e) {
+  //     // Send a 500 status code and the error message if an error occurs
+  //     res.status(500).json({ error: e.message });
+  //   }
+  // }
 
   // Method to add orders
   static async apiAddOrdersLuxuriant(req, res, next) {
@@ -153,8 +153,12 @@ export default class LuxuriantController {
         
         // If the order was found, send an email and a JSON response with the order details
         if (order) {
-          sendMail(customer,order.order_details,product);
-          res.json({order:order, message: "Success" });
+         const mail = await sendMail(customer,order.order_details,product);
+         if (mail){
+           res.json({order:order, message: "Success" });
+         }else{
+          res.json({message: "Failure"})
+         }
         } else {
           // Send a JSON response with an error message if no orders were found
           res.json({ message: "No orders found" });
