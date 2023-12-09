@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react'
-import {ThemeContext} from "../context/ThemeContext";
+import React, { useEffect } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 // import {useNavigate} from "react-router-dom";
-import '../style.css'
-import '../input.css'
+import "../style.css";
+import "../input.css";
 import {
 	IconBrandFacebook,
 	IconBrandInstagram,
@@ -10,11 +10,11 @@ import {
 	IconBrandWhatsapp,
 	IconMail,
 	IconPhoneCall,
-	IconShoppingCartPlus
+	IconShoppingCartPlus,
 } from "@tabler/icons-react";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
-import {CartContext} from "../context/CartContext";
-import {FancyButton} from "../components/ui/FancyButton";
+import { CartContext } from "../context/CartContext";
+// import { FancyButton } from "../components/ui/FancyButton";
 
 let images = [
 	`https://www.rollingstone.com/wp-content/uploads/2023/01/taylor-swift-1975.jpg`,
@@ -29,12 +29,9 @@ let images = [
 ];
 const Products = () => {
 	// const navigate = useNavigate();
-	const {theme} = React.useContext(ThemeContext);
-	let {
-		addToCart,
-		productInfo,
-	} = React.useContext(CartContext);
-	
+	const { theme } = React.useContext(ThemeContext);
+	let { addToCart, productInfo } = React.useContext(CartContext);
+
 	useEffect(() => {
 		if (theme === "light") {
 			const light_button = document.getElementById("light_button");
@@ -45,128 +42,139 @@ const Products = () => {
 		}
 	});
 	return (
-		<div>
-			<section className="flex flex-col p-4 m-8 justify-center items-center text-4xl bulgatti" id="intro">
+		<div id="products_div">
+			<section
+				className="flex flex-col p-4 m-8 justify-center items-center text-5xl bulgatti"
+				id="intro"
+			>
 				Our Products
 			</section>
-			
-			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+
+			<section
+				className="flex flex-col p-4 justify-center items-center"
+				id="intro"
+			>
 				<div className="text-xl mt-4 prata text-left  text-center">
-					Tired of trying to find a product for your skin which is organic beneficial and chemical free? Dont worry! We
-					have got you covered!
+					Tired of trying to find a product for your skin which is
+					organic beneficial and chemical free? Dont worry! We have
+					got you covered!
 				</div>
 			</section>
-			<section className="flex flex-col p-4 justify-center items-center bg-base-200 m-6 pb-10 rounded-2xl" id="intro">
-				<div className="text-4xl dancing my-6 mb-3">
-					Oily Skin
-				</div>
+			<section
+				className="flex flex-col p-4 justify-center items-center bg-base-200 m-6 pb-10 rounded-2xl"
+				id="intro"
+			>
+				<div className="text-5xl dancing my-6 mb-3">Oily Skin</div>
 				<div className="flex justify-center mt-4">
-					<div id={theme === "light" ? "blue_1" : "blue_1"}
-					     className="w-screen h-64 bg-center snap-center self-center my-4">
-					</div>
+					<div
+						id={theme === "light" ? "blue_1" : "blue_1"}
+						className="w-screen h-64 bg-center snap-center self-center my-4"
+					></div>
 				</div>
 				<div className="text-xl mt-4 prata text-left  text-center">
-					Tired of trying to find a product for your skin which is organic beneficial and chemical free? Don't worry! We
-					have got you covered!
-					
-					Reduces Oiliness, makes skin bouncy, reduces dullness and dead skin cells, bringing out fairer and healthier
-					skin.
-					
-					Stimulates glands and helping drainage reduce of sebaceous
-					bumps and sebum accumulation.
+					Tired of trying to find a product for your skin which is
+					organic beneficial and chemical free? Don't worry! We have
+					got you covered! Reduces Oiliness, makes skin bouncy,
+					reduces dullness and dead skin cells, bringing out fairer
+					and healthier skin. Stimulates glands and helping drainage
+					reduce of sebaceous bumps and sebum accumulation.
 				</div>
-				<button className="btn btn-sm btn-primary my-6" onClick={
-					() => {
+				<button
+					className="btn btn-sm btn-primary my-6"
+					onClick={() => {
 						// navigate("/cart");
 						addToCart({
 							product_id: productInfo[0].product_id,
 							cost: productInfo[0].product_cost,
 							quantity: 1,
-						})
+						});
 						// display the alert for 1 second
 						const alert = document.getElementById("added_order");
 						alert.classList.remove("hidden");
 						setTimeout(() => {
 							alert.classList.add("hidden");
 						}, 3000);
-					}
-				}>
-					Add to Cart <IconShoppingCartPlus className="w-4 h-4"/>
+					}}
+				>
+					Add to Cart <IconShoppingCartPlus className="w-4 h-4" />
 				</button>
-				
-				<FancyButton/>
-			
 			</section>
-			
-			<section className="flex flex-col p-4 justify-center items-center bg-base-200 m-6 pb-10 rounded-2xl" id="intro">
-				<div className="text-4xl dancing my-6 mb-3">
-					Dry Skin
-				</div>
+
+			<section
+				className="flex flex-col p-4 justify-center items-center bg-base-200 m-6 pb-10 rounded-2xl"
+				id="intro"
+			>
+				<div className="text-5xl dancing my-6 mb-3">Dry Skin</div>
 				<div className="flex justify-center mt-4">
-					<div id={theme === "light" ? "pink_1" : "pink_1"}
-					     className="w-screen h-64 bg-center snap-center self-center my-4">
-					</div>
+					<div
+						id={theme === "light" ? "pink_1" : "pink_1"}
+						className="w-screen h-64 bg-center snap-center self-center my-4"
+					></div>
 				</div>
 				<div className="text-xl mt-4 prata text-left  text-center">
-					Our body cleanser is dedicated to rejuvenate and make your dry skin soft, bouncy and supple again.
-					
-					Our cleanser contains essential nature sources oils which are easy to absorb by your skin which softens by
-					penetration into the dermis and making it softer and smoother.
+					Our body cleanser is dedicated to rejuvenate and make your
+					dry skin soft, bouncy and supple again. Our cleanser
+					contains essential nature sources oils which are easy to
+					absorb by your skin which softens by penetration into the
+					dermis and making it softer and smoother.
 				</div>
-				<button className="btn btn-sm btn-primary my-6" onClick={
-					() => {
+				<button
+					className="btn btn-sm btn-primary my-6"
+					onClick={() => {
 						// navigate("/cart");
 						addToCart({
 							product_id: productInfo[1].product_id,
 							cost: productInfo[1].product_cost,
 							quantity: 1,
-						})
+						});
 						const alert = document.getElementById("added_order");
 						alert.classList.remove("hidden");
 						setTimeout(() => {
 							alert.classList.add("hidden");
 						}, 3000);
-					}
-				}>
-					Add to Cart <IconShoppingCartPlus className="w-4 h-4"/>
+					}}
+				>
+					Add to Cart <IconShoppingCartPlus className="w-4 h-4" />
 				</button>
 			</section>
-			
-			<section className="flex flex-col p-4 justify-center items-center bg-base-200 m-6 pb-10 rounded-2xl" id="intro">
-				<div className="text-4xl dancing my-6 mb-3">
-					Normal Skin
-				</div>
+
+			<section
+				className="flex flex-col p-4 justify-center items-center bg-base-200 m-6 pb-10 rounded-2xl"
+				id="intro"
+			>
+				<div className="text-5xl dancing my-6 mb-3">Normal Skin</div>
 				<div className="flex justify-center mt-4">
-					<div id={theme === "light" ? "purple_1" : "purple_1"}
-					     className="w-screen h-64 bg-center snap-center self-center my-4">
-					</div>
+					<div
+						id={theme === "light" ? "purple_1" : "purple_1"}
+						className="w-screen h-64 bg-center snap-center self-center my-4"
+					></div>
 				</div>
 				<div className="text-xl mt-4 prata text-left  text-center">
-					A perfect balance of essential oils and
-					natural smoothness helping you in
-					simplifying and making your bathing and
+					A perfect balance of essential oils and natural smoothness
+					helping you in simplifying and making your bathing and
 					skincare experience organic and fun.
 				</div>
-				<button className="btn btn-sm btn-primary my-6" onClick={
-					() => {
+				<button
+					className="btn btn-sm btn-primary my-6"
+					onClick={() => {
 						// navigate("/cart");
 						addToCart({
 							product_id: productInfo[2].product_id,
 							cost: productInfo[2].product_cost,
 							quantity: 1,
-						})
+						});
 						const alert = document.getElementById("added_order");
 						alert.classList.remove("hidden");
 						setTimeout(() => {
 							alert.classList.add("hidden");
 						}, 3000);
-					}
-				}>
-					Add to Cart <IconShoppingCartPlus className="w-4 h-4"/>
+					}}
+				>
+					Add to Cart <IconShoppingCartPlus className="w-4 h-4" />
 				</button>
 			</section>
-			
-			<footer className="footer footer-center p-10 bg-secondary text-primary-content bottom-0">
+
+			{/* <footer className="footer footer-center p-10 bg-secondary text-primary-content bottom-0">
 				<aside>
 					<div id="luxelogo" className="w-20 h-20 bg-center snap-center self-center"
 					></div>
@@ -190,11 +198,6 @@ const Products = () => {
 						>
 							<IconBrandFacebook className="w-8 h-8"/>
 						</a>
-						{/*<a*/}
-						{/*	href=""*/}
-						{/*>*/}
-						{/*	<IconBrandTelegram className="w-8 h-8"/>*/}
-						{/*</a>*/}
 						<a
 							href="https://www.linkedin.com/in/luxuriant-luxe-1b852a292"
 						>
@@ -223,35 +226,53 @@ const Products = () => {
 						<ScrollToTopButton/>
 					</div>
 				</nav>
-			</footer>
-			
+			</footer> */}
+
 			<div className="flex justify-center toast-center toast">
 				<div
 					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
-					id="added_order">
-					<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
-					     viewBox="0 0 24 24">
-						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					id="added_order"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						className="stroke-current shrink-0 h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
+							d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+						/>
 					</svg>
 					<span>Added to Cart!</span>
 				</div>
 			</div>
-			
+
 			<div className="flex justify-center toast-center toast">
 				<div
 					className="alert alert-success hidden transform-gpu transition-all duration-300 flex gap-4"
-					id="added_order_failed">
-					<svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none"
-					     viewBox="0 0 24 24">
-						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-						      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					id="added_order_failed"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						className="stroke-current shrink-0 h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
+							d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+						/>
 					</svg>
 					<span>Could not Add Order! Please Contact Us!</span>
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default Products
+export default Products;
