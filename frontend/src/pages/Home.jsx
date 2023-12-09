@@ -14,6 +14,7 @@ import {
 	IconPhoneCall
 } from "@tabler/icons-react";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
+import slideshowhtml from '../components/slideshow.html'
 
 const Home = () => {
 	
@@ -39,100 +40,36 @@ const Home = () => {
 		// 	"https://www.refinery29.com/images/8833407.jpg",
 		// 	"https://media.pitchfork.com/photos/5f62c6f6b2d5b619cfead49d/1:1/w_1500,h_1500,c_limit/Taylor%20Swift.jpg",
 		// ];
-		// const carousal_div = document.getElementById("car-div");
-		// console.log(carousal_div);
-		// const carousals = carousal_div.querySelectorAll("div");
-		// for (let i = 0; i < carousals.length; i++) {
-		// 	// add images from results.images
-		// 	carousals[i].style.backgroundImage = `url(${images[i]})`;
-		// 	// carousals[i].classList.add("hidden");
-		// }
 	});
 	return (
 		<div className="">
-			{/*<div className="untitled">*/}
-			{/*	<div className="untitled__slides">*/}
-			{/*		<div className="untitled__slide">*/}
-			{/*			<div className="untitled__slideBg"></div>*/}
-			{/*			<div className="untitled__slideContent">*/}
-			{/*				<span>London</span>*/}
-			{/*				<span>Scout</span>*/}
-			{/*				<a className="button" href="https://unsplash.com/@scoutthecity" target="/black">Unsplash Profile</a>*/}
-			{/*			</div>*/}
-			{/*		</div>*/}
-			{/*		<div className="untitled__slide">*/}
-			{/*			<div className="untitled__slideBg"></div>*/}
-			{/*			<div className="untitled__slideContent">*/}
-			{/*				*/}
-			{/*				<span>Vladimir</span>*/}
-			{/*				<span>Kudinov</span>*/}
-			{/*				<a className="button" href="https://unsplash.com/@madbyte" target="/black">Unsplash Profile</a>*/}
-			{/*			</div>*/}
-			{/*		</div>*/}
-			{/*		<div className="untitled__slide">*/}
-			{/*			<div className="untitled__slideBg"></div>*/}
-			{/*			<div className="untitled__slideContent">*/}
-			{/*				<span>Macio</span>*/}
-			{/*				<span>Amorim</span>*/}
-			{/*				<a className="button" href="https://unsplash.com/@maicoamorim" target="/black">Unsplash Profile</a>*/}
-			{/*			</div>*/}
-			{/*		</div>*/}
-			{/*		<div className="untitled__slide">*/}
-			{/*			<div className="untitled__slideBg"></div>*/}
-			{/*			<div className="untitled__slideContent">*/}
-			{/*				<span>Mario</span>*/}
-			{/*				<span>Calvo</span>*/}
-			{/*				<a className="button" href="https://unsplash.com/@mariocalvo" target="/black">Unsplash Profile</a>*/}
-			{/*			</div>*/}
-			{/*		</div>*/}
-			{/*	</div>*/}
-			{/*	<div className="untitled__shutters"></div>*/}
-			{/*</div>*/}
-			{/*<div className="container_div">*/}
-			{/*	<div className="carousel" id="car-div">*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*		<div className="carousel__face"><span></span></div>*/}
-			{/*	</div>*/}
-			{/*</div>*/}
-			<section className="flex flex-col p-4 justify-center items-center" id="intro">
-				<div className="text-6xl bulgatti my-12">
-					Luxuriant Luxe
-				</div>
+			
+			<section>
+				<iframe src={slideshowhtml} style={
+					{
+						width: "100%",
+						height: "100vh",
+						border: "none",
+						overflow: "hidden",
+						// position: "fixed",
+						// top: "0",
+						// left: "0",
+						// zIndex: "-1",
+					}
+				}>
 				
-				{/*<div className="patterns">*/}
-				{/*	<svg width="100%" height="100%">*/}
-				{/*		<defs>*/}
-				{/*			<pattern*/}
-				{/*				id="polka-dots"*/}
-				{/*				x="0"*/}
-				{/*				y="0"*/}
-				{/*				width="100"*/}
-				{/*				height="100"*/}
-				{/*				patternUnits="userSpaceOnUse"*/}
-				{/*			>*/}
-				{/*				<circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>*/}
-				{/*			</pattern>*/}
-				{/*			<style>*/}
-				{/*				@import url("https://fonts.googleapis.com/css? family=Lora:400,400i,700,700i");*/}
-				{/*			</style>*/}
-				{/*		</defs>*/}
-				{/*		*/}
-				{/*		<!-- <rect x="0" y="0" width="100%" height="75%" fill="url(#polka-dots)"> </rect> -->*/}
-				{/*		<text x="50%" y="60%" text-anchor="middle" id="artist-text"></text>*/}
-				{/*	</svg>*/}
+				</iframe>
+			</section>
+			
+			<section className="flex flex-col p-4 justify-center items-center" id="intro">
+				{/*<div className="text-6xl bulgatti my-12">*/}
+				{/*	Luxuriant Luxe*/}
 				{/*</div>*/}
 			
 			</section>
 			
 			<section className="flex flex-col p-2 m-8 justify-center items-center " id="intro">
-				<div className="text-4xl bulgatti my-6">
+				<div className="text-7xl bulgatti my-6">
 					Our Products
 				</div>
 				
