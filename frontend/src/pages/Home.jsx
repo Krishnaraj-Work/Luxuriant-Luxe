@@ -48,13 +48,23 @@ const Home = () => {
 				></iframe>
 			</section>
 
+			<div className="ribbon color"></div>
+
 			<section className="mt-16">
 				<Products />
 			</section>
 
+			<div className="my-12">
+				<div className="ribbon color"></div>
+			</div>
+
 			<section>
 				<About />
 			</section>
+
+			{/* <div className="my-12"> */}
+			{/* <div className="ribbon color"></div> */}
+			{/* </div> */}
 
 			<footer className="footer footer-center p-10 bg-secondary text-primary-content bottom-0">
 				<aside>

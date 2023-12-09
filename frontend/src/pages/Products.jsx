@@ -54,7 +54,7 @@ const Products = () => {
 				className="flex flex-col p-4 justify-center items-center"
 				id="intro"
 			>
-				<div className="text-xl mt-4 prata text-left  text-center">
+				<div className="text-xl mt-4 prata text-center">
 					Tired of trying to find a product for your skin which is
 					organic beneficial and chemical free? Dont worry! We have
 					got you covered!

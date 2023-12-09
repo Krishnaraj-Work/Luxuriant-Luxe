@@ -173,37 +173,11 @@ const About = () => {
 				id="intro"
 			>
 				Get in Touch!
-				<div className="text-xl mt-10 prata text-left">
+				<div className="text-xl mt-10 prata text-center">
 					For any queries, Feel Free to Call, or Whatsapp us anytime!
 					We assure you that we will get back to you in 24 hours!
 				</div>
-				<div className="flex flex-row justify-center gap-4 my-5">
-					<a href="https://wa.me/917666018928?text=Welcome%20to%20Luxuriant%20Luxe!%20How%20can%20we%20assist%20you%20today%3F%20">
-						<IconBrandWhatsapp className="w-8 h-8" />
-					</a>
-					<a
-						onClick={
-							// open mail client
-							() => {
-								window.location.href =
-									"mailto:luxeluxuriant@gmail.com";
-							}
-						}
-					>
-						<IconMail className="w-8 h-8" />
-					</a>
-					<a
-						onClick={
-							// open phone client
-							() => {
-								window.location.href = "tel:+917666018928";
-							}
-						}
-					>
-						<IconPhoneCall className="w-8 h-8" />
-					</a>
-				</div>
-				<div className="text-xl mt-10 prata text-left">
+				<div className="text-xl mt-10 prata text-center">
 					You can Also DM us on our Instagram!
 				</div>
 				<div className="flex justify-center mt-4">

@@ -39,7 +39,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    animation: rotateHue infinite 20s linear;
+    /* animation: rotateHue infinite 20s linear; */
     animation-delay: 0.625s;
 }
 
@@ -110,7 +110,7 @@ body {
     width: 100%;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
-    background-color: #b3401a;
+    background-color: #e9cece;
     pointer-events: auto;
 }
 
@@ -288,8 +288,8 @@ body {
     z-index: 2;
     opacity: 1;
     text-align: center;
-    text-shadow: 6px 6px 0.5em rgba(179, 64, 26, 0.5);
-    mix-blend-mode: lighten;
+    text-shadow: 15px 15px 2em rgba(8, 2, 0, 0.5);
+    /* mix-blend-mode: lighten; */
 }
 
 .untitled__slideContent span {
