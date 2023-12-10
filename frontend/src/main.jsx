@@ -5,13 +5,16 @@ import "./input.css";
 import App from "./App";
 import { BaseUrlProvider } from "./context/BaseUrlContext";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<BaseUrlProvider>
-				<App />
+				<ThemeProvider>
+					<App />
+				</ThemeProvider>
 			</BaseUrlProvider>
 		</BrowserRouter>
 	</React.StrictMode>
