@@ -4422,6 +4422,10 @@ details.collapse summary::-webkit-details-marker {
   overflow: hidden;
 }
 
+.overflow-clip {
+  overflow: clip;
+}
+
 .\!overflow-visible {
   overflow: visible !important;
 }
@@ -5941,12 +5945,12 @@ details.collapse summary::-webkit-details-marker {
   opacity: 0.1;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
 .opacity-40 {
   opacity: 0.4;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow {
