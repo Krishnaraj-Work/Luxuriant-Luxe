@@ -6,6 +6,7 @@ import { ThemeContext } from "../context/ThemeContext";
 import { NavLink, useNavigate } from "react-router-dom";
 import {
 	IconBrush,
+	IconHome,
 	IconInfoCircle,
 	IconLogout,
 	IconMenu2,
@@ -166,7 +167,17 @@ export function Navbar(props) {
 								<ul className="p-2 bg-base-100 text-base-content z-50 flex flex-wrap flex-col w-fit gap-2">
 									<li className="text-md md:text-xl whitespace-nowrap flex-nowrap w-36">
 										<NavLink
-											to={"/products/#products_div"}
+											to={"/"}
+											id="contact_element"
+											className="hover:text-black"
+										>
+											<IconHome className="w-6 h-6" />
+											Home
+										</NavLink>
+									</li>
+									<li className="text-md md:text-xl whitespace-nowrap flex-nowrap w-36">
+										<NavLink
+											to={"/products"}
 											id="contact_element"
 											className="hover:text-black"
 										>
@@ -235,16 +246,6 @@ export function Navbar(props) {
 												Account
 											</summary>
 											<ul className="p-2 bg-base-100 text-base-content">
-												{/*<li className="text-md">*/}
-												{/*	<NavLink*/}
-												{/*		to={"/cart"}*/}
-												{/*		id="contact_element"*/}
-												{/*		className="hover:text-black"*/}
-												{/*	>*/}
-												{/*		<IconGardenCart className="w-6 h-6"/>*/}
-												{/*		Cart*/}
-												{/*	</NavLink>*/}
-												{/*</li>*/}
 												<li className="text-md">
 													<NavLink
 														to={"/"}
