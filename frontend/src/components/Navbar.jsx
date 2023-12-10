@@ -54,7 +54,7 @@ export function Navbar(props) {
 							id="luxelogo"
 							className="w-9 h-9 bg-center snap-center self-center"
 						></div>
-						<div className="md:btn md:btn-ghost md:normal-case md:text-lg md:text-xl hidden md:display">
+						<div className="md:btn md:btn-ghost md:normal-case md:text-xl hidden md:display">
 							Luxuriant Luxe
 						</div>
 					</NavLink>
@@ -137,19 +137,9 @@ export function Navbar(props) {
 							<li>
 								<details>
 									<summary>
-										<IconUserBolt className="w-8 h-8" />
+										<IconUserBolt className="w-8 h-8 text-secondary-content" />
 									</summary>
-									<ul className="p-2 bg-base-100 text-base-content">
-										{/*<li className="text-lg">*/}
-										{/*	<NavLink*/}
-										{/*		to={"/cart"}*/}
-										{/*		id="contact_element"*/}
-										{/*		className="hover:text-black"*/}
-										{/*	>*/}
-										{/*		<IconGardenCart className="w-8 h-8"/>*/}
-										{/*		Cart*/}
-										{/*	</NavLink>*/}
-										{/*</li>*/}
+									<ul className="p-2 bg-base-100 text-secondary-content">
 										<li
 											className="text-lg hover:text-black"
 											onClick={() => {
@@ -170,13 +160,13 @@ export function Navbar(props) {
 					<ul className="menu menu-horizontal px-1 w-fit">
 						<li>
 							<details className="w-fit">
-								<summary className="text-md md:text-xl hover:text-black">
-									<IconMenu2 className="w-6 h-6" />
+								<summary className="text-md md:text-xl text-black">
+									<IconMenu2 className="w-6 h-6 text-black" />
 								</summary>
 								<ul className="p-2 bg-base-100 text-base-content z-50 flex flex-wrap flex-col w-fit gap-2">
 									<li className="text-md md:text-xl whitespace-nowrap flex-nowrap w-36">
 										<NavLink
-											to={"/products"}
+											to={"/products/#products_div"}
 											id="contact_element"
 											className="hover:text-black"
 										>
@@ -206,7 +196,7 @@ export function Navbar(props) {
 									</li>
 									<li className="menu menu-horizontal px-1 py-0 ">
 										<details>
-											<summary className="text-md md:text-xl hover:text-black">
+											<summary className="text-md md:text-xl text-secondary-content">
 												<IconBrush className="w-6 h-6" />
 												Theme
 											</summary>
@@ -240,8 +230,8 @@ export function Navbar(props) {
 									</li>
 									<li className="menu menu-horizontal px-1 py-0">
 										<details>
-											<summary className="text-md md:text-xl hover:text-black">
-												<IconUserBolt className="w-6 h-6" />
+											<summary className="text-md md:text-xl text-secondary-content">
+												<IconUserBolt className="w-6 h-6 text-secondary-content" />
 												Account
 											</summary>
 											<ul className="p-2 bg-base-100 text-base-content">

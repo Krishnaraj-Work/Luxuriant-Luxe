@@ -149,7 +149,7 @@ const Products = () => {
 						className="w-screen h-64 bg-center snap-center self-center my-4"
 					></div>
 				</div>
-				<div className="text-xl mt-4 prata text-left  text-center">
+				<div className="text-xl mt-4 prata text-center ">
 					A perfect balance of essential oils and natural smoothness
 					helping you in simplifying and making your bathing and
 					skincare experience organic and fun.
