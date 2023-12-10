@@ -15,6 +15,40 @@ import {
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import { CartContext } from "../context/CartContext";
 import { useLocation } from "react-router-dom";
+import { ProductCarousel } from "../components/ui/ProductCarousel";
+
+const product_1_images = [
+	"../../assets/images/product_carousel/1/06.png",
+	"../../assets/images/product_carousel/1/07.png",
+	"../../assets/images/product_carousel/1/08.png",
+	"../../assets/images/product_carousel/1/00.jpg",
+	"../../assets/images/product_carousel/1/01.png",
+	"../../assets/images/product_carousel/1/02.png",
+	"../../assets/images/product_carousel/1/03.png",
+	"../../assets/images/product_carousel/1/04.png",
+	"../../assets/images/product_carousel/1/05.png",
+];
+
+const product_2_images = [
+	"../../assets/images/product_carousel/2/06.png",
+	"../../assets/images/product_carousel/2/07.png",
+	"../../assets/images/product_carousel/2/08.png",
+	"../../assets/images/product_carousel/2/01.png",
+	"../../assets/images/product_carousel/2/02.png",
+	// "../../assets/images/product_carousel/2/03.png",
+	// "../../assets/images/product_carousel/2/04.png",
+	"../../assets/images/product_carousel/2/05.png",
+];
+
+const product_3_images = [
+	"../../assets/images/product_carousel/3/04.png",
+	"../../assets/images/product_carousel/3/05.png",
+	"../../assets/images/product_carousel/3/06.png",
+	"../../assets/images/product_carousel/3/07.png",
+	"../../assets/images/product_carousel/3/01.png",
+	"../../assets/images/product_carousel/3/02.png",
+	"../../assets/images/product_carousel/3/03.png",
+];
 
 const Products = () => {
 	// const navigate = useNavigate();
@@ -56,13 +90,14 @@ const Products = () => {
 				id="intro"
 			>
 				<div className="text-5xl dancing my-6 mb-3">Oily Skin</div>
-				<div className="flex justify-center mt-4">
+				{/* <div className="flex justify-center mt-4">
 					<div
 						id={theme === "light" ? "blue_1" : "blue_1"}
 						className="w-screen h-64 bg-center snap-center self-center my-4"
 					></div>
-				</div>
-				<div className="text-xl mt-4 prata text-left  text-center">
+				</div> */}
+				{<ProductCarousel images={product_1_images} />}
+				<div className="text-xl mt-4 prata text-center">
 					Tired of trying to find a product for your skin which is
 					organic beneficial and chemical free? Don't worry! We have
 					got you covered! Reduces Oiliness, makes skin bouncy,
@@ -96,13 +131,15 @@ const Products = () => {
 				id="intro"
 			>
 				<div className="text-5xl dancing my-6 mb-3">Dry Skin</div>
-				<div className="flex justify-center mt-4">
+				{/* <div className="flex justify-center mt-4">
 					<div
 						id={theme === "light" ? "pink_1" : "pink_1"}
 						className="w-screen h-64 bg-center snap-center self-center my-4"
 					></div>
-				</div>
-				<div className="text-xl mt-4 prata text-left  text-center">
+				</div> */}
+				{<ProductCarousel images={product_2_images} />}
+
+				<div className="text-xl mt-4 prata text-center">
 					Our body cleanser is dedicated to rejuvenate and make your
 					dry skin soft, bouncy and supple again. Our cleanser
 					contains essential nature sources oils which are easy to
@@ -134,12 +171,14 @@ const Products = () => {
 				id="intro"
 			>
 				<div className="text-5xl dancing my-6 mb-3">Normal Skin</div>
-				<div className="flex justify-center mt-4">
+				{/* <div className="flex justify-center mt-4">
 					<div
 						id={theme === "light" ? "purple_1" : "purple_1"}
 						className="w-screen h-64 bg-center snap-center self-center my-4"
 					></div>
-				</div>
+				</div> */}
+				{<ProductCarousel images={product_3_images} />}
+
 				<div className="text-xl mt-4 prata text-center ">
 					A perfect balance of essential oils and natural smoothness
 					helping you in simplifying and making your bathing and

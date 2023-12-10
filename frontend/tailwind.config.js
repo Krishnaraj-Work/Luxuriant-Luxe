@@ -1,19 +1,28 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-	content: ["./src/App.jsx", "./src/main.jsx", "./src/components/**/*.jsx", './src/pages/*.jsx', './index.html', './src/components/ui/*.jsx'],
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
+	content: [
+		"./src/App.jsx",
+		"./src/main.jsx",
+		"./src/components/**/*.jsx",
+		"./src/pages/*.jsx",
+		"./index.html",
+		"./src/components/ui/*.jsx",
+	],
 	theme: {
 		extend: {
 			colors: {
-				'text': '#231010',
-				'background': '#f6eaea',
-				'primary': '#e89293',
-				'secondary': '#e9cece',
-				'accent': '#eb5959',
-				'text_dark': '#efdcdc',
-				'background_dark': '#181616',
-				'primary_dark': '#c58a8a',
-				'secondary_dark': '#140404',
-				'accent_dark': '#f26c6c',
+				text: "#231010",
+				background: "#f6eaea",
+				primary: "#e89293",
+				secondary: "#e9cece",
+				accent: "#eb5959",
+				text_dark: "#efdcdc",
+				background_dark: "#181616",
+				primary_dark: "#c58a8a",
+				secondary_dark: "#140404",
+				accent_dark: "#f26c6c",
 			},
 		},
 	},
@@ -23,12 +32,12 @@ module.exports = {
 		themes: [
 			{
 				MyLight: {
-					text: '#231010',
-					'base-100': '#f6eaea',
-					primary: '#e89293',
-					secondary: '#e9cece',
-					neutral: '#a2494a',
-					accent: '#eb5959',
+					text: "#231010",
+					"base-100": "#f6eaea",
+					primary: "#e89293",
+					secondary: "#e9cece",
+					neutral: "#a2494a",
+					accent: "#eb5959",
 					info: "#5699eb",
 					success: "#37e1cd",
 					warning: "#eabe10",
@@ -67,7 +76,7 @@ module.exports = {
 				},
 			},
 		],
-		
+
 		darkTheme: "dark", // name of one of the included themes for dark mode
 		base: true, // applies background color and foreground color for root element by default
 		styled: true, // include daisyUI colors and design decisions for all components
@@ -76,4 +85,4 @@ module.exports = {
 		prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
 		logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
 	},
-};
+});
