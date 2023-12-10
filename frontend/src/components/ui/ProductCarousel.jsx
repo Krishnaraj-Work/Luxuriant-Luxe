@@ -1,5 +1,11 @@
 import { Carousel, IconButton } from "@material-tailwind/react";
-import { IconMoodSadFilled } from "@tabler/icons-react";
+import {
+	IconArrowRight,
+	IconBounceRightFilled,
+	IconCaretLeftFilled,
+	IconCaretRightFilled,
+	IconMoodSadFilled,
+} from "@tabler/icons-react";
 
 export function ProductCarousel(props) {
 	const images = props.images;
@@ -9,6 +15,28 @@ export function ProductCarousel(props) {
 			autoplay={true}
 			autoplayDelay={2000}
 			loop={true}
+			prevArrow={({ handlePrev }) => (
+				<IconButton
+					variant="text"
+					color="white"
+					size="lg"
+					onClick={handlePrev}
+					className="!absolute top-2/4 left-4 -translate-y-2/4 bg-white opacity-40"
+				>
+					<IconCaretLeftFilled className="text-black" />
+				</IconButton>
+			)}
+			nextArrow={({ handleNext }) => (
+				<IconButton
+					variant="text"
+					color="white"
+					size="lg"
+					onClick={handleNext}
+					className="!absolute top-2/4 !right-4 -translate-y-2/4 p-4 bg-white opacity-40 glass"
+				>
+					<IconCaretRightFilled className="text-black" />
+				</IconButton>
+			)}
 		>
 			{images && images.length > 0 ? (
 				images.map((image, index) => (

@@ -15,6 +15,7 @@ import {
 } from "@tabler/icons-react";
 import ScrollToTopButton from "../components/ui/ScrollToTopButton";
 import slideshowhtml from "../components/slideshow.html";
+const imgUrl = new URL("../components/slideshow.html", import.meta.url).href;
 import About from "./About";
 import Products from "./Products";
 
@@ -34,7 +35,7 @@ const Home = () => {
 		<div className="">
 			<section>
 				<iframe
-					src={"../components/slideshow.html"}
+					src={imgUrl}
 					style={{
 						width: "100%",
 						height: "100vh",

@@ -92,7 +92,7 @@ const About = () => {
 					Why are we special?
 				</div>
 
-				<div className="text-xl mt-4 prata text-left text-center">
+				<div className="text-xl mt-4 prata text-center">
 					Made with{" "}
 					<span className="text-accent prata text-xl">
 						{" "}
@@ -108,12 +108,12 @@ const About = () => {
 					</span>
 				</div>
 				<button
-					className="btn btn-sm btn-primary my-6"
+					className="btn btn-lg btn-primary my-6"
 					onClick={() => {
 						navigate("/about");
 					}}
 				>
-					Learn More <IconArrowUpRight className="w-4 h-4" />
+					Learn More <IconArrowUpRight className="w-8 h-8" />
 				</button>
 			</section>
 

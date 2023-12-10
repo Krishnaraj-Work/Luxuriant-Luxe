@@ -90,12 +90,6 @@ const Products = () => {
 				id="intro"
 			>
 				<div className="text-5xl dancing my-6 mb-3">Oily Skin</div>
-				{/* <div className="flex justify-center mt-4">
-					<div
-						id={theme === "light" ? "blue_1" : "blue_1"}
-						className="w-screen h-64 bg-center snap-center self-center my-4"
-					></div>
-				</div> */}
 				{<ProductCarousel images={product_1_images} />}
 				<div className="text-xl mt-4 prata text-center">
 					Tired of trying to find a product for your skin which is
@@ -106,7 +100,7 @@ const Products = () => {
 					reduce of sebaceous bumps and sebum accumulation.
 				</div>
 				<button
-					className="btn btn-sm btn-primary my-6"
+					className="btn btn-lg btn-primary my-6"
 					onClick={() => {
 						// navigate("/cart");
 						addToCart({
@@ -122,7 +116,7 @@ const Products = () => {
 						}, 3000);
 					}}
 				>
-					Add to Cart <IconShoppingCartPlus className="w-4 h-4" />
+					Add to Cart <IconShoppingCartPlus className="w-8 h-8" />
 				</button>
 			</section>
 
@@ -147,7 +141,7 @@ const Products = () => {
 					dermis and making it softer and smoother.
 				</div>
 				<button
-					className="btn btn-sm btn-primary my-6"
+					className="btn btn-lg btn-primary my-6"
 					onClick={() => {
 						// navigate("/cart");
 						addToCart({
@@ -162,7 +156,7 @@ const Products = () => {
 						}, 3000);
 					}}
 				>
-					Add to Cart <IconShoppingCartPlus className="w-4 h-4" />
+					Add to Cart <IconShoppingCartPlus className="w-8 h-8" />
 				</button>
 			</section>
 
@@ -185,7 +179,7 @@ const Products = () => {
 					skincare experience organic and fun.
 				</div>
 				<button
-					className="btn btn-sm btn-primary my-6"
+					className="btn btn-lg btn-primary my-6"
 					onClick={() => {
 						// navigate("/cart");
 						addToCart({
@@ -200,7 +194,7 @@ const Products = () => {
 						}, 3000);
 					}}
 				>
-					Add to Cart <IconShoppingCartPlus className="w-4 h-4" />
+					Add to Cart <IconShoppingCartPlus className="w-8 h-8" />
 				</button>
 			</section>
 			{isProductsPage ? (
