@@ -70,7 +70,7 @@ export function Navbar(props) {
 							<NavLink
 								to={"/products"}
 								id="contact_element"
-								className="hover:text-black"
+								className="hover:text-text"
 							>
 								<IconPackage className="w-8 h-8" />
 								Our Products
@@ -80,7 +80,7 @@ export function Navbar(props) {
 							<NavLink
 								to={"/about"}
 								id="contact_element"
-								className="hover:text-black"
+								className="hover:text-text"
 							>
 								<IconInfoCircle className="w-8 h-8" />
 								About Us
@@ -96,7 +96,7 @@ export function Navbar(props) {
 								<NavLink
 									to={"/cart"}
 									id="contact_element"
-									className="hover:text-black"
+									className="hover:text-text text-text"
 								>
 									<IconShoppingCart className="w-8 h-8" />
 								</NavLink>
@@ -142,7 +142,7 @@ export function Navbar(props) {
 									</summary>
 									<ul className="p-2 bg-base-100 text-secondary-content">
 										<li
-											className="text-lg hover:text-black"
+											className="text-lg hover:text-text"
 											onClick={() => {
 												handleLogout();
 											}}
@@ -161,15 +161,15 @@ export function Navbar(props) {
 					<ul className="menu menu-horizontal px-1 w-fit">
 						<li>
 							<details className="w-fit">
-								<summary className="text-md md:text-xl text-black">
-									<IconMenu2 className="w-6 h-6 text-black" />
+								<summary className="text-md md:text-xl text-text">
+									<IconMenu2 className="w-6 h-6 text-text" />
 								</summary>
 								<ul className="p-2 bg-base-100 text-base-content z-50 flex flex-wrap flex-col w-fit gap-2">
 									<li className="text-md md:text-xl whitespace-nowrap flex-nowrap w-36">
 										<NavLink
 											to={"/"}
 											id="contact_element"
-											className="hover:text-black"
+											className="hover:text-text"
 										>
 											<IconHome className="w-6 h-6" />
 											Home
@@ -179,7 +179,7 @@ export function Navbar(props) {
 										<NavLink
 											to={"/products"}
 											id="contact_element"
-											className="hover:text-black"
+											className="hover:text-text"
 										>
 											<IconPackage className="w-6 h-6" />
 											Products
@@ -189,7 +189,7 @@ export function Navbar(props) {
 										<NavLink
 											to={"/about"}
 											id="contact_element"
-											className="hover:text-black"
+											className="hover:text-text"
 										>
 											<IconInfoCircle className="w-6 h-6" />
 											About Us
@@ -199,7 +199,7 @@ export function Navbar(props) {
 										<NavLink
 											to={"/cart"}
 											id="contact_element"
-											className="hover:text-black"
+											className="hover:text-text"
 										>
 											<IconShoppingCart className="w-6 h-6" />
 											Cart
@@ -250,7 +250,7 @@ export function Navbar(props) {
 													<NavLink
 														to={"/"}
 														id="contact_element"
-														className="hover:text-black"
+														className="hover:text-text"
 													>
 														<IconLogout className="w-6 h-6" />
 														Logout

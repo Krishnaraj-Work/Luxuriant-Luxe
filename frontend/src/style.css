@@ -5865,6 +5865,11 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(245 127 23 / var(--tw-text-opacity));
 }
 
+.text-text_dark {
+  --tw-text-opacity: 1;
+  color: rgb(239 220 220 / var(--tw-text-opacity));
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

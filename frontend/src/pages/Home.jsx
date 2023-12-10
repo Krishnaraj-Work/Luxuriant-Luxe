@@ -34,7 +34,7 @@ const Home = () => {
 		<div className="">
 			<section>
 				<iframe
-					src={slideshowhtml}
+					src={"../components/slideshow.html"}
 					style={{
 						width: "100%",
 						height: "100vh",
