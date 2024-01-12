@@ -1,0 +1,533 @@
+1/1/24, 16:14 - +91 85283 96430: We also want order tracking page
+1/1/24, 23:18 - Krishnaraj: IMG-20240108-WA0055.jpg (file attached)
+so now there are 7 shades and 4 volume each with different costs
+1/1/24, 23:21 - +91 85283 96430: Okay
+1/1/24, 23:21 - +91 85283 96430: 👍
+1/1/24, 23:21 - +91 85283 96430: Can we add more product in gloss section later
+1/1/24, 23:21 - Krishnaraj: glosses are in cosmetic section
+1/1/24, 23:22 - Krishnaraj: so u can add any number of products in the cosmetic section
+1/1/24, 23:22 - Krishnaraj: there is no separate gloss section
+1/1/24, 23:22 - +91 85283 96430: Okay done
+1/1/24, 23:29 - Krishnaraj: Also send the discover and rewards page
+1/1/24, 23:29 - Krishnaraj: Keep it simple if possible
+1/1/24, 23:30 - 51. Balraj Tavanandi: This message was deleted
+1/1/24, 23:30 - Krishnaraj: Yeah ok
+1/1/24, 23:30 - Krishnaraj: Try morning
+1/1/24, 23:30 - Krishnaraj: By 12
+1/1/24, 23:31 - 51. Balraj Tavanandi: we have deleted the discover page and rewards page
+1/1/24, 23:31 - Krishnaraj: Where will u add about us faq and shipping policy
+1/1/24, 23:31 - 51. Balraj Tavanandi: that will be at the bottom
+1/1/24, 23:31 - 51. Balraj Tavanandi: we made changes in the footer
+1/1/24, 23:31 - 51. Balraj Tavanandi: wait
+1/1/24, 23:31 - Krishnaraj: It'll link to where then
+1/1/24, 23:31 - 51. Balraj Tavanandi: IMG-20240101-WA0023.jpg (file attached)
+1/1/24, 23:32 - Krishnaraj: Ok
+1/1/24, 23:32 - 51. Balraj Tavanandi: it has a open a new page where only the item clicked will be visible
+1/1/24, 23:32 - Krishnaraj: So 6 different pages?
+1/1/24, 23:32 - Krishnaraj: That's fine too
+1/1/24, 23:33 - 51. Balraj Tavanandi: yes
+1/1/24, 23:33 - 51. Balraj Tavanandi: yes do u have anything else in mind
+1/1/24, 23:33 - Krishnaraj: Faq is there on both support and faq?
+1/1/24, 23:33 - 51. Balraj Tavanandi: no im giving you an idea
+1/1/24, 23:33 - 51. Balraj Tavanandi: its not complete
+1/1/24, 23:33 - Krishnaraj: The discover page was a good idea
+1/1/24, 23:33 - 51. Balraj Tavanandi: no we don't want it
+1/1/24, 23:33 - Krishnaraj: Ok then
+1/1/24, 23:33 - Krishnaraj: This is the way
+1/1/24, 23:33 - Krishnaraj: Same work
+1/1/24, 23:34 - 51. Balraj Tavanandi: yes this is concise and all in one place so easier
+1/1/24, 23:34 - 51. Balraj Tavanandi: yes
+1/1/24, 23:34 - Krishnaraj: Yeah ok np
+1/1/24, 23:34 - 51. Balraj Tavanandi: gg
+1/1/24, 23:34 - Krishnaraj: Send my tmro 12 everything u have
+1/1/24, 23:34 - Krishnaraj: Gg
+1/1/24, 23:34 - 51. Balraj Tavanandi: yes
+1/1/24, 23:34 - Krishnaraj: The hardest part was shades anyway so that's done
+1/1/24, 23:34 - Krishnaraj: Just front-end tmro
+1/1/24, 23:34 - 51. Balraj Tavanandi: yes
+1/1/24, 23:35 - Krishnaraj: So only product page and those 6 pages are left
+1/1/24, 23:35 - Krishnaraj: Send how u want those pages to look too btw
+1/1/24, 23:35 - Krishnaraj: Those 6.
+1/1/24, 23:35 - +91 85283 96430: Yes
+1/1/24, 23:45 - 51. Balraj Tavanandi: Yea
+1/2/24, 08:49 - 51. Balraj Tavanandi: We also want a submit review section
+1/2/24, 14:20 - +91 85283 96430: <Media omitted>
+product page.pdf
+1/2/24, 14:22 - +91 85283 96430: do ask if any relevant detail or ellaboration needed for product page
+1/2/24, 14:22 - 51. Balraj Tavanandi: we have invited to canvas also along with the pdf just in case
+1/2/24, 14:22 - 51. Balraj Tavanandi: canva*
+1/2/24, 14:22 - Krishnaraj: the adding number to cart depending on number is not possible inside the cart
+1/2/24, 14:22 - Krishnaraj: number of products can be shown besides it
+1/2/24, 14:22 - 51. Balraj Tavanandi: only cart photo will be fine
+1/2/24, 14:22 - 51. Balraj Tavanandi: yes works
+1/2/24, 14:23 - Krishnaraj: what products are you showing in "you may also like"
+1/2/24, 14:24 - 51. Balraj Tavanandi: the products that will be shown there are gonna be the ones that are displayed at the beginning
+1/2/24, 14:24 - 51. Balraj Tavanandi: that is luxuriant luxe essential
+1/2/24, 14:24 - Krishnaraj: so only essential category products
+1/2/24, 14:25 - 51. Balraj Tavanandi: the shopping bag photo is MUST same be on all site
+1/2/24, 14:25 - 51. Balraj Tavanandi: yes
+1/2/24, 14:25 - Krishnaraj: yeah np
+1/2/24, 14:25 - Krishnaraj: details is the same as product description right
+1/2/24, 14:25 - 51. Balraj Tavanandi: this pattern is for all proudcts except lip gloss uska we r sending
+1/2/24, 14:26 - +91 85283 96430: no keep it modular
+1/2/24, 14:26 - Krishnaraj: product description is modular
+1/2/24, 14:26 - 51. Balraj Tavanandi: ok
+1/2/24, 14:26 - Krishnaraj: IMG-20240108-WA0056.jpg (file attached)
+1/2/24, 14:26 - Krishnaraj: every product also has a volume, and each volume has a different cost
+1/2/24, 14:26 - 51. Balraj Tavanandi: yes this is fine
+1/2/24, 14:26 - Krishnaraj: 10ml, 20ml etc
+1/2/24, 14:27 - 51. Balraj Tavanandi: okay perfect
+1/2/24, 14:27 - 51. Balraj Tavanandi: keep it modualr
+1/2/24, 14:27 - Krishnaraj: nono
+1/2/24, 14:27 - Krishnaraj: where is the layout for adding that
+1/2/24, 14:27 - 51. Balraj Tavanandi: na wo product descriptions mai aayega
+1/2/24, 14:27 - 51. Balraj Tavanandi: bro wo mai description mai aayega <This message was edited>
+1/2/24, 14:27 - Krishnaraj: bro how will they select which one they want
+1/2/24, 14:27 - Krishnaraj: they catn select from descritption
+1/2/24, 14:28 - +91 85283 96430: fit it above the cart or somewhere
+1/2/24, 14:28 - Krishnaraj: put it on canva
+1/2/24, 14:28 - Krishnaraj: send me
+1/2/24, 14:28 - Krishnaraj: send this again with volumes added to it
+1/2/24, 14:28 - Krishnaraj: the "only" thing that lip gloss has other than this is shades
+1/2/24, 14:29 - Krishnaraj: each shade has color, name, number
+1/2/24, 14:29 - Krishnaraj: and image
+1/2/24, 14:29 - +91 85283 96430: see not every product has ml so keep it modular
+1/2/24, 14:29 - Krishnaraj: IMG-20240108-WA0057.jpg (file attached)
+1/2/24, 14:29 - Krishnaraj: it is already modular
+1/2/24, 14:29 - +91 85283 96430: yes
+1/2/24, 14:29 - Krishnaraj: but for those that do have it, i need the layout
+1/2/24, 14:30 - Krishnaraj: ..
+1/2/24, 14:31 - Krishnaraj: in those that dont have volumes, itll simply disappear
+1/2/24, 14:31 - Krishnaraj: same goes with shades, those products without shades, the shade options will simply disappear
+1/2/24, 14:36 - +91 85283 96430: This message was deleted
+1/2/24, 14:36 - Krishnaraj: same one
+1/2/24, 14:36 - +91 85283 96430: yea ik
+1/2/24, 14:36 - 51. Balraj Tavanandi: <Media omitted>
+product page (1).pdf
+1/2/24, 14:37 - Krishnaraj: alright
+1/2/24, 14:37 - 51. Balraj Tavanandi: le bro
+1/2/24, 14:37 - Krishnaraj: yeah just send shades
+1/2/24, 14:37 - Krishnaraj: for lip gloss layout too
+1/2/24, 14:37 - Krishnaraj: that wil be it
+1/2/24, 14:37 - 51. Balraj Tavanandi: okay sending
+1/2/24, 14:48 - +91 85283 96430: measurements are in ml & oz both <This message was edited>
+1/2/24, 14:49 - Krishnaraj: what
+1/2/24, 14:50 - Krishnaraj: whats the point of that?
+1/2/24, 14:50 - Krishnaraj: also they are different systems of units of measurements
+1/2/24, 14:50 - +91 85283 96430: you make the category
+1/2/24, 14:51 - +91 85283 96430: ik that just make it its gonna look like 25 ml, 5 fl oz
+1/2/24, 14:51 - Krishnaraj: so same price?
+1/2/24, 14:51 - Krishnaraj: u mean u wanna show the same quantity in different units
+1/2/24, 14:52 - +91 85283 96430: 25 ml is 5 oz so yes the price is going to be same only
+1/2/24, 14:52 - +91 85283 96430: yes
+1/2/24, 14:52 - Krishnaraj: <Media omitted>
+1/2/24, 14:53 - Krishnaraj: why not just convert ml in frontend then
+1/2/24, 14:54 - +91 85283 96430: if its possible then yes
+1/2/24, 14:54 - Krishnaraj: yeah why not
+1/2/24, 14:54 - Krishnaraj: itll show 25ml, 0.8 fl oz
+1/2/24, 14:54 - Krishnaraj: below the name
+1/2/24, 14:54 - +91 85283 96430: perfect
+1/2/24, 15:09 - 51. Balraj Tavanandi: This message was deleted
+1/2/24, 15:10 - 51. Balraj Tavanandi: this has all the patterns of product
+1/2/24, 15:10 - 51. Balraj Tavanandi: lower is lip gloss
+1/2/24, 15:10 - 51. Balraj Tavanandi: lip gloss shades ka colour should be modular in hex code so we can change in accordingly
+1/2/24, 15:11 - Krishnaraj: yeah it is
+1/2/24, 15:11 - Krishnaraj: alright
+1/2/24, 15:21 - +91 85283 96430: <Media omitted>
+final website layout.pdf
+1/2/24, 15:21 - 51. Balraj Tavanandi: <Media omitted>
+product page (3).pdf
+1/2/24, 15:21 - 51. Balraj Tavanandi: this is final lip gloss format <This message was edited>
+1/2/24, 15:22 - Krishnaraj: and this is final too right
+1/2/24, 15:22 - 51. Balraj Tavanandi: yes
+1/2/24, 15:22 - Krishnaraj: ok
+1/2/24, 23:05 - Krishnaraj: IMG-20240102-WA0013.jpg (file attached)
+1/2/24, 23:05 - Krishnaraj: IMG-20240102-WA0012.jpg (file attached)
+1/2/24, 23:08 - +91 85283 96430: 👍nice
+1/3/24, 10:50 - Krishnaraj: IMG-20240103-WA0002.jpg (file attached)
+so if you disable the checkboxes it wont be shown in the website. If you enable them, then you should fill in the values. If you fill only 2 volumes, only 2 will be displayed. Same with shades
+1/3/24, 12:07 - +91 85283 96430: Okay gg 👍
+1/3/24, 12:08 - Krishnaraj: You deleted this message
+1/3/24, 12:17 - Krishnaraj: <Media omitted>
+heres the manual rating system
+1/3/24, 12:17 - Krishnaraj: the ones ticked with visible will be shown in the main page, all other reviews will be shown in admin page
+1/3/24, 13:35 - +91 85283 96430: Okay great 👍 and if someone wants to upload a picture as a review
+1/3/24, 13:35 - Krishnaraj: nah thats not there
+1/3/24, 13:35 - +91 85283 96430: Make it cus if some damage happens or something
+1/3/24, 13:35 - Krishnaraj: uploading a picture is far more complicated, ull have to buy storage space to store those images, it wont be free
+1/3/24, 13:35 - Krishnaraj: they have ur whatsapp
+1/3/24, 13:35 - +91 85283 96430: Okay
+1/3/24, 14:20 - Krishnaraj: IMG-20240108-WA0058.jpg (file attached)
+are you sure for taking these images?
+1/3/24, 14:20 - Krishnaraj: https://icons8.com/icons/
+1/3/24, 14:20 - Krishnaraj: if possible try searching these things on this website, itll be easier to put in, and there are more choices
+1/3/24, 14:30 - 51. Balraj Tavanandi: Okay perfect
+1/3/24, 14:30 - 51. Balraj Tavanandi: Beautiful
+1/3/24, 14:31 - 51. Balraj Tavanandi: Yes wait well search n send in sometime
+1/3/24, 14:46 - Krishnaraj: IMG-20240108-WA0059.jpg (file attached)
+these are the product details, check that everything is there
+1/3/24, 14:47 - Krishnaraj: IMG-20240108-WA0060.jpg (file attached)
+1/3/24, 14:47 - Krishnaraj: well change the styles together on discord
+1/3/24, 14:47 - Krishnaraj: color, fonts, spacing, text size etc
+1/3/24, 14:54 - +91 85283 96430: Yes done
+1/3/24, 15:01 - Krishnaraj: IMG-20240108-WA0061.jpg (file attached)
+1/3/24, 15:23 - Krishnaraj: here shades are clickable, images will change upon clicking shades
+1/3/24, 15:23 - Krishnaraj: and cost will change upon clicking volumes
+1/3/24, 15:29 - 51. Balraj Tavanandi: Yes
+1/3/24, 15:29 - 51. Balraj Tavanandi: Okay
+1/3/24, 15:30 - Krishnaraj: is this fine, does it have everything
+1/3/24, 15:30 - Krishnaraj: or u want me to add
+1/3/24, 15:30 - 51. Balraj Tavanandi: Lemme check
+1/3/24, 15:30 - 51. Balraj Tavanandi: Uske niche ka sab kuch did u add
+1/3/24, 15:31 - 51. Balraj Tavanandi: How to use wagera
+1/3/24, 15:31 - Krishnaraj: na doing rn
+1/3/24, 15:31 - 51. Balraj Tavanandi: Acha
+1/3/24, 15:31 - Krishnaraj: this is just top ka
+1/3/24, 15:31 - 51. Balraj Tavanandi: Acha it's good
+1/3/24, 15:31 - +91 85283 96430: Details has that +- sign right
+1/3/24, 15:31 - Krishnaraj: yeah
+1/3/24, 15:31 - +91 85283 96430: Okay
+1/3/24, 15:32 - Krishnaraj: ill move on to the below part then
+1/3/24, 15:32 - Krishnaraj: how to use, real results and reviews
+1/3/24, 15:33 - Krishnaraj: also you guys havent given how the cart page must look like
+1/3/24, 15:33 - 51. Balraj Tavanandi: After adding the details and ingredients it'll automatically shift niche ?
+1/3/24, 15:33 - 51. Balraj Tavanandi: Yes
+1/3/24, 15:33 - Krishnaraj: VID-20240103-WA0001.mp4 (file attached)
+1/3/24, 15:34 - 51. Balraj Tavanandi: It's like the previous one only columns and products and uska addition with the options to Remove and add the quantity if more is needed
+1/3/24, 15:34 - Krishnaraj: ok
+1/3/24, 15:34 - 51. Balraj Tavanandi: Okay this is good
+1/3/24, 15:34 - Krishnaraj: ill just add invoice then
+1/3/24, 15:34 - Krishnaraj: and the i agree box
+1/3/24, 15:35 - 51. Balraj Tavanandi: Try making the format more pleasing to look if possible
+1/3/24, 15:35 - Krishnaraj: ill try,
+1/3/24, 15:35 - +91 85283 96430: Hold on i ll provide you how cart is going to look by mid evening
+1/3/24, 15:35 - Krishnaraj: yeah better
+1/3/24, 15:35 - Krishnaraj: ill try to make the invoice downloadable by pdf
+1/3/24, 15:35 - 51. Balraj Tavanandi: Yes that should have ALL the terms and conditions in a small window with the check box uska bhi data base mai aana chaiye
+1/3/24, 15:35 - +91 85283 96430: I ve exam till 6 pm
+1/3/24, 15:35 - Krishnaraj: not sure but ill try
+1/3/24, 15:35 - +91 85283 96430: After that
+1/3/24, 15:36 - Krishnaraj: yeah np
+1/3/24, 15:36 - Krishnaraj: ok
+1/3/24, 15:36 - Krishnaraj: data base me?
+1/3/24, 15:37 - 51. Balraj Tavanandi: We should have a record of the ppl who have ticked the box
+1/3/24, 15:37 - 51. Balraj Tavanandi: In a way
+1/3/24, 15:37 - Krishnaraj: anyone who bought will automatically be recorded anyway
+1/3/24, 15:37 - 51. Balraj Tavanandi: And make it like you can't see the payment method unless u tick the box
+1/3/24, 15:37 - Krishnaraj: and only those that paid are recorded, so naturally theyll have ticked the box
+1/3/24, 15:37 - 51. Balraj Tavanandi: Acha okay
+1/3/24, 15:37 - Krishnaraj: yeah
+1/3/24, 15:37 - 51. Balraj Tavanandi: Okay okay
+1/3/24, 15:38 - Krishnaraj: <Media omitted>
+laps (5).pdf
+1/3/24, 15:39 - Krishnaraj: if there arent too many cosmetic changes and cart page isnt too fancy, it should be done in 4 to 6 more hours
+1/3/24, 16:51 - Krishnaraj: Reviews are now working
+1/3/24, 16:52 - Krishnaraj: So just the cart page is left from my side.. Send it by 8 if possible
+1/3/24, 16:52 - Krishnaraj: And some minor changes
+1/3/24, 18:54 - 51. Balraj Tavanandi: Only fonts and colors and placement
+1/3/24, 18:54 - 51. Balraj Tavanandi: Yes
+1/3/24, 18:58 - 51. Balraj Tavanandi: This message was deleted
+1/3/24, 18:58 - 51. Balraj Tavanandi: Bro Aisa try kar banane ko the final invoice display while checking out
+1/3/24, 19:02 - 51. Balraj Tavanandi: This message was deleted
+1/3/24, 19:28 - 51. Balraj Tavanandi: @919834312135 have u made the checkout page where the customer puts his adress contact details and everything
+1/3/24, 19:30 - 51. Balraj Tavanandi: If not we r putting it in the cart page only
+1/3/24, 20:10 - 51. Balraj Tavanandi: final website layout (2).pdf (file attached)
+final website layout (2).pdf
+1/3/24, 20:10 - 51. Balraj Tavanandi: this is cart layout
+1/3/24, 21:38 - +91 85283 96430: This message was deleted
+1/3/24, 22:26 - Krishnaraj: I'll try but I'm not sure I can do the whole right side panel opening thing
+1/3/24, 22:26 - Krishnaraj: If I can't it'll directly redirect to the cart page
+1/3/24, 22:30 - +91 85283 96430: final website layout-2.png (file attached)
+final website layout-2.png
+1/3/24, 22:30 - +91 85283 96430: This is final cart layout
+1/3/24, 22:30 - +91 85283 96430: Okay but try the panel because its much more user friendly
+1/3/24, 22:45 - Krishnaraj: Yeah
+1/3/24, 22:46 - Krishnaraj: Couple of things here
+1/3/24, 22:46 - Krishnaraj: 1. There is no reward section
+1/3/24, 22:46 - Krishnaraj: 2. U can't do particular recommendations like if they buy lotion recommend oil, it'll just be ll essentials
+1/3/24, 22:47 - Krishnaraj: 3. Sample is just products from the same category
+1/3/24, 22:47 - +91 85283 96430: Why we can recommend them from the same category
+1/3/24, 22:47 - Krishnaraj: Or if you want u can make a new category for samples
+1/3/24, 22:47 - Krishnaraj: Yeah same category is possible
+1/3/24, 22:47 - +91 85283 96430: Sample will be decided by us
+1/3/24, 22:47 - Krishnaraj: Which is whst it is rn
+1/3/24, 22:47 - Krishnaraj: So sample isn't from same category then
+1/3/24, 22:47 - +91 85283 96430: Yes body lotion and oil will be most probably in the same category of ll skin
+1/3/24, 22:48 - +91 85283 96430: No it ll be random
+1/3/24, 22:48 - Krishnaraj: So it'll simple show ll skin products
+1/3/24, 22:48 - Krishnaraj: That's it
+1/3/24, 22:48 - +91 85283 96430: Depends upon the availability
+1/3/24, 22:48 - Krishnaraj: No deciding etc
+1/3/24, 22:48 - +91 85283 96430: Yes done
+1/3/24, 22:48 - Krishnaraj: Yeah only those in stock
+1/3/24, 22:48 - +91 85283 96430: Yes
+1/3/24, 22:48 - Krishnaraj: Also in products page where do u wanna add if product is in stock or not
+1/3/24, 22:49 - +91 85283 96430: Make it modular sample section so that we can even change names and put the ml and image differentlt
+1/3/24, 22:49 - +91 85283 96430: Near adding of quantity
+1/3/24, 22:49 - Krishnaraj: Then samples won't be in same category
+1/3/24, 22:49 - Krishnaraj: It'll be a new category
+1/3/24, 22:49 - +91 85283 96430: If it wont be in a stock instead of add to cart it ll be out of stock
+1/3/24, 22:49 - Krishnaraj: U can't have samples in each category
+1/3/24, 22:49 - +91 85283 96430: Yes
+1/3/24, 22:50 - Krishnaraj: A new category for samples
+1/3/24, 22:50 - Krishnaraj: And products in that category will be shown
+1/3/24, 22:50 - Krishnaraj: Here u can add sample
+1/3/24, 22:50 - +91 85283 96430: Hold on see we want to add sample randomly that will be only seen during the checkout if person buys above 3 k
+1/3/24, 22:51 - Krishnaraj: This isn't possible, that feature isnt there
+1/3/24, 22:51 - +91 85283 96430: Then what is possible
+1/3/24, 22:51 - Krishnaraj: U can ether show products from some category in samples, or u make a new category like hair, and put products there
+1/3/24, 22:51 - Krishnaraj: Then those products will be visible
+1/3/24, 22:52 - +91 85283 96430: No no you re not getting it
+1/3/24, 22:52 - +91 85283 96430: Sample is not a category it ll be shown only in a cart
+1/3/24, 22:52 - Krishnaraj: I recommend just make a new category called samples, and products u add there will simply be shown upon purchasing any product
+1/3/24, 22:52 - +91 85283 96430: And samples will be free of cost
+1/3/24, 22:52 - Krishnaraj: Unique samples per category not possible
+1/3/24, 22:53 - Krishnaraj: Unique samples per product not possible
+1/3/24, 22:53 - +91 85283 96430: Not per product
+1/3/24, 22:53 - +91 85283 96430: Areey
+1/3/24, 22:53 - Krishnaraj: Not even per category
+1/3/24, 22:53 - +91 85283 96430: Its not per category either
+1/3/24, 22:53 - Krishnaraj: U can have 8 fixed samples and show it every time
+1/3/24, 22:54 - +91 85283 96430: Can you show sample template like this in cart
+1/3/24, 22:54 - Krishnaraj: Yeah
+1/3/24, 22:54 - +91 85283 96430: Okay can i change in those 8
+1/3/24, 22:54 - +91 85283 96430: Or its going to be same
+1/3/24, 22:54 - Krishnaraj: Modular
+1/3/24, 22:55 - Krishnaraj: U can change just like any other product
+1/3/24, 22:55 - +91 85283 96430: Okay
+1/3/24, 22:55 - Krishnaraj: Ml and all
+1/3/24, 22:55 - +91 85283 96430: Thats all
+1/3/24, 22:55 - Krishnaraj: But those 8 will be fixed throughout
+1/3/24, 22:55 - Krishnaraj: Not just 8 any number
+1/3/24, 22:55 - Krishnaraj: However many u want
+1/3/24, 22:56 - +91 85283 96430: Acha okay we can change name ml everything in sample section right
+1/3/24, 22:56 - Krishnaraj: Yeah in admin page
+1/3/24, 22:56 - Krishnaraj: Sample is a category like hair skin and all
+1/3/24, 22:56 - +91 85283 96430: Okay done thats all
+1/3/24, 22:56 - +91 85283 96430: Okay but customer wont see it
+1/3/24, 22:56 - Krishnaraj: Yeah
+1/3/24, 22:56 - Krishnaraj: Only during checkout
+1/3/24, 22:56 - +91 85283 96430: Yes done
+1/3/24, 22:56 - +91 85283 96430: Thats all
+1/3/24, 22:57 - Krishnaraj: Also do u wanna show points earned per product in product page or only checkout
+1/3/24, 22:57 - +91 85283 96430: Both
+1/3/24, 22:57 - Krishnaraj: So in product page where
+1/3/24, 22:58 - +91 85283 96430: If they ll be able to see it in product page they ll be encouraged to buy a product cus of points
+1/3/24, 22:58 - Krishnaraj: Yeah
+1/3/24, 22:58 - Krishnaraj: It's not mentioned in the canva template
+1/3/24, 22:58 - +91 85283 96430: Where can it be more visible
+1/3/24, 22:58 - Krishnaraj: Usually near cart button
+1/3/24, 22:58 - +91 85283 96430: Ik you just know gave the idea
+1/3/24, 22:59 - Krishnaraj: Yeah
+1/3/24, 22:59 - +91 85283 96430: Okay then put it near cart button
+1/3/24, 22:59 - Krishnaraj: Yeah we can change its appearance  during discord
+1/3/24, 22:59 - +91 85283 96430: Sure
+1/3/24, 22:59 - Krishnaraj: So hopefully I'll finish everything by tomorrow evening
+1/3/24, 23:00 - Krishnaraj: Around 8 we can have the discord meeting
+1/3/24, 23:00 - 51. Balraj Tavanandi: Done
+1/3/24, 23:00 - Krishnaraj: Does that work for both
+1/3/24, 23:00 - Krishnaraj: Ok
+1/3/24, 23:00 - +91 85283 96430: Great work and thankyou for putting so much efforts .
+1/3/24, 23:01 - +91 85283 96430: Yes
+1/3/24, 23:01 - Krishnaraj: Ty😁
+1/3/24, 23:01 - 51. Balraj Tavanandi: Yes true beautiful work
+1/3/24, 23:01 - 51. Balraj Tavanandi: We r open for LOR signatures too 🤝
+1/3/24, 23:01 - Krishnaraj: Yeah I'll make a new one again and show once we meet
+1/3/24, 23:02 - 51. Balraj Tavanandi: Sure
+1/3/24, 23:02 - +91 85283 96430: Done
+1/3/24, 23:02 - Krishnaraj: Tmro around till 9 well finalise the cosmetics
+1/3/24, 23:02 - Krishnaraj: Rn I'm going to do the pink gradiant as bg
+1/3/24, 23:02 - 51. Balraj Tavanandi: Done yes
+1/3/24, 23:02 - +91 85283 96430: Sure and even we ll decide the colours and other things for frontend
+1/3/24, 23:03 - +91 85283 96430: Font and other beautifications <This message was edited>
+1/3/24, 23:03 - Krishnaraj: Yeah that's all we have to do
+1/3/24, 23:03 - Krishnaraj: It'll be done on the spot
+1/3/24, 23:03 - +91 85283 96430: Okay
+1/3/24, 23:03 - 51. Balraj Tavanandi: Yes 👍
+1/3/24, 23:04 - Krishnaraj: Ok
+1/4/24, 15:47 - Krishnaraj: Guys im not well from the past few days so i might have to visit the doc tonight
+1/4/24, 15:47 - Krishnaraj: we just have cosmetics remaining, all the features are done
+1/4/24, 15:47 - Krishnaraj: the side cart thing is working as well
+1/4/24, 15:48 - Krishnaraj: so im not sure if we can have the meeting tonight, ill let you know, if not well have to do it tomorrow
+1/4/24, 15:48 - Krishnaraj: minor bugs, terms and condition page and box, and cosmetics are remaining
+1/4/24, 15:50 - Krishnaraj: VID-20240104-WA0001.mp4 (file attached)
+1/4/24, 15:53 - 51. Balraj Tavanandi: Okay np tomorrow evening tho we have to complete it
+1/4/24, 15:53 - 51. Balraj Tavanandi: Okay
+1/4/24, 15:54 - Krishnaraj: yea
+1/4/24, 15:54 - Krishnaraj: ill anyway do as much as possible today
+1/4/24, 15:54 - 51. Balraj Tavanandi: Okay that's almost done with all the placements
+1/4/24, 15:54 - 51. Balraj Tavanandi: Bro footer mai saare wo nai daale
+1/4/24, 15:54 - Krishnaraj: yeah all that is just few lines of code
+1/4/24, 15:55 - Krishnaraj: 10 15 min ka kaam hai
+1/4/24, 16:06 - 51. Balraj Tavanandi: Okay
+1/5/24, 08:14 - +91 85283 96430: Its alright tcr
+1/5/24, 08:14 - +91 85283 96430: Greatt
+1/5/24, 08:14 - +91 85283 96430: Very nice
+1/5/24, 14:38 - Krishnaraj: <Media omitted>
+i havent got the layout for these pages
+1/5/24, 14:39 - +91 85283 96430: I ll send you by evening i ve exam rn
+1/5/24, 14:39 - Krishnaraj: yeah
+1/5/24, 14:50 - 51. Balraj Tavanandi: Make the terms and conditions and privacy policy modular so we can make changes later but put all there is in canva in the site for now
+1/5/24, 14:51 - 51. Balraj Tavanandi: I'll make remaining changes later
+1/5/24, 14:51 - Krishnaraj: that wont be modular
+1/5/24, 14:51 - Krishnaraj: if you wanna change it just send it to me ill hardcode
+1/5/24, 14:51 - Krishnaraj: that wont change every now and then
+1/5/24, 14:51 - Krishnaraj: otherwise well make it modular when we make the phone page
+1/5/24, 14:52 - 51. Balraj Tavanandi: PTT-20240105-WA0000.opus (file attached)
+1/5/24, 14:52 - Krishnaraj: yeah
+1/5/24, 14:52 - 51. Balraj Tavanandi: PTT-20240105-WA0001.opus (file attached)
+1/5/24, 14:53 - Krishnaraj: yeah
+1/5/24, 15:18 - Krishnaraj: also before the meeting, please try to finalize 2 fonts
+1/5/24, 15:18 - Krishnaraj: instead of th 4 or 5 we have currently in our website
+1/5/24, 15:18 - Krishnaraj: any website in the world uses at most 2 fonts, more than that appears clumsy, confused, inconsistant
+1/5/24, 15:18 - +91 85283 96430: We do need 3-4 fonts anyways
+1/5/24, 15:19 - Krishnaraj: even auteur uses 2 fonts, GT America and FF Regal
+1/5/24, 15:19 - +91 85283 96430: Watever
+1/5/24, 15:19 - Krishnaraj: it wont look good, but if you still want to, np
+1/5/24, 15:19 - Krishnaraj: whichever they are, finalize them
+1/5/24, 15:19 - +91 85283 96430: Yes
+1/5/24, 15:20 - Krishnaraj: this is a general 3rd person suggestion, i personally wont be inclined to shop at a website that cant even decide on its fonts
+1/5/24, 15:20 - Krishnaraj: ull see what i mean when i show the website
+1/5/24, 15:21 - +91 85283 96430: I doubt that person who wants to shop cares about a font more than the product
+1/5/24, 15:22 - Krishnaraj: then thats where ur wrong
+1/5/24, 15:22 - Krishnaraj: see this is basic ui ux theory
+1/5/24, 15:22 - +91 85283 96430: The choice of font is completely different so we ll update you it has no relation from buyer or seller pov
+1/5/24, 15:22 - Krishnaraj: it should
+1/5/24, 15:22 - Krishnaraj: serif fonts display class, confidence and trust
+1/5/24, 15:23 - Krishnaraj: sans serif fonts are modern looking
+1/5/24, 15:23 - +91 85283 96430: Okay
+1/5/24, 15:23 - Krishnaraj: trust me iv been desiging and using fonts for over 5 years
+1/5/24, 15:23 - Krishnaraj: in fact, better than that
+1/5/24, 15:23 - Krishnaraj: do some research yourself
+1/5/24, 15:24 - Krishnaraj: the kinda fonts companies use, what it means to them, how it reflects on the consumer
+1/5/24, 15:24 - Krishnaraj: again, this is just a suggestion, i dont mind adding whatever font color u want
+1/5/24, 15:24 - Krishnaraj: for me its just 2 lines of code
+1/5/24, 15:24 - +91 85283 96430: Okay i ll see to it
+1/5/24, 15:25 - Krishnaraj: 👍
+1/5/24, 18:13 - 51. Balraj Tavanandi: Okay fine we'll check n decide
+1/5/24, 18:15 - 51. Balraj Tavanandi: We have 4 fonts for specific purposes and it's something we want let's see how it comes out to be first
+1/5/24, 18:55 - Krishnaraj: Yeah np
+1/5/24, 20:28 - Krishnaraj: IMG-20240108-WA0062.jpg (file attached)
+1/5/24, 20:29 - Krishnaraj: IMG-20240108-WA0063.jpg (file attached)
+1/5/24, 20:29 - Krishnaraj: thats about as close i can get with footer and navbar
+1/5/24, 20:30 - Krishnaraj: IMG-20240108-WA0064.jpg (file attached)
+1/5/24, 20:31 - Krishnaraj: im just finishing up with the side cart and checkout page, which is the last thing left
+1/5/24, 20:31 - Krishnaraj: after that we can do the meeting to make any other changes
+1/5/24, 21:34 - 51. Balraj Tavanandi: Yes
+1/5/24, 21:34 - 51. Balraj Tavanandi: Bro the cart ka symbol
+1/5/24, 21:34 - 51. Balraj Tavanandi: Idt it's the same we sent
+1/5/24, 21:34 - Krishnaraj: i cant take it from canva
+1/5/24, 21:35 - 51. Balraj Tavanandi: Kisse liya
+1/5/24, 21:35 - Krishnaraj: idk how im supposed to export png image of cart from canva
+1/5/24, 21:35 - Krishnaraj: so i gave that website na
+1/5/24, 21:35 - Krishnaraj: find it from there
+1/5/24, 21:35 - 51. Balraj Tavanandi: Acha
+1/5/24, 21:35 - 51. Balraj Tavanandi: Wait so u want it png mai na
+1/5/24, 21:35 - Krishnaraj: or ill have to take a screenshot on canva, remove background convert to png
+1/5/24, 21:35 - Krishnaraj: ha
+1/5/24, 21:35 - 51. Balraj Tavanandi: Na na
+1/5/24, 21:35 - 51. Balraj Tavanandi: I'll send hold on
+1/5/24, 21:44 - 51. Balraj Tavanandi: IMG-20240108-WA0065.jpg (file attached)
+1/5/24, 21:44 - Krishnaraj: send doc
+1/5/24, 21:45 - Krishnaraj: whatsapp doesnt send png
+1/5/24, 21:45 - 51. Balraj Tavanandi: <Media omitted>
+cart png.png
+1/5/24, 21:45 - 51. Balraj Tavanandi: which other emoji weren't u getting ill send them
+1/5/24, 21:49 - 51. Balraj Tavanandi: bro about us page did u make
+1/5/24, 21:49 - Krishnaraj: the vegan thing
+1/5/24, 21:50 - Krishnaraj: those 3
+1/5/24, 21:50 - 51. Balraj Tavanandi: ha
+1/5/24, 21:55 - 51. Balraj Tavanandi: <Media omitted>
+gurantee.png
+1/5/24, 21:55 - 51. Balraj Tavanandi: <Media omitted>
+vegan.png
+1/5/24, 21:55 - 51. Balraj Tavanandi: <Media omitted>
+cruelty free.png
+1/5/24, 21:56 - 51. Balraj Tavanandi: aur koi symbol
+1/5/24, 21:56 - Krishnaraj: thats it ig
+1/5/24, 21:57 - +91 85283 96430: IMG-20240108-WA0066.jpg (file attached)
+1/5/24, 21:58 - Krishnaraj: the checkout page and side cart is still being done
+1/5/24, 21:58 - Krishnaraj: rest of the stuff is done ig
+1/5/24, 21:58 - Krishnaraj: ill show u on discord quick
+1/5/24, 21:58 - Krishnaraj: in like 5 mins
+1/5/24, 21:58 - 51. Balraj Tavanandi: yes finish as much as possible tell us after sab kuch well tell the changes
+1/5/24, 21:59 - Krishnaraj: na iv dinner after this and i wont get time for a meeting later
+1/5/24, 21:59 - Krishnaraj: just see what it is rn
+1/5/24, 21:59 - Krishnaraj: ill finish by today anyway
+1/5/24, 21:59 - 51. Balraj Tavanandi: changes wagera mai time lagega
+1/5/24, 21:59 - Krishnaraj: we might have to do the meeting tmro morning
+1/5/24, 21:59 - 51. Balraj Tavanandi: have dinner then come
+1/5/24, 21:59 - Krishnaraj: na not today then
+1/5/24, 21:59 - 51. Balraj Tavanandi: na bro lets finish aaj
+1/5/24, 22:00 - Krishnaraj: im not even free bro my dad wont even let me sit on a computer
+1/5/24, 22:00 - Krishnaraj: im sitting here from morning 10
+1/5/24, 22:00 - Krishnaraj: 12th hour rn
+1/5/24, 22:00 - 51. Balraj Tavanandi: okay show us abhi well write down kal make the changes ek sath
+1/5/24, 22:00 - Krishnaraj: ha
+1/5/24, 22:00 - Krishnaraj: just see
+1/5/24, 22:01 - Krishnaraj: should i send a gmeet?
+1/5/24, 22:01 - +91 85283 96430: Join discord
+1/5/24, 22:01 - 51. Balraj Tavanandi: na discord pe aaja
+1/5/24, 22:02 - Krishnaraj: ok
+1/6/24, 00:03 - 51. Balraj Tavanandi: IMG-20240106-WA0001.jpg (file attached)
+1/6/24, 00:03 - 51. Balraj Tavanandi: IMG-20240106-WA0000.jpg (file attached)
+1/6/24, 00:04 - 51. Balraj Tavanandi: this should be visible after placing order
+1/6/24, 01:15 - Krishnaraj: Yea
+1/6/24, 12:12 - +91 85283 96430: The placement of luxe essential is misplaced
+1/6/24, 13:00 - 51. Balraj Tavanandi: changes.txt (file attached)
+changes.txt
+1/6/24, 14:04 - Krishnaraj: Alright I'll make these changes all are possible
+1/6/24, 14:22 - 51. Balraj Tavanandi: Yes
+1/6/24, 14:22 - 51. Balraj Tavanandi: Fonts and sizes make them in alignment and good scale for visibility
+1/6/24, 14:22 - Krishnaraj: Yea
+1/6/24, 14:43 - 51. Balraj Tavanandi: Do u want the policy and footer details I'm notepad?
+1/6/24, 14:43 - 51. Balraj Tavanandi: In*
+1/6/24, 14:44 - Krishnaraj: If its opening in a browser then better send browser link
+1/6/24, 14:44 - 51. Balraj Tavanandi: Or will u copy it off canva ?
+1/6/24, 14:44 - 51. Balraj Tavanandi: Ok
+1/6/24, 14:44 - Krishnaraj: Canva is fine
+1/6/24, 14:44 - Krishnaraj: But if u pasted it off some website then that link is better
+1/6/24, 14:45 - 51. Balraj Tavanandi: I didn't paste it it has lots of changes so take the one we put on canva
+1/6/24, 14:45 - Krishnaraj: Yeah canva then
+1/6/24, 14:46 - 51. Balraj Tavanandi: Yes
+1/6/24, 15:12 - 51. Balraj Tavanandi: @919834312135 call asap u finish the changes
+1/6/24, 15:13 - +91 85283 96430: And we need finished website by today .
+1/6/24, 15:13 - +91 85283 96430: Anyhow
+1/6/24, 15:25 - Krishnaraj: yeah
+1/6/24, 19:49 - +91 85283 96430: What’s the progress?
+1/6/24, 19:49 - Krishnaraj: still working on cart
+1/6/24, 19:50 - Krishnaraj: cart is surprisingly complicated
+1/6/24, 19:50 - Krishnaraj: from the past 5 hours
+1/6/24, 20:13 - +91 85283 96430: Alright
+1/6/24, 20:14 - +91 85283 96430: How much more time ? <This message was edited>
+1/6/24, 20:38 - Krishnaraj: See the good news is 99% of the website is working
+1/6/24, 21:50 - Krishnaraj: IMG-20240108-WA0070.jpg (file attached)
+1/6/24, 21:50 - Krishnaraj: IMG-20240108-WA0068.jpg (file attached)
+1/6/24, 21:51 - Krishnaraj: IMG-20240108-WA0067.jpg (file attached)
+1/6/24, 21:51 - Krishnaraj: IMG-20240108-WA0069.jpg (file attached)
+1/6/24, 21:54 - +91 85283 96430: Okay nice
+1/6/24, 21:55 - +91 85283 96430: Just put free sample on every purchase
+1/6/24, 21:55 - +91 85283 96430: Cart icon needs to be changed
+1/6/24, 22:19 - 51. Balraj Tavanandi: Yes
+1/6/24, 22:27 - Krishnaraj: Yeah np
+1/6/24, 23:25 - Krishnaraj: lladmin.surge.sh
+1/6/24, 23:25 - Krishnaraj: luxuriantluxe.surge.sh
+1/6/24, 23:26 - Krishnaraj: heres the website, test the features of both admin page and main website
+1/6/24, 23:26 - Krishnaraj: add changes to this file and lemme know tomorrow morning,
+1/6/24, 23:30 - Krishnaraj: IMG-20240107-WA0000.jpg (file attached)
+check emails u receive as well
+1/6/24, 23:58 - 51. Balraj Tavanandi: Yes
+1/7/24, 13:51 - Krishnaraj: IMG-20240108-WA0071.jpg (file attached)
+check
+1/7/24, 14:50 - 51. Balraj Tavanandi: Make the image size as much as the white box
+1/7/24, 14:50 - 51. Balraj Tavanandi: Make it symmetrical and leave a little space between the box and image
+1/7/24, 14:52 - Krishnaraj: IMG-20240108-WA0072.jpg (file attached)
+this is similar to garbata
+1/7/24, 14:52 - 51. Balraj Tavanandi: Lemme find one hold on
+1/7/24, 14:52 - 51. Balraj Tavanandi: Na
+1/7/24, 14:52 - Krishnaraj: ok
+1/7/24, 15:30 - 51. Balraj Tavanandi: IMG-20240108-WA0076.jpg (file attached)
+1/7/24, 15:33 - 51. Balraj Tavanandi: IMG-20240108-WA0074.jpg (file attached)
+1/7/24, 15:33 - 51. Balraj Tavanandi: IMG-20240108-WA0075.jpg (file attached)
+1/7/24, 15:35 - Krishnaraj: IMG-20240108-WA0077.jpg (file attached)
+1/7/24, 16:45 - 51. Balraj Tavanandi: IMG-20240108-WA0073.jpg (file attached)

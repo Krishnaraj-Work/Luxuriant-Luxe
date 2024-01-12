@@ -1,0 +1,57 @@
+MAIN SCREEN CHANGES : 
+
+LUXURINAT LUXE AT TOP MAKE IT BIGGER AND FULLER AND ALIGH THEM HORIZONTALLY
+icons not in place
+LL hair skin cosmetics should be bigger and not be in bold [FONT : BODONI FLF]
+luxuriant luxe little bigger 5% [FONT : BODONI FLF]
+below that on main screen we do not want animation of images make it static and modular
+
+
+lUXURIANT LUXE ESSENTIALS COLLECTIONS NOT MATCHING CANVA
+ [FONT : BODONI FLF ] make it all black colour font WITH UNDERLINE 
+Essential the word in italic font
+SHOP ALL (in black colour) IN THE CENTER [FONT : BODONI FLF]
+
+make everything in line
+
+fEATURED ORGANIC CLEANSER in bodoni flf font no bold and underline
+remove "from us to your loved ones " 
+make all headings in bodoni flf
+
+make arrows for swiping BIGGER AND LIGHTER IN SHADE 
+
+FOOTER 
+make LL in center , size is fine 
+all the text in [FONT : GARBATA] in footer
+make all the text bigger and fit it in screen , 3 columns in extreme left center and right .
+
+all the emoji ka size bigger and make it longer atleast half the screen 
+
+
+ON PRODUCT PAGE
+PUT A BOX BEHIND TEXT LIKE SHOWN IN CANVA [on product page]
+make the fonts in garbata beside the main product page beside the image
+
+review section {font : bodoni flf
+all fonts to be in canva sans
+
+
+Real results 
+background box to be added behind real results in canva in white colour 
+fonts ot be in GARBATA
+
+CART SECTION
+remove the word estimated
+rewrite "FREE SAMPLE ON EVERY PURCHASE" instead of free sample on purchase over 3999"
+
+YOU MAY ALSO LIKE 
+bodoni flf without bold 
+
+ABOUT US SECTION MAKE IT LIKE THE LAYOUT GIVEN IN CANVA
+
+ALL ALIGNMENT TO BE IN CENTER 
+
+ALLL HEADING FONT TO BE IN BODONI FLF WITH NO BOLD
+
+
+ABOUT US CONTACT SECTION SHOULD IN BODONI FLF

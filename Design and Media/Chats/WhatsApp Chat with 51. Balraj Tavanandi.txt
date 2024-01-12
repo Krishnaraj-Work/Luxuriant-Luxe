@@ -1,0 +1,509 @@
+12/12/23, 15:37 - Krishnaraj: VID-20231212-WA0000.mp4 (file attached)
+12/12/23, 15:46 - 51. Balraj Tavanandi: This is soo much better
+12/12/23, 15:47 - 51. Balraj Tavanandi: Awesome
+12/12/23, 18:30 - 51. Balraj Tavanandi: dude I need a lil help with dse
+12/12/23, 18:31 - 51. Balraj Tavanandi: #TITLE MACHINE LEARNING MODELS
+# IMPORT IMPORTANT LIBRARIES
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+import warnings
+warnings.filterwarnings('ignore')
+file_name = "Salary_Data" #@param {type:"string"}
+data = pd.read_csv(file_name+'.csv')
+df = list(data.columns)
+data.corr()
+
+#MODEL PREPARATION
+X = data[[df[0]]]
+y = data[df[1]]
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3,random_sta);
+                                                 
+Select_ML_Model = 'SUPPORT VECTOR REGRESSION' #@param ["LINEAR REGRESSION PRE
+mlm = Select_ML_Model
+if mlm == 'LINEAR REGRESSION PREDICTION':
+  from sklearn.linear_model import LinearRegression
+  reg = LinearRegression()
+elif mlm == 'RANDOM FOREST REGRESSION':
+  from sklearn.ensemble import RandomForestRegressor
+  reg = RandomForestRegressor(n_estimators=50,max_depth=30,n_jobs=-1)
+elif mlm == 'KNN REGRESSION':
+  from sklearn.neighbors import KNeighborsRegressor
+  reg = KNeighborsRegressor(n_neighbors=3)
+elif mlm == 'LASSO REGRESSION':
+  from sklearn.linear_model import Lasso
+  reg = Lasso()
+elif mlm == 'POLYNOMIAL REGRESSION':
+  from sklearn.preprocessing import PolynomialFeatures
+  polymatrix = PolynomialFeatures(degree=4)
+  x_poly = polymatrix.fit_transform(X_train)
+  reg = PolynomialFeatures()
+elif mlm == 'DECISION TREE REGRESSION':
+  from sklearn.tree import DecisionTreeRegressor
+  reg = DecisionTreeRegressor(random_state=0)
+  elif mlm == 'SUPPORT VECTOR REGRESSION':
+  from sklearn.svm import SVR
+  reg = SVR(C=100,kernel='linear',gamma=1)
+elif mlm == 'GRADIENT BOOSTING REGRESSOR':
+  from sklearn.ensemble import GradientBoostingRegressor
+  reg = GradientBoostingRegressor(learning_rate=0.1,random_state=4)
+elif mlm == 'LGBM REGRESSOR':
+  from lightgbm import LGBMRegressor
+  reg = LGBMRegressor(learning_rate=0.1,random_state=30)
+elif mlm == 'ELASTICNET REGRESSION':
+  from sklearn.linear_model import ElasticNetCV
+  reg = ElasticNetCV(cv=10).fit(X_train,y_train)
+else:
+  print('Select a ML Model')  
+
+reg.fit(X_train,y_train)
+predictions = reg.predict(X_test)
+data = pd.DataFrame({'Actual Values':y_test,'Predicted Values':predictions})
+data.sort_index(ascending=True)
+plot_only_graph = True #@param {type:"boolean"}
+if plot_only_graph == False:
+  print('\n',data)   
+
+yrs_exp = X_test.sort_index(ascending=True)
+sal_act = y_test.sort_index(ascending=True)
+sal_pre = np.sort(predictions) 
+
+plt.plot(yrs_exp, sal_act, label = 'Actual '+df[1], marker = "o", linewidth=3
+plt.plot(yrs_exp, sal_pre, label = 'Predicted '+df[1], marker = "o", linewidt
+plt.xlabel(df[0])
+plt.ylabel(df[1])
+plt.title(df[1]+' v/s '+df[0])
+plt.legend(loc='lower right')
+plt.show()
+from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score
+mae = print('mae: ' mean absolute error(y test predictions))
+mae = print( mae: ,mean_absolute_error(y_test,predictions))
+mse = print('\nmse: ',mean_squared_error(y_test,predictions))
+rscore = print('\nr2_score: ',r2_score(y_test,predictions))
+12/12/23, 18:31 - 51. Balraj Tavanandi: mdoel prep ke niceh
+12/12/23, 18:31 - 51. Balraj Tavanandi: train_test_split(X,y,test_size=0.3,random_sta);
+12/12/23, 18:31 - 51. Balraj Tavanandi: this line im getting a porblem
+12/12/23, 18:31 - 51. Balraj Tavanandi: positional argument
+12/12/23, 18:31 - 51. Balraj Tavanandi: it says
+12/12/23, 18:31 - 51. Balraj Tavanandi: https://colab.research.google.com/drive/1QTFWvkBCWFZkKowXXFOXQfOeIDVipM5_?usp=sharing
+12/12/23, 18:32 - 51. Balraj Tavanandi: can u please check it out
+12/12/23, 19:19 - Krishnaraj: did u fix
+12/12/23, 19:20 - 51. Balraj Tavanandi: nai na I couulnt understand only what to add
+12/12/23, 19:22 - Krishnaraj: did you write it urself
+12/12/23, 19:22 - 51. Balraj Tavanandi: na na I copied it from a friend it was too long
+12/12/23, 19:23 - Krishnaraj: do u have the csv file
+12/12/23, 19:24 - Krishnaraj: salary_data
+12/12/23, 19:26 - 51. Balraj Tavanandi: yeah
+12/12/23, 19:26 - Krishnaraj: uv to upload it there
+12/12/23, 19:26 - Krishnaraj: or send it to me
+12/12/23, 19:26 - 51. Balraj Tavanandi: <Media omitted>
+Salary_Data.csv
+12/12/23, 19:30 - Krishnaraj: u gotta show me ur friends code
+12/12/23, 19:31 - Krishnaraj: nvm
+12/12/23, 19:31 - Krishnaraj: its working now
+12/12/23, 19:31 - Krishnaraj: check colab
+12/12/23, 19:31 - 51. Balraj Tavanandi: Yess
+12/12/23, 22:58 - 51. Balraj Tavanandi: IMG-20231212-WA0006.jpg (file attached)
+12/12/23, 22:58 - 51. Balraj Tavanandi: IMG-20231212-WA0007.jpg (file attached)
+12/12/23, 22:58 - Krishnaraj: Yes
+12/12/23, 22:58 - 51. Balraj Tavanandi: IMG-20231212-WA0008.jpg (file attached)
+12/12/23, 22:58 - Krishnaraj: What about this
+12/12/23, 22:59 - 51. Balraj Tavanandi: we need to add "limited edition " fefore bath ruffles
+12/12/23, 22:59 - 51. Balraj Tavanandi: the above 3 is what we want
+12/12/23, 22:59 - Krishnaraj: Want As in?
+12/12/23, 22:59 - 51. Balraj Tavanandi: 3 section for each of the 15 producrs we have
+12/12/23, 22:59 - 51. Balraj Tavanandi: 3 sections under every product
+12/12/23, 23:00 - 51. Balraj Tavanandi: photos and cocntent we'll give
+12/12/23, 23:00 - 51. Balraj Tavanandi: content*
+12/12/23, 23:00 - Krishnaraj: Yeah i dont mind but creating new sections and stuff wud be charged by the hoir
+12/12/23, 23:00 - Krishnaraj: Coz that means a lot more code
+12/12/23, 23:01 - 51. Balraj Tavanandi: IMG-20231212-WA0009.jpg (file attached)
+12/12/23, 23:01 - 51. Balraj Tavanandi: yes we will pay no problem
+12/12/23, 23:01 - 51. Balraj Tavanandi: yes
+12/12/23, 23:01 - 51. Balraj Tavanandi: super similar to this but we need it better
+12/12/23, 23:02 - Krishnaraj: Yeah ull have to tell me exactly
+12/12/23, 23:02 - Krishnaraj: How u want it to look
+12/12/23, 23:02 - 51. Balraj Tavanandi: we also need to add a section "you may also like"
+12/12/23, 23:02 - 51. Balraj Tavanandi: yes wait im sending you a site sample
+12/12/23, 23:04 - 51. Balraj Tavanandi: Kyliecosmetics.com
+12/12/23, 23:04 - 51. Balraj Tavanandi: something on the lines of this exactly
+12/12/23, 23:04 - 51. Balraj Tavanandi: but our colour scheme
+12/12/23, 23:04 - 51. Balraj Tavanandi: see we want a webite similar to this but this is just like a guideline
+12/12/23, 23:05 - Krishnaraj: U shud have sent me b4 man
+12/12/23, 23:05 - Krishnaraj: It's quite a bit different
+12/12/23, 23:05 - Krishnaraj: I'd asked u many times if u had a sample website
+12/12/23, 23:05 - 51. Balraj Tavanandi: how much different
+12/12/23, 23:05 - Krishnaraj: See this has a unique product page for each product
+12/12/23, 23:05 - 51. Balraj Tavanandi: yes true but we coulnt find a exact one
+12/12/23, 23:06 - 51. Balraj Tavanandi: bro im not asking u to change the frame work of it alll
+12/12/23, 23:06 - Krishnaraj: U want it like that?
+12/12/23, 23:06 - Krishnaraj: Coz ull have to ig
+12/12/23, 23:06 - Krishnaraj: If u have 15 products
+12/12/23, 23:06 - Krishnaraj: If each of them. Only have as associated description it's fine
+12/12/23, 23:07 - Krishnaraj: But if u have usage guidelines and stuff
+12/12/23, 23:07 - Krishnaraj: It's too much scrolling for one page right
+12/12/23, 23:07 - Krishnaraj: From the user perspective
+12/12/23, 23:07 - Krishnaraj: Each product will need it's own page to have these 3 sections
+12/12/23, 23:07 - 51. Balraj Tavanandi: we are adding more products 14 more to be be precise so we need a big
+12/12/23, 23:08 - Krishnaraj: Yeah ull need a page for each product
+12/12/23, 23:08 - 51. Balraj Tavanandi: yes it will have
+12/12/23, 23:08 - 51. Balraj Tavanandi: yeah but can u provide sections upar atleast ?
+12/12/23, 23:08 - Krishnaraj: I can do all those sections
+12/12/23, 23:09 - Krishnaraj: But they are unique to each product
+12/12/23, 23:09 - 51. Balraj Tavanandi: so yeah we need somthing on these lines atlease a seperate section if not a new page
+12/12/23, 23:09 - 51. Balraj Tavanandi: bro hold on explain it to us tomorrow
+12/12/23, 23:09 - Krishnaraj: U want 3 sections, "u may like", how to use, details, images
+12/12/23, 23:09 - Krishnaraj: For Each 15 products
+12/12/23, 23:09 - 51. Balraj Tavanandi: yes
+12/12/23, 23:09 - 51. Balraj Tavanandi: on those lines
+12/12/23, 23:09 - Krishnaraj: So naturally ull have a separate page for each product
+12/12/23, 23:10 - Krishnaraj: It's not that hard to make
+12/12/23, 23:10 - Krishnaraj: But around 5 10 hours of work
+12/12/23, 23:10 - 51. Balraj Tavanandi: okay okay yes
+12/12/23, 23:10 - 51. Balraj Tavanandi: okay no problem
+12/12/23, 23:10 - 51. Balraj Tavanandi: so you can do it ?
+12/12/23, 23:10 - Krishnaraj: After exams yes
+12/12/23, 23:10 - 51. Balraj Tavanandi: explain it to us in detail tomorrow and well tell
+12/12/23, 23:10 - Krishnaraj: Probably in Jan
+12/12/23, 23:11 - Krishnaraj: Yeah
+12/12/23, 23:11 - 51. Balraj Tavanandi: exams are over in 22 na
+12/12/23, 23:11 - Krishnaraj: Iv a wedding to attend after that
+12/12/23, 23:11 - 51. Balraj Tavanandi: haye ram
+12/12/23, 23:11 - 51. Balraj Tavanandi: how many days
+12/12/23, 23:11 - Krishnaraj: Few ig
+12/12/23, 23:11 - Krishnaraj: I'm not sure either
+12/12/23, 23:11 - Krishnaraj: U want it b4 Jan?
+12/12/23, 23:11 - 51. Balraj Tavanandi: i am on a call with janestha rn
+12/12/23, 23:12 - 51. Balraj Tavanandi: we need it before 28th dec
+12/12/23, 23:12 - Krishnaraj: Yeah ig I can
+12/12/23, 23:12 - Krishnaraj: Prolly have to grind more
+12/12/23, 23:12 - Krishnaraj: But possible yes
+12/12/23, 23:12 - 51. Balraj Tavanandi: well explain everything tomrrow tell us more
+12/12/23, 23:12 - Krishnaraj: Yeah
+12/12/23, 23:12 - Krishnaraj: I'll start only after 22
+12/12/23, 23:13 - Krishnaraj: So make sure u have the text, description images how to use etc all ready
+12/12/23, 23:13 - 51. Balraj Tavanandi: yes well have it ready
+12/12/23, 23:13 - Krishnaraj: For each product
+12/12/23, 23:13 - 51. Balraj Tavanandi: yes.
+12/12/23, 23:13 - Krishnaraj: Assume anywhere around 250 per hr for this
+12/12/23, 23:14 - 51. Balraj Tavanandi: tomorrow afternoon what time will u be getting free
+12/12/23, 23:14 - Krishnaraj: So if you have everything ready it'll be much faster
+12/12/23, 23:14 - Krishnaraj: Well be free by 12
+12/12/23, 23:14 - Krishnaraj: We can stay back till 1 130 if ur therr
+12/12/23, 23:15 - 51. Balraj Tavanandi: wait a sec
+12/12/23, 23:20 - 51. Balraj Tavanandi: Okya so we have vivas till 1230
+12/12/23, 23:21 - 51. Balraj Tavanandi: We'll come see you as soon as we get free
+12/12/23, 23:21 - Krishnaraj: Okay
+12/12/23, 23:21 - 51. Balraj Tavanandi: We'll get free much before that
+12/12/23, 23:21 - Krishnaraj: Yea
+12/12/23, 23:21 - 51. Balraj Tavanandi: I'll call you asap our viva is over
+12/12/23, 23:21 - Krishnaraj: Ok
+12/13/23, 11:26 - Krishnaraj: null
+12/13/23, 11:37 - Krishnaraj: null
+12/13/23, 11:37 - Krishnaraj: Bro wya
+12/13/23, 11:37 - Krishnaraj: We are leaving rn
+12/13/23, 12:13 - 51. Balraj Tavanandi: Broo
+12/13/23, 12:13 - 51. Balraj Tavanandi: I was in the exam just got over
+12/13/23, 12:18 - 51. Balraj Tavanandi: null
+12/21/23, 16:53 - Krishnaraj: Bro make the grp and send me stuff i wont be available for any work after Jan 1
+12/21/23, 16:53 - Krishnaraj: I'd like to wind up by 28th when you give the check and I'll make the website live
+12/21/23, 16:53 - Krishnaraj: Iv quite a bit to study then...
+12/21/23, 16:54 - Krishnaraj: Make the list of stuff u want and lemme know ASAP. Send everything as well
+12/21/23, 17:36 - 51. Balraj Tavanandi: What
+12/21/23, 17:36 - 51. Balraj Tavanandi: Um okay wait
+12/21/23, 17:36 - 51. Balraj Tavanandi: Okay okay I understand
+12/21/23, 17:36 - 51. Balraj Tavanandi: Yes i
+12/21/23, 17:37 - 51. Balraj Tavanandi: I did make a group on telegram
+12/21/23, 17:37 - Krishnaraj: Yeah that one's fine just send stuff there
+12/21/23, 17:56 - 51. Balraj Tavanandi: Yes
+12/21/23, 22:22 - 51. Balraj Tavanandi: <Media omitted>
+12/21/23, 22:23 - Krishnaraj: if possible try and tell me how it would look like on phone too
+12/21/23, 22:23 - Krishnaraj: this is doable for lap
+12/21/23, 22:23 - Krishnaraj: draw on paper is fine too
+12/21/23, 22:24 - 51. Balraj Tavanandi: is it not possible to make similar in phone ?
+12/21/23, 22:24 - Krishnaraj: ofcourse not same
+12/21/23, 22:24 - Krishnaraj: look at amazon no
+12/21/23, 22:24 - Krishnaraj: even ourwebsite looks far diff on phone
+12/21/23, 22:24 - 51. Balraj Tavanandi: okay ill update u on it
+12/21/23, 22:25 - Krishnaraj: yeah even if you dont ill still figure it out
+12/21/23, 22:25 - Krishnaraj: but itll be faster if you send a similar page by 25th for phone also
+12/21/23, 22:25 - Krishnaraj: this already makes it so much easier for m
+12/21/23, 22:25 - 51. Balraj Tavanandi: okay I will
+12/25/23, 13:14 - Krishnaraj: bro u sending stuff today right
+12/25/23, 13:14 - 51. Balraj Tavanandi: yes today evening
+12/25/23, 13:15 - Krishnaraj: ok
+12/25/23, 18:28 - 51. Balraj Tavanandi: Did u recieve the invite link of canva
+12/25/23, 18:28 - 51. Balraj Tavanandi: You can start working on the template
+12/25/23, 18:34 - Krishnaraj: Yea
+12/26/23, 23:23 - 51. Balraj Tavanandi: How's it going
+12/26/23, 23:23 - Krishnaraj: its fine rn
+12/26/23, 23:23 - Krishnaraj: ill update u tmro night
+12/26/23, 23:23 - 51. Balraj Tavanandi: Sure
+12/26/23, 23:23 - 51. Balraj Tavanandi: How much did u finish
+12/26/23, 23:23 - Krishnaraj: im doing some groundwork rn
+12/26/23, 23:24 - Krishnaraj: fonts and stuff
+12/26/23, 23:24 - Krishnaraj: and navbar
+12/26/23, 23:24 - 51. Balraj Tavanandi: Bro i sent you both templates for phone and laptop
+12/26/23, 23:24 - 51. Balraj Tavanandi: Acha
+12/26/23, 23:24 - Krishnaraj: yeah in canva
+12/26/23, 23:25 - 51. Balraj Tavanandi: Yeah
+12/27/23, 20:51 - Krishnaraj: <Media omitted>
+12/27/23, 20:51 - Krishnaraj: the updated navbar
+12/27/23, 21:55 - Krishnaraj: bro make an imgur acount, and send me the credentials
+12/27/23, 22:13 - 51. Balraj Tavanandi: yes
+12/27/23, 22:14 - 51. Balraj Tavanandi: this is going good but bro the pics jaisa hai waise hi daal don't fliter or anything
+12/27/23, 22:25 - Krishnaraj: Yes np
+12/27/23, 22:26 - Krishnaraj: IMG-20231227-WA0007.jpg (file attached)
+12/27/23, 22:26 - Krishnaraj: See itna kaam to hai aur
+12/27/23, 22:26 - Krishnaraj: It'll easily take 2 3 days
+12/27/23, 22:27 - Krishnaraj: By tomorrow morning I'll let u know how much work is done per hour till now
+12/27/23, 22:28 - Krishnaraj: So as uv paid 500, uv 9.5 remaining, and I'll add the hourly work done till tmro to that
+12/27/23, 22:28 - 51. Balraj Tavanandi: Wait like total ?
+12/27/23, 22:28 - Krishnaraj: Yeah
+12/27/23, 22:29 - Krishnaraj: Most probably by 30
+12/27/23, 22:29 - 51. Balraj Tavanandi: So 72 hrs u r saying??
+12/27/23, 22:29 - Krishnaraj: Even in that the main things will be done by tmro
+12/27/23, 22:29 - Krishnaraj: Nono
+12/27/23, 22:29 - 51. Balraj Tavanandi: Then
+12/27/23, 22:29 - 51. Balraj Tavanandi: Wait I'll call u hold on
+12/27/23, 22:29 - Krishnaraj: In those 72 I'll work for like 20 maybe
+12/27/23, 22:30 - Krishnaraj: Rn iv worked for 4
+12/27/23, 22:30 - Krishnaraj: So 9.5 + 1k till now
+12/27/23, 22:31 - Krishnaraj: Maybe I'll work for 2 3 more hours today
+12/27/23, 22:31 - Krishnaraj: So tomorrow u can write a check for that amount
+12/27/23, 22:32 - Krishnaraj: Maybe 11 max 11.5
+12/27/23, 22:34 - Krishnaraj: Then u said u wanna cap at 15 so that's 4k more, which means 16 hours of work... Which I'll do till December 30
+12/27/23, 22:34 - Krishnaraj: U can pay that either by upi or on the day school reopens I don't mind
+12/27/23, 22:38 - 51. Balraj Tavanandi: null
+12/28/23, 14:25 - Krishnaraj: bro send ur imgur credentiaals
+12/28/23, 14:27 - 51. Balraj Tavanandi: null
+12/28/23, 14:38 - Krishnaraj: <Media omitted>
+4 Hours.pdf
+12/28/23, 14:39 - Krishnaraj: ull get a similar one for the rest
+12/28/23, 14:53 - 51. Balraj Tavanandi: Perfect
+12/28/23, 22:35 - Krishnaraj: bro send me a code u have received at gmail
+12/28/23, 22:35 - Krishnaraj: ur gmail
+12/28/23, 22:35 - Krishnaraj: balraj
+12/28/23, 22:35 - Krishnaraj: Enter the code we sent to ba*****@gmail.com.
+12/28/23, 22:35 - 51. Balraj Tavanandi: 6802154
+12/28/23, 22:35 - Krishnaraj: ok done
+12/28/23, 22:35 - 51. Balraj Tavanandi: Gg
+12/29/23, 09:23 - 51. Balraj Tavanandi: Bro we need a point system for the user like if we but they will get points and future mai they will get discount because of points
+12/29/23, 10:15 - Krishnaraj: Rephrase
+12/29/23, 10:17 - Krishnaraj: How do points increase?
+12/29/23, 10:17 - Krishnaraj: This meana tho that u want a sign up and sign in page? Or u wanna give points only to those users who have bought
+12/29/23, 12:10 - 51. Balraj Tavanandi: After buying a certain product the user gets points related to that product
+12/29/23, 12:11 - Krishnaraj: And how does that translate to reduction in cost
+12/29/23, 12:11 - 51. Balraj Tavanandi: Points to those who  buy and they will hold on to those points and next time whent why but they get a discount
+12/29/23, 12:11 - 51. Balraj Tavanandi: We can keep for example 500 points is 100 ruppees or something accordingly it'll deduct
+12/29/23, 12:12 - Krishnaraj: They won't be holding on to the points as they won't be signing up or logging in
+12/29/23, 12:12 - Krishnaraj: We will hold on to them
+12/29/23, 12:12 - Krishnaraj: So they can't see how much points they have
+12/29/23, 12:12 - 51. Balraj Tavanandi: Haa okay we'll keep the data with us
+12/29/23, 12:12 - 51. Balraj Tavanandi: Haa chalega
+12/29/23, 12:12 - 51. Balraj Tavanandi: I'm out rn I'll call u afternoon mai
+12/29/23, 12:13 - Krishnaraj: Chalega i got it
+12/29/23, 12:13 - 51. Balraj Tavanandi: Yes
+12/29/23, 13:23 - Krishnaraj: <Media omitted>
+12/29/23, 14:33 - 51. Balraj Tavanandi: <Media omitted>
+performa invoice.docx
+12/29/23, 14:33 - 51. Balraj Tavanandi: This is good
+12/29/23, 14:33 - 51. Balraj Tavanandi: Try plotting it out in this format
+12/29/23, 14:48 - Krishnaraj: ill try idk if itll work
+12/29/23, 15:03 - 51. Balraj Tavanandi: Yes try
+12/29/23, 15:11 - Krishnaraj: <Media omitted>
+12/29/23, 15:11 - Krishnaraj: <Media omitted>
+and heres the mail
+12/29/23, 15:11 - Krishnaraj: itll instantly send it to all the customers
+12/29/23, 15:12 - Krishnaraj: ull be capped at 175 customers a day
+12/29/23, 15:13 - Krishnaraj: the content field over there is a html thing, you can put html there, so u can make ur emails look fancy, and include image links as well
+12/29/23, 15:15 - Krishnaraj: <Media omitted>
+im putting an image link here
+12/29/23, 15:16 - Krishnaraj: <Media omitted>
+and heres the email with the image
+12/29/23, 16:34 - 51. Balraj Tavanandi: Awesome
+12/29/23, 16:34 - 51. Balraj Tavanandi: That's more than enough for now
+12/29/23, 16:34 - 51. Balraj Tavanandi: Perfect
+12/29/23, 16:34 - 51. Balraj Tavanandi: Is the Imgur working
+12/29/23, 16:35 - 51. Balraj Tavanandi: Awesome
+12/29/23, 19:28 - Krishnaraj: Iv tested it already it works
+12/29/23, 19:54 - 51. Balraj Tavanandi: Perfect
+12/29/23, 23:06 - Krishnaraj: <Media omitted>
+this is how ur product editing looks like in admin page
+12/29/23, 23:07 - Krishnaraj: <Media omitted>
+12/29/23, 23:08 - 51. Balraj Tavanandi: Awesome
+12/29/23, 23:08 - 51. Balraj Tavanandi: Damn good
+12/29/23, 23:09 - Krishnaraj: so u see the image links here
+12/29/23, 23:09 - Krishnaraj: u just put image links separated by commas
+12/29/23, 23:09 - Krishnaraj: and itll show up
+12/29/23, 23:09 - 51. Balraj Tavanandi: Acha
+12/29/23, 23:09 - Krishnaraj: the image links u can get from imgur
+12/29/23, 23:09 - 51. Balraj Tavanandi: Okay got it
+12/29/23, 23:09 - Krishnaraj: ill put screenshots for how to do that
+12/29/23, 23:09 - 51. Balraj Tavanandi: So i upload to imgur and put it to the page and done
+12/29/23, 23:09 - 51. Balraj Tavanandi: Aightt
+12/29/23, 23:09 - Krishnaraj: yeah
+12/29/23, 23:09 - 51. Balraj Tavanandi: Got it
+12/29/23, 23:09 - Krishnaraj: ill document the entire process so its easy to follow next time
+12/29/23, 23:10 - 51. Balraj Tavanandi: Okay perfect
+12/29/23, 23:12 - Krishnaraj: <Media omitted>
+so the red button is for adding products
+12/29/23, 23:12 - Krishnaraj: and the delete button for deleting the product.
+12/29/23, 23:12 - 51. Balraj Tavanandi: Achaa got it
+12/29/23, 23:12 - Krishnaraj: all the boxes u see are editable
+12/29/23, 23:12 - Krishnaraj: so after making changes uv to click on save changes
+12/29/23, 23:12 - Krishnaraj: and itll save
+12/29/23, 23:13 - 51. Balraj Tavanandi: So once i add the product new page and sab kuch will change automatically?
+12/29/23, 23:13 - Krishnaraj: yeah
+12/29/23, 23:13 - Krishnaraj: say u put the product under category of hair, then itll automatically show up on the website
+12/29/23, 23:13 - Krishnaraj: with its description images and everything
+12/29/23, 23:13 - Krishnaraj: in the hair section
+12/29/23, 23:13 - 51. Balraj Tavanandi: And will u make new empty pages too or isme add kate hi automatically aajayega ?
+12/29/23, 23:14 - 51. Balraj Tavanandi: Yes
+12/29/23, 23:14 - Krishnaraj: wdym new empty page
+12/29/23, 23:14 - 51. Balraj Tavanandi: Meaning
+12/29/23, 23:15 - 51. Balraj Tavanandi: Once we want to launch new products it'll automatically make new page ?
+12/29/23, 23:15 - Krishnaraj: yeah
+12/29/23, 23:15 - 51. Balraj Tavanandi: Okay gg
+12/29/23, 23:15 - Krishnaraj: also theres a section for real results, and how to use
+12/29/23, 23:15 - Krishnaraj: so those will have separate images
+12/29/23, 23:16 - Krishnaraj: ill add those too in the images links
+12/29/23, 23:19 - 51. Balraj Tavanandi: Okay
+12/29/23, 23:19 - 51. Balraj Tavanandi: We need it exactly like the canva pe jo hai
+12/29/23, 23:19 - 51. Balraj Tavanandi: Aight
+12/29/23, 23:19 - 51. Balraj Tavanandi: Okayu
+12/29/23, 23:20 - Krishnaraj: <Media omitted>
+aise na
+12/29/23, 23:20 - Krishnaraj: itll be like this mostly
+12/29/23, 23:20 - 51. Balraj Tavanandi: Yes
+12/29/23, 23:20 - Krishnaraj: yea
+12/29/23, 23:21 - 51. Balraj Tavanandi: Upar ka is one part of screen and after we scrool we get niche ka part
+12/29/23, 23:21 - 51. Balraj Tavanandi: That you got na
+12/29/23, 23:21 - Krishnaraj: yeah
+12/29/23, 23:21 - 51. Balraj Tavanandi: Aight perfect
+12/29/23, 23:32 - Krishnaraj: IMG-20231230-WA0000.jpg (file attached)
+12/29/23, 23:33 - Krishnaraj: this is the add product form
+12/29/23, 23:33 - Krishnaraj: also if you set the quantity to 0, itll show out of stock in the main website
+12/30/23, 10:01 - 51. Balraj Tavanandi: Wow
+12/30/23, 10:01 - 51. Balraj Tavanandi: Beautiful
+12/30/23, 10:01 - 51. Balraj Tavanandi: Aight got it
+12/30/23, 10:02 - 51. Balraj Tavanandi: Bro make th we colours too beige and white
+12/30/23, 10:28 - Krishnaraj: Which admin?
+12/30/23, 11:08 - 51. Balraj Tavanandi: This page only where we add the new product
+12/30/23, 11:11 - Krishnaraj: yeah ok
+12/30/23, 11:55 - Krishnaraj: <Media omitted>
+12/30/23, 11:55 - Krishnaraj: <Media omitted>
+12/30/23, 12:04 - 51. Balraj Tavanandi: Yes better
+12/30/23, 12:04 - Krishnaraj: yeah so now admin page is done
+12/30/23, 12:05 - Krishnaraj: also i put the points system
+12/30/23, 12:05 - 51. Balraj Tavanandi: Okay awesome
+12/30/23, 12:05 - Krishnaraj: <Media omitted>
+12/30/23, 12:05 - Krishnaraj: so whatever point u put here, will be awarded to the customer
+12/30/23, 12:05 - 51. Balraj Tavanandi: Bro grp pe likhe de na pls it's easier for janestha also to understand
+12/30/23, 12:05 - 51. Balraj Tavanandi: Okay perfect
+12/30/23, 12:05 - Krishnaraj: and next purcase itll be deducted
+12/30/23, 12:05 - Krishnaraj: in the invoice
+12/30/23, 12:05 - Krishnaraj: ha ok
+12/30/23, 12:06 - Krishnaraj: u can just put 0 if u dont want any
+12/30/23, 12:06 - 51. Balraj Tavanandi: Accha perfect
+12/30/23, 12:06 - 51. Balraj Tavanandi: Okay perfect
+12/30/23, 16:08 - Krishnaraj: Bro is it possible for u to pay me with upi instead of checks?
+12/30/23, 16:09 - Krishnaraj: I'll return the checks to you, apparently my dad isn't gonna cash them in as he's not gonna be home from Jan 10th for a month
+12/30/23, 16:10 - Krishnaraj: Ull anyway have the money in ur account.. So just upi on those dates
+12/30/23, 16:32 - 51. Balraj Tavanandi: Yes
+12/30/23, 16:32 - 51. Balraj Tavanandi: Okay np
+12/30/23, 16:32 - 51. Balraj Tavanandi: Yes I'll do that
+12/30/23, 16:37 - Krishnaraj: Alright thanks
+12/30/23, 22:41 - Krishnaraj: bro iv put things on imgur
+12/30/23, 22:41 - Krishnaraj: and images are working fine now, synced with imgur
+12/30/23, 23:47 - 51. Balraj Tavanandi: aight perfect
+1/1/24, 16:03 - Krishnaraj: also bro we are at 6k rn
+1/1/24, 16:04 - Krishnaraj: but currently, i have literally no cash from like 2 months of work
+1/1/24, 16:04 - Krishnaraj: so for me its like 7k + 6k pending which is 13k
+1/1/24, 16:04 - Krishnaraj: i can only work so much with pending amounts
+1/1/24, 16:05 - Krishnaraj: i expected it to be 15k, up to which i was ready to work without getting any money
+1/1/24, 16:05 - Krishnaraj: which is true rn too, ill work till it amounts to 15k
+1/1/24, 16:05 - Krishnaraj: thats 2k more, which is 8 more hours.
+1/1/24, 16:05 - Krishnaraj: after that ill legit stop
+1/1/24, 16:05 - Krishnaraj: every time we talk theres like 5 more things being added to the todo list
+1/1/24, 16:06 - 51. Balraj Tavanandi: Okiee
+1/1/24, 16:06 - 51. Balraj Tavanandi: null
+1/1/24, 16:17 - Krishnaraj: ill send a gmeet?
+1/1/24, 16:18 - 51. Balraj Tavanandi: Discord come I sent invite
+1/2/24, 09:18 - 51. Balraj Tavanandi: How many hours are u left with
+1/2/24, 09:23 - 51. Balraj Tavanandi: Bro and the review section and faq keep it modular so we can control what is displayed and the faq ka answers too make it displayed based
+1/2/24, 10:28 - 51. Balraj Tavanandi: the red arrows show new page should open after clicking on the product
+1/2/24, 10:34 - 51. Balraj Tavanandi: we also want a window that says agree to our terms and conditions tick the box and we should store that data
+1/2/24, 11:09 - 51. Balraj Tavanandi: Bro i sent you the invite
+1/2/24, 11:09 - Krishnaraj: Yea
+1/2/24, 11:09 - Krishnaraj: 5 ig
+1/2/24, 11:09 - 51. Balraj Tavanandi: Acha
+1/2/24, 13:29 - 51. Balraj Tavanandi: bro photos or videos it will accept na ?
+1/2/24, 13:32 - 51. Balraj Tavanandi: imgur pe thsoe vids bhi jayenge so that also it should accept
+1/2/24, 13:53 - Krishnaraj: No not videos
+1/2/24, 13:54 - 51. Balraj Tavanandi: bro
+1/2/24, 13:54 - 51. Balraj Tavanandi: we are gonna upload videos
+1/2/24, 13:54 - 51. Balraj Tavanandi: uska kya change hoga
+1/2/24, 13:54 - Krishnaraj: bro why didnt you tellllll
+1/2/24, 13:54 - Krishnaraj: ye har bar naya kyu
+1/2/24, 13:55 - 51. Balraj Tavanandi: fuck man
+1/2/24, 13:55 - 51. Balraj Tavanandi: okay can u do gif
+1/2/24, 13:55 - 51. Balraj Tavanandi: its not necessary but short video can u do
+1/2/24, 13:56 - Krishnaraj: yeah
+1/2/24, 13:56 - Krishnaraj: gifs will work ig
+1/2/24, 13:56 - Krishnaraj: lemme test
+1/2/24, 13:56 - 51. Balraj Tavanandi: haa try gif
+1/2/24, 13:56 - 51. Balraj Tavanandi: video nai hua then we'll get around it but gif atlease should <This message was edited>
+1/2/24, 13:56 - Krishnaraj: bro video and gif are same
+1/2/24, 13:56 - Krishnaraj: no difference
+1/2/24, 13:57 - 51. Balraj Tavanandi: acha then what can be deon
+1/2/24, 13:57 - 51. Balraj Tavanandi: done*
+1/2/24, 13:57 - Krishnaraj: also where will you put video
+1/2/24, 13:57 - 51. Balraj Tavanandi: but isnt it coded to imgur
+1/2/24, 13:57 - 51. Balraj Tavanandi: waha se its importing directly ?
+1/2/24, 13:57 - Krishnaraj: yeah but in html u gotta use a <video > tag for videos
+1/2/24, 13:57 - 51. Balraj Tavanandi: photo ko place pe video place hoga
+1/2/24, 13:57 - Krishnaraj: and <img> tag for images right?
+1/2/24, 13:57 - 51. Balraj Tavanandi: haaa fuckk
+1/2/24, 13:58 - 51. Balraj Tavanandi: acha then can that be done
+1/2/24, 13:58 - Krishnaraj: usme bhi there are options like autoplay , mute and all
+1/2/24, 13:58 - 51. Balraj Tavanandi: na na
+1/2/24, 13:58 - 51. Balraj Tavanandi: only video
+1/2/24, 13:58 - 51. Balraj Tavanandi: no audio
+1/2/24, 13:58 - 51. Balraj Tavanandi: so sirf import and display
+1/2/24, 13:59 - Krishnaraj: gifs are working fine
+1/2/24, 13:59 - 51. Balraj Tavanandi: acha then its fine
+1/2/24, 13:59 - 51. Balraj Tavanandi: but aage ka which u r coding usme video ka bhi option please add
+1/2/24, 14:00 - Krishnaraj: gifs hai na lekin
+1/2/24, 14:00 - 51. Balraj Tavanandi: haa chalega then
+1/2/24, 14:00 - Krishnaraj: where do you want video
+1/2/24, 14:00 - Krishnaraj: in the site
+1/2/24, 14:00 - 51. Balraj Tavanandi: for product images hai na left side mai 4-4 images of the product aate hai
+1/2/24, 14:00 - 51. Balraj Tavanandi: waha we want ot add
+1/2/24, 14:01 - Krishnaraj: ha gifs will work fine
+1/2/24, 14:01 - Krishnaraj: itll autoplay also
+1/2/24, 14:01 - Krishnaraj: u can convert any video into a gif and put on imgur
+1/2/24, 14:01 - Krishnaraj: paste the link in the admin page
+1/2/24, 14:04 - 51. Balraj Tavanandi: acha then its fine
+1/2/24, 14:04 - 51. Balraj Tavanandi: acha cool then so no change
+1/2/24, 14:04 - Krishnaraj: yeah
+1/2/24, 15:33 - 51. Balraj Tavanandi: yes it is final but for more understanding its on canva for referenc
+1/2/24, 15:33 - Krishnaraj: ya
+1/2/24, 21:44 - Krishnaraj: IMG-20240102-WA0013.jpg (file attached)
+1/2/24, 21:44 - Krishnaraj: IMG-20240102-WA0012.jpg (file attached)
+1/2/24, 21:44 - Krishnaraj: this is how the admin page looks now
+1/2/24, 21:44 - Krishnaraj: if there are any changes here lemme know rn
+1/2/24, 21:44 - Krishnaraj: any other field etc
+1/2/24, 22:51 - Krishnaraj: IMG-20240102-WA0011.jpg (file attached)
+These are the last things left
+1/2/24, 23:04 - 51. Balraj Tavanandi: I think this is perfectly fine
+1/2/24, 23:04 - 51. Balraj Tavanandi: Na nothing more
+1/2/24, 23:05 - Krishnaraj: Ok
+1/2/24, 23:05 - 51. Balraj Tavanandi: Bro grp bhi send this ek baar
+1/2/24, 23:05 - Krishnaraj: Hopefully I'll finish by tmro or day after tmro maz
+1/2/24, 23:05 - 51. Balraj Tavanandi: Okay
+1/2/24, 23:05 - 51. Balraj Tavanandi: Okay np
+1/5/24, 14:30 - Krishnaraj: You deleted this message

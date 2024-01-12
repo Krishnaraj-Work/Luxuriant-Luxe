@@ -1,0 +1,652 @@
+[
+  {
+    "id": "c6448c18-f767-4e30-b4f9-fcb239fba6b8",
+    "startTime": "1/10/2024, 10:06:52 PM",
+    "endTime": 0,
+    "current_hours": 1,
+    "current_minutes": 18,
+    "current_seconds": 55,
+    "workDoneString": "Changing the aspect ratios. fixing and uploading final. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "17258f2d-bbad-43f4-ab3e-583320fa90e8",
+    "startTime": "1/10/2024, 12:00:20 AM",
+    "endTime": "1/10/2024, 10:06:52 PM",
+    "current_hours": 1,
+    "current_minutes": 1,
+    "current_seconds": 6,
+    "workDoneString": "making things modular, adding stuff that wasnt modular before. changing aspect ratios. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "66b1a23c-3315-4492-9eec-72edeb26a2c2",
+    "startTime": "1/8/2024, 9:04:07 PM",
+    "endTime": "1/10/2024, 12:00:20 AM",
+    "current_hours": 2,
+    "current_minutes": 20,
+    "current_seconds": 2,
+    "workDoneString": "Fixing aspect ratio and adding images and text as modular. Static stuff now works. Aspect ratios are better. Making chnages according to list. p.txt.",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "91d8f97c-f470-44ae-bc0c-f91ea4ba1766",
+    "startTime": "1/7/2024, 8:31:45 PM",
+    "endTime": "1/8/2024, 9:04:07 PM",
+    "current_hours": 0,
+    "current_minutes": 36,
+    "current_seconds": 35,
+    "workDoneString": "Working on fixing sub category bug. Added modal. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "c577b2fa-0e76-468c-81df-85c6eefa749b",
+    "startTime": "1/7/2024, 2:44:33 PM",
+    "endTime": "1/7/2024, 8:31:45 PM",
+    "current_hours": 1,
+    "current_minutes": 43,
+    "current_seconds": 24,
+    "workDoneString": "More cosmetic changes. Deployment done. Testing. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "ee27f2e9-93ad-42a0-8590-b087843f6059",
+    "startTime": "1/7/2024, 1:40:38 PM",
+    "endTime": "1/7/2024, 2:44:33 PM",
+    "current_hours": 1,
+    "current_minutes": 3,
+    "current_seconds": 54,
+    "workDoneString": "working on cosmetic changes",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "ea7dda18-830b-43bf-87ad-adf7c52e199c",
+    "startTime": "1/6/2024, 10:02:27 PM",
+    "endTime": "1/7/2024, 1:40:38 PM",
+    "current_hours": 1,
+    "current_minutes": 12,
+    "current_seconds": 38,
+    "workDoneString": "reformated and added all policies. Added modal for i agree button. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "1e55988f-47d8-4524-93c4-d05593f2ec51",
+    "startTime": "1/6/2024, 8:41:32 PM",
+    "endTime": "1/6/2024, 10:02:27 PM",
+    "current_hours": 1,
+    "current_minutes": 20,
+    "current_seconds": 54,
+    "workDoneString": "Fixing bugs and issues, testing. deleting previous orders. Testing new orders. Deploying.",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "48261fdd-edfb-4cf1-a2af-0cb98fe6f900",
+    "startTime": "1/6/2024, 7:06:29 PM",
+    "endTime": "1/6/2024, 8:41:32 PM",
+    "current_hours": 1,
+    "current_minutes": 34,
+    "current_seconds": 57,
+    "workDoneString": "Working on refining cart page. Bug fixes. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "4582011b-4948-4b78-a1f2-6a19e681e046",
+    "startTime": "1/6/2024, 6:32:28 PM",
+    "endTime": "1/6/2024, 7:06:29 PM",
+    "current_hours": 0,
+    "current_minutes": 34,
+    "current_seconds": 0,
+    "workDoneString": "working on points system in checkout",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "4831d6a5-e259-4e84-ba78-2b8c0b9d17ba",
+    "startTime": "1/6/2024, 5:00:24 PM",
+    "endTime": "1/6/2024, 6:32:28 PM",
+    "current_hours": 1,
+    "current_minutes": 25,
+    "current_seconds": 43,
+    "workDoneString": "working on checkout page cost. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "7bc0649c-bd8d-4e3f-9c62-76b0ffa74147",
+    "startTime": "1/6/2024, 3:44:15 PM",
+    "endTime": "1/6/2024, 5:00:24 PM",
+    "current_hours": 1,
+    "current_minutes": 0,
+    "current_seconds": 0,
+    "workDoneString": "working on fixing side cart",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "d9e89f36-fd1b-40ec-a12c-a61c75aba7f2",
+    "startTime": "1/5/2024, 10:55:50 PM",
+    "endTime": "1/6/2024, 3:44:15 PM",
+    "current_hours": 0,
+    "current_minutes": 32,
+    "current_seconds": 3,
+    "workDoneString": "Continuing work on checkout and cart page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "6bd35cfc-c067-43f2-a872-55506a39c95c",
+    "startTime": "1/5/2024, 9:09:59 PM",
+    "endTime": "1/5/2024, 10:55:50 PM",
+    "current_hours": 1,
+    "current_minutes": 17,
+    "current_seconds": 22,
+    "workDoneString": "Fixing Cosmetics of Checkout page and Cart. discord discussions and explanation of admin page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "9fcc5f33-17c7-4e5e-ba46-8eb47b51d7c1",
+    "startTime": "1/5/2024, 8:13:33 PM",
+    "endTime": "1/5/2024, 9:09:59 PM",
+    "current_hours": 0,
+    "current_minutes": 53,
+    "current_seconds": 44,
+    "workDoneString": "Fixing Cosmetics of Review page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "dda29a19-3900-45c2-888d-022e5bcb8bd6",
+    "startTime": "1/5/2024, 4:38:57 PM",
+    "endTime": "1/5/2024, 8:13:33 PM",
+    "current_hours": 0,
+    "current_minutes": 58,
+    "current_seconds": 41,
+    "workDoneString": "done with home page and navbar, and footer. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "4b5c2a30-5b92-46f3-a0f9-9dc1c5875e66",
+    "startTime": "1/5/2024, 2:54:01 PM",
+    "endTime": "1/5/2024, 4:38:57 PM",
+    "current_hours": 1,
+    "current_minutes": 23,
+    "current_seconds": 28,
+    "workDoneString": "Changed footer, website background",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "79b7d2f8-2ea3-4d9f-863b-0d3291043ef5",
+    "startTime": "1/5/2024, 2:00:02 PM",
+    "endTime": "1/5/2024, 2:54:01 PM",
+    "current_hours": 0,
+    "current_minutes": 44,
+    "current_seconds": 13,
+    "workDoneString": "Making faq, and policy pages. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "a61e72aa-8ec0-4ba6-94d3-a6b6787ffeb2",
+    "startTime": "1/5/2024, 4:11:32 AM",
+    "endTime": "1/5/2024, 2:00:02 PM",
+    "current_hours": 1,
+    "current_minutes": 15,
+    "current_seconds": 43,
+    "workDoneString": "Fixing products not being added to side cart. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "d2f6b69f-a556-4281-9a3e-7ccba8fca7cd",
+    "startTime": "1/5/2024, 3:17:37 AM",
+    "endTime": "1/5/2024, 4:11:32 AM",
+    "current_hours": 0,
+    "current_minutes": 53,
+    "current_seconds": 54,
+    "workDoneString": "All features now work. only cosmetics remain. Minor bugs and fixes pending along those cosmetics. Adding tc page, faq also remains. categories now link to subcategories. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "2cfc8e38-7386-4cee-85a5-871770118966",
+    "startTime": "1/5/2024, 2:37:46 AM",
+    "endTime": "1/5/2024, 3:17:37 AM",
+    "current_hours": 0,
+    "current_minutes": 39,
+    "current_seconds": 51,
+    "workDoneString": "working on creating subcategories in the main website",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "5f062ddf-ad8c-4d4e-9119-3efacc3220a3",
+    "startTime": "1/4/2024, 11:36:40 PM",
+    "endTime": "1/5/2024, 2:37:46 AM",
+    "current_hours": 1,
+    "current_minutes": 28,
+    "current_seconds": 8,
+    "workDoneString": "Fixing bugs in subcategories and categories addition. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "e1fe357c-c169-4725-9389-36a026bdab25",
+    "startTime": "1/4/2024, 3:56:44 PM",
+    "endTime": "1/4/2024, 11:36:40 PM",
+    "current_hours": 1,
+    "current_minutes": 11,
+    "current_seconds": 57,
+    "workDoneString": "fixed duplicate products bug. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "386190e5-7889-4800-9149-d9e4e4832fe7",
+    "startTime": "1/4/2024, 2:17:52 PM",
+    "endTime": "1/4/2024, 3:56:44 PM",
+    "current_hours": 0,
+    "current_minutes": 48,
+    "current_seconds": 38,
+    "workDoneString": "making cart page. Added customer email subscription feature. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "737bc039-ed63-4723-860b-b493e13b390e",
+    "startTime": "1/4/2024, 1:24:53 PM",
+    "endTime": "1/4/2024, 2:17:52 PM",
+    "current_hours": 0,
+    "current_minutes": 52,
+    "current_seconds": 58,
+    "workDoneString": "making cart page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "5aff76cd-cb29-4699-8060-f2d7f418566d",
+    "startTime": "1/3/2024, 9:44:59 PM",
+    "endTime": "1/4/2024, 1:24:53 PM",
+    "current_hours": 1,
+    "current_minutes": 6,
+    "current_seconds": 45,
+    "workDoneString": "Discussions for cart page and samples. Experimenting how to put right side toggling page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "e45034e9-f7fe-44f7-808b-8855ed2f96f7",
+    "startTime": "1/3/2024, 4:34:26 PM",
+    "endTime": "1/3/2024, 9:44:59 PM",
+    "current_hours": 0,
+    "current_minutes": 52,
+    "current_seconds": 41,
+    "workDoneString": "Reviews are now working. Product page review designing left. Feature wise only points implementation is remaining. Fixed bugs. Research on how to implement cart page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "d6c22d19-ca5f-4075-a1ee-c3a1015bfd41",
+    "startTime": "1/3/2024, 3:22:01 PM",
+    "endTime": "1/3/2024, 4:34:26 PM",
+    "current_hours": 1,
+    "current_minutes": 7,
+    "current_seconds": 14,
+    "workDoneString": "Making Product Page. Working on description, images and reviews. Finished Product page with some bugs remaining. Added Reviews",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "2d8e15e6-d533-4898-a06f-766f05732c8e",
+    "startTime": "1/3/2024, 2:12:04 PM",
+    "endTime": "1/3/2024, 3:22:01 PM",
+    "current_hours": 0,
+    "current_minutes": 55,
+    "current_seconds": 24,
+    "workDoneString": "Making Product Page. Done with main layout. Remaining with description and carousal and images. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "2a5d27ad-bb06-49f0-b3ba-c1fb229020a0",
+    "startTime": "1/3/2024, 1:13:34 PM",
+    "endTime": "1/3/2024, 2:12:04 PM",
+    "current_hours": 0,
+    "current_minutes": 55,
+    "current_seconds": 50,
+    "workDoneString": "Making Product Page. Done with layout and architecture, props and states. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "688cb872-e009-483c-bf6e-a0ba14da88ac",
+    "startTime": "1/3/2024, 12:26:36 PM",
+    "endTime": "1/3/2024, 1:13:34 PM",
+    "current_hours": 0,
+    "current_minutes": 46,
+    "current_seconds": 57,
+    "workDoneString": "Making product page for frontend. Added ingredients to products in admin page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "dc5940d3-bc90-44c2-8886-87723fa60781",
+    "startTime": "1/3/2024, 10:29:08 AM",
+    "endTime": "1/3/2024, 12:26:36 PM",
+    "current_hours": 1,
+    "current_minutes": 14,
+    "current_seconds": 0,
+    "workDoneString": "Fixed addition of products, simplified addition. Fixed bug in downloading categories and faq on startup. Updating products now works. Added category checkboxes to product modification page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "1ba92029-bd45-482b-b07e-12650902c2ea",
+    "startTime": "1/2/2024, 10:56:17 PM",
+    "endTime": "1/3/2024, 10:29:08 AM",
+    "current_hours": 1,
+    "current_minutes": 7,
+    "current_seconds": 36,
+    "workDoneString": "Made and Fixed Category page. Updating Product details working. Have to fix products. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "0714361c-2305-43c9-a868-4bec6675f07a",
+    "startTime": "1/2/2024, 8:59:48 PM",
+    "endTime": "1/2/2024, 10:56:17 PM",
+    "current_hours": 0,
+    "current_minutes": 58,
+    "current_seconds": 51,
+    "workDoneString": "FAQ Page CRUD Operations now working. Making Category page. Making list again. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "3c8e8908-9927-4fdd-b9b6-a8c42472a91c",
+    "startTime": "1/2/2024, 3:49:50 PM",
+    "endTime": "1/2/2024, 8:59:48 PM",
+    "current_hours": 0,
+    "current_minutes": 52,
+    "current_seconds": 30,
+    "workDoneString": "working on the product page. Done with a separate product page for each product. Created FAQ Page and Added FAQs over there. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "60efb7f4-ef4a-4d2d-b9f4-6b83459f8277",
+    "startTime": "1/2/2024, 2:32:19 PM",
+    "endTime": "1/2/2024, 3:49:50 PM",
+    "current_hours": 0,
+    "current_minutes": 52,
+    "current_seconds": 57,
+    "workDoneString": "Made a new product page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "ea8ec542-7163-4eed-9d6f-6526a187fbc7",
+    "startTime": "1/2/2024, 1:00:11 PM",
+    "endTime": "1/2/2024, 2:32:19 PM",
+    "current_hours": 1,
+    "current_minutes": 15,
+    "current_seconds": 3,
+    "workDoneString": "added backend routes for categories. created new cluster in mongodb for categories. Testing GIFS. Making admin page for products separate due to lengthy products. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "e095b4b6-30ec-45a4-b729-a62fd6f5e2c4",
+    "startTime": "1/1/2024, 11:26:11 PM",
+    "endTime": "1/2/2024, 1:00:11 PM",
+    "current_hours": 0,
+    "current_minutes": 55,
+    "current_seconds": 59,
+    "workDoneString": "Redesign of the main site. Thinking of another architecture for frontend for this page. Research regarding deploying images or gradients for the main page. Starting to work on the faqs becoming modular. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "1b3077b9-f337-4865-9941-eacba0f52bf5",
+    "startTime": "1/1/2024, 10:26:53 PM",
+    "endTime": "1/1/2024, 11:26:11 PM",
+    "current_hours": 0,
+    "current_minutes": 59,
+    "current_seconds": 18,
+    "workDoneString": "Adding volumes to admin page and adding products. Adding products has some bugs. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "c312b266-5ff9-47ba-8ba4-4e82c2f9ae91",
+    "startTime": "1/1/2024, 4:51:02 PM",
+    "endTime": "1/1/2024, 10:26:53 PM",
+    "current_hours": 0,
+    "current_minutes": 46,
+    "current_seconds": 44,
+    "workDoneString": "Adding shades to admin page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "3721a393-aa02-4f17-b03e-2f45a449965e",
+    "startTime": "1/1/2024, 3:31:57 PM",
+    "endTime": "1/1/2024, 4:51:02 PM",
+    "current_hours": 1,
+    "current_minutes": 17,
+    "current_seconds": 52,
+    "workDoneString": "discussions and clarifications of work to do and done. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "2183c297-b963-456e-b465-82e05a74bbeb",
+    "startTime": "1/1/2024, 2:04:21 PM",
+    "endTime": "1/1/2024, 3:31:57 PM",
+    "current_hours": 1,
+    "current_minutes": 0,
+    "current_seconds": 49,
+    "workDoneString": "Working on grid layout for category page. Changed minor things in display carousal again. Edited navbar buttons. Changed cart button colors. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "4a9be428-a056-4b55-9ae8-4222942c4aa7",
+    "startTime": "1/1/2024, 1:03:46 PM",
+    "endTime": "1/1/2024, 2:04:21 PM",
+    "current_hours": 1,
+    "current_minutes": 0,
+    "current_seconds": 35,
+    "workDoneString": "Category page rudimentarily complete. Added cards. Searching for patterns to use for background. Checking compatibility. Fixed bug for not receiving categories in category page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "f713345f-6c11-4ac0-9d2c-bd00f0e222d9",
+    "startTime": "12/31/2023, 9:15:09 PM",
+    "endTime": "1/1/2024, 1:03:46 PM",
+    "current_hours": 0,
+    "current_minutes": 54,
+    "current_seconds": 48,
+    "workDoneString": "created catalogue page. added catalogues. Started working on category page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "e8386d01-ab90-4b85-a4d7-33cde1e6159a",
+    "startTime": "12/31/2023, 4:51:24 PM",
+    "endTime": "12/31/2023, 9:15:09 PM",
+    "current_hours": 1,
+    "current_minutes": 3,
+    "current_seconds": 42,
+    "workDoneString": "working on editing the display carousal for home page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "6433d4f0-b3ed-4815-9081-5b62a6c87a3c",
+    "startTime": "12/31/2023, 3:04:29 PM",
+    "endTime": "12/31/2023, 4:51:24 PM",
+    "current_hours": 1,
+    "current_minutes": 1,
+    "current_seconds": 39,
+    "workDoneString": "working on editing the display carousal for home page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "4c57db7a-dcb6-4b1f-952b-40cc692218a0",
+    "startTime": "12/31/2023, 2:09:42 PM",
+    "endTime": "12/31/2023, 3:04:29 PM",
+    "current_hours": 0,
+    "current_minutes": 54,
+    "current_seconds": 42,
+    "workDoneString": "Wrote product carousal for Essential featured and holiday products on the home page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "3ba9df04-112f-47cf-913a-a18d238c8794",
+    "startTime": "12/31/2023, 3:08:35 AM",
+    "endTime": "12/31/2023, 2:09:42 PM",
+    "current_hours": 1,
+    "current_minutes": 6,
+    "current_seconds": 2,
+    "workDoneString": "Made separate pages for products and their categories. Routing now works for each product page. We are able to get products from server.  Working on making product display carousal on home page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "3c6064ab-6c8a-4d10-beaa-80ebb1e8f6d8",
+    "startTime": "12/31/2023, 2:07:43 AM",
+    "endTime": "12/31/2023, 3:08:35 AM",
+    "current_hours": 1,
+    "current_minutes": 0,
+    "current_seconds": 51,
+    "workDoneString": "Made a catalogue page. Separating Product Categories and fixing bugs in admin page while segregating product categories. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "d417a2ac-778a-48b5-9a1f-bba022df88cb",
+    "startTime": "12/30/2023, 9:38:37 PM",
+    "endTime": "12/31/2023, 2:07:43 AM",
+    "current_hours": 0,
+    "current_minutes": 58,
+    "current_seconds": 32,
+    "workDoneString": "Fixed bugs in admin page regarding comma separation of image links. slideshow image links now working. Products page and other pages now work with imgur images on the main site. Data is retrieved from mongodb and backend.  Fixed bugs for loading images from links. Changed colors of buttons to beige. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "e91248bc-bb9e-4038-841e-6b8c988ccc40",
+    "startTime": "12/30/2023, 2:44:52 PM",
+    "endTime": "12/30/2023, 9:38:37 PM",
+    "current_hours": 0,
+    "current_minutes": 55,
+    "current_seconds": 0,
+    "workDoneString": "Making Folders and sorting images. Uploading on imgur. Changed website code to take images from links instead of hard coded. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "3594c4c7-ecde-4386-8bb8-554bba3842c4",
+    "startTime": "12/30/2023, 12:51:01 PM",
+    "endTime": "12/30/2023, 2:44:52 PM",
+    "current_hours": 0,
+    "current_minutes": 55,
+    "current_seconds": 40,
+    "workDoneString": "Working on Points refund logic. Added points to customers, orders, and wrote routes for deleting customers. Deleting customers works. ideally backend and admin page work is complete. All features implemented. testing remains. Minor changes remain, to be done in accordance with frontend. Documenting Changes. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "0edf67df-2b2e-470f-b65a-e2b29531c52e",
+    "startTime": "12/30/2023, 11:43:31 AM",
+    "endTime": "12/30/2023, 12:51:01 PM",
+    "current_hours": 1,
+    "current_minutes": 0,
+    "current_seconds": 10,
+    "workDoneString": "Changing Theme of Admin page to match LL. admin page, and backend are now done except for point logic. Working on point logic. Added routes for deleting order in backend. Modified Frontend for Deleting Order. Testing Deleting Orders, Deleting orders works.",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "e90d4370-094c-4470-968b-1601dc43850c",
+    "startTime": "12/29/2023, 11:46:20 PM",
+    "endTime": "12/30/2023, 11:43:31 AM",
+    "current_hours": 1,
+    "current_minutes": 0,
+    "current_seconds": 15,
+    "workDoneString": "Testing Add Products. Adding Products works. Added confirmation dialog box for deletion. Deletion now works. Adding real results, how to use etc in mongodb and frontend. Updating Request call such that it only executes upon recent changes to avoid excess api calls. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "238cdc34-78e0-4691-a5db-fea2d1f65782",
+    "startTime": "12/29/2023, 10:44:03 PM",
+    "endTime": "12/29/2023, 11:46:20 PM",
+    "current_hours": 1,
+    "current_minutes": 2,
+    "current_seconds": 14,
+    "workDoneString": "Working on Updating Multiple Products. Made Frontend for Deleting a product. Made Add product form. Added provision for adding description and images in frontend for real results and how to use.",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "0ce3c448-b7b6-416b-8e7d-ffff71063353",
+    "startTime": "12/29/2023, 9:10:46 PM",
+    "endTime": "12/29/2023, 10:44:03 PM",
+    "current_hours": 1,
+    "current_minutes": 5,
+    "current_seconds": 20,
+    "workDoneString": "Working on updating multiple products by editing products page.",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "71048acc-1c1c-4461-bab1-d95a3f03e016",
+    "startTime": "12/29/2023, 3:47:28 PM",
+    "endTime": "12/29/2023, 9:10:46 PM",
+    "current_hours": 1,
+    "current_minutes": 1,
+    "current_seconds": 2,
+    "workDoneString": "Making routes for adding, deleting and updating products from the admin page.  Updated all products in Mongodb, and now displaying their properties in frontend. Updated routes. Working on updating products table in admin page. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "408fd1e5-8a80-43b3-816b-5245ec00fb10",
+    "startTime": "12/29/2023, 1:50:44 PM",
+    "endTime": "12/29/2023, 3:47:28 PM",
+    "current_hours": 1,
+    "current_minutes": 0,
+    "current_seconds": 5,
+    "workDoneString": "Testing invoice making options. Testing subscription emails to everyone. Testing images being sent from those emails. Testing payment emails from mailjet. Fixed bug that mongo would change status irrespective of mail sent. Mail sent or not now sends accurate toasts. All mails now work as expected. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "354abff2-2e1f-4b55-8f14-68b2608f7cf5",
+    "startTime": "12/29/2023 3:01:16 AM",
+    "endTime": "12/29/2023, 1:50:44 PM",
+    "current_hours": 1,
+    "current_minutes": 1,
+    "current_seconds": 0,
+    "workDoneString": "checking if mailing client works. Testing subscription mails working for variaous accounts. converting from elastic to mailjet code. Subscription and transaction mails work on localhost at this point. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "14b8baf6-a55c-4320-90b7-f5d78b772a22",
+    "startTime": "12/28/2023 9:47:43 PM",
+    "endTime": "12/29/2023 3:01:16 AM",
+    "current_hours": 1,
+    "current_minutes": 1,
+    "current_seconds": 28,
+    "workDoneString": "changed to local server instead of cyclic for testing. created mailjet account. added code for sending subscription emails; testing remaining; also modified code from elastic mail to mailjet mail. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "9ee3bad0-5292-43ce-b939-4f4a995c0a51",
+    "startTime": "12/28/2023 8:43:24 PM",
+    "endTime": "12/28/2023 9:47:43 PM",
+    "current_hours": 0,
+    "current_minutes": 59,
+    "current_seconds": 59,
+    "workDoneString": "made emails section in the admin page; divided customers into batches. Made frontend for emails in admin page; added toasts; tried out different toast libraries. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "20fa8462-8575-4901-8048-0912a2a8ae2b",
+    "startTime": "12/27/2023 9:53:05 PM",
+    "endTime": "12/27/2023 10:51:30 PM",
+    "current_hours": 0,
+    "current_minutes": 59,
+    "current_seconds": 25,
+    "workDoneString": "Researching image hosting options; trying out different links and approaches; testing website loading speed with them. Creating and testing accounts and validity. Logging in with LL credentials; making api calls from website to get products. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "d0156efe-1499-4fb8-af9d-e6b9d91dd63e",
+    "startTime": "12/27/2023 8:51:53 PM",
+    "endTime": "12/27/2023 9:53:05 PM",
+    "current_hours": 1,
+    "current_minutes": 0,
+    "current_seconds": 59,
+    "workDoneString": "designing pages; outlines and skeletons; making the list of things to do. reorienting approaches. Rethinking backend; writing todo lists for updating routes and database. ",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "4acf571d-3011-439f-9f23-d5a50b1fbee4",
+    "startTime": "12/27/2023 7:57:26 PM",
+    "endTime": "12/27/2023 8:51:53 PM",
+    "current_hours": 0,
+    "current_minutes": 59,
+    "current_seconds": 0,
+    "workDoneString": "working on faqs; added images in carousal; added new about section; finished faqs; added product varieties in the navbar.",
+    "HourlyAmount": 250
+  },
+  {
+    "id": "b25d02d8-bda6-4bd6-886c-385e56edb678",
+    "startTime": "12/27/2023 6:51:32 PM",
+    "endTime": "12/27/2023 7:57:26 PM",
+    "current_hours": 0,
+    "current_minutes": 59,
+    "current_seconds": 56,
+    "workDoneString": "changed fonts; edited navbar for pc; changed footer acc to design; downloaded fonts; fixed error with bun; started working on FAQs. ",
+    "HourlyAmount": 250
+  }
+]
